@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>批量预设 - CaptionMeta</title>
+  <meta name="description" content="复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。">
+  <meta name="theme-color" content="#1976D2">
+  
+  
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"批量预设","description":"复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。","mainEntity":{"@id":"#batch-presets-app"}},{"@type":"SoftwareApplication","@id":"#batch-presets-app","name":"CaptionMeta","operatingSystem":"Android","featureList":["创建并复用元数据模板或预设。","将批量值应用到多张选中的照片。","在单张照片需要不同说明或字段值时使用单张覆盖。"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"单张照片可以覆盖批量元数据吗？","acceptedAnswer":{"@type":"Answer","text":"可以。工作流解析器测试覆盖了单张照片值优先于批量值的行为。"}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"zh-CN","autoRedirect":true,"rememberSelection":true,"storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US"},"locales":[{"code":"zh-CN","url":"./"},{"code":"en-US","url":"../../en-US/features/batch-presets/"}]}</script>
+  <script src="../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="CaptionMeta"><img src="../../assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+    <nav aria-label="主导航">
+      <a href="../../">首页</a>
+      <a href="../../blog/">指南</a>
+      <a href="../../about.html">关于</a>
+      <a href="../../support.html">支持</a>
+      <label class="language-picker"><span class="visually-hidden">语言</span><select data-locale-switcher aria-label="语言"><option value="zh-CN">简体中文</option><option value="en-US">English</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="面包屑导航"><a href="../../">首页</a><span aria-hidden="true">/</span><a href="../../#features">功能</a></nav>
+        <p class="category">已验证功能</p>
+        <h1>批量预设</h1>
+        <p class="tagline">复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。</p>
+        <p class="feature-problem"><strong>解决什么问题:</strong> 重复处理一批照片时，如果每次都重新输入相同字段，就很难保持一致。</p>
+      </header>
+      <figure class="feature-media"><img src="../../assets/screenshots/02-captionmeta-upload.png" alt="复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。" loading="eager"><figcaption>复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>可以完成什么</h2><ul><li>创建并复用元数据模板或预设。</li><li>将批量值应用到多张选中的照片。</li><li>在单张照片需要不同说明或字段值时使用单张覆盖。</li></ul></section>
+        <section><h2>可配置选项</h2><ul><li>预设字段、批量值、单张覆盖、署名、位置和交付设置。</li></ul></section>
+        <section><h2>支持的输入</h2><ul><li>一组本地照片和一个已保存的元数据预设。</li></ul></section>
+        <section><h2>生成的结果</h2><ul><li>带有解析后元数据值的一组处理照片副本。</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>操作流程</h2><ol><li>选择或创建 IPTC 预设。</li><li>选择批量字段和要处理的照片。</li><li>检查单张覆盖值，并将最终值写入处理后的副本。</li></ol></section>
+      <section class="feature-limitations"><h2>使用限制</h2><ul><li>预设只影响该工作流配置的字段；空字段或停用字段不会被推断为有值。</li></ul></section>
+      <section class="feature-faq"><h2>常见问题</h2><details><summary>单张照片可以覆盖批量元数据吗？</summary><p>可以。工作流解析器测试覆盖了单张照片值优先于批量值的行为。</p></details></section>
+      <section class="feature-evidence"><h2>项目证据</h2><ul class="evidence-list"><li><code>core/core_exif/src/test/java/com/wkq/iptc/feature/press/model/MetadataTemplateWorkflowTest.kt</code></li><li><code>feature/feature_app/src/test/java/com/wkq/iptc/feature/press/workflow/WorkflowResolverTest.kt</code></li><li><code>feature/feature_app/src/main/res/values/strings.xml</code></li></ul></section>
+      <a class="primary-action" href="../../blog/batch-presets/">阅读相关指南</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. 保留所有权利。</p>
+    <nav aria-label="页脚导航">
+      <a href="../../privacy.html">隐私</a>
+      <a href="../../about.html">关于</a>
+      <a href="../../support.html">支持</a>
+    </nav>
+  </footer>
+</body>
+</html>

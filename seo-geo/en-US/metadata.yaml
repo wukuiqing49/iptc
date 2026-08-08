@@ -1,0 +1,27 @@
+schemaVersion: '1.0'
+locale: en-US
+pages:
+  /en-US/:
+    title: CaptionMeta - Android photo metadata tool
+    description: CaptionMeta
+    primaryQuery: IPTC metadata editor Android
+  /en-US/features/iptc-exif-and-xmp-editing/:
+    title: IPTC, EXIF, and XMP editing - CaptionMeta
+    description: Review and edit captions, headlines, keywords, bylines, copyright,
+      rights, and location metadata.
+    primaryQuery: IPTC metadata editor for Android
+  /en-US/features/private-metadata-cleanup/:
+    title: Private metadata cleanup - CaptionMeta
+    description: Inspect and clean selected EXIF, IPTC, and XMP data before sharing
+      a processed photo copy.
+    primaryQuery: remove EXIF metadata Android
+  /en-US/features/batch-presets/:
+    title: Batch presets - CaptionMeta
+    description: Reuse IPTC presets across a group of photos while retaining per-photo
+      overrides.
+    primaryQuery: batch IPTC metadata editor
+  /en-US/features/photo-delivery-queue/:
+    title: Photo delivery queue - CaptionMeta
+    description: Queue processed photos, deliver them through configured servers,
+      and review task results.
+    primaryQuery: photo upload queue Android

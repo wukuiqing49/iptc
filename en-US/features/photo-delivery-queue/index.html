@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo delivery queue - CaptionMeta</title>
+  <meta name="description" content="Queue processed photos, deliver them through configured servers, and review task results.">
+  <meta name="theme-color" content="#1976D2">
+  
+  
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Photo delivery queue","description":"Queue processed photos, deliver them through configured servers, and review task results.","mainEntity":{"@id":"#photo-delivery-app"}},{"@type":"SoftwareApplication","@id":"#photo-delivery-app","name":"CaptionMeta","operatingSystem":"Android","featureList":["Queue processed photo files for delivery.","Support configured FTP, FTPS, SFTP, HTTP, SMB, and WebDAV clients.","Retry selected transient HTTP failures and keep upload task results for review."]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which delivery protocols are supported?","acceptedAnswer":{"@type":"Answer","text":"The upload module contains clients and configuration models for FTP, FTPS, SFTP, HTTP, SMB, and WebDAV."}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"en-US","autoRedirect":false,"rememberSelection":true,"storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US"},"locales":[{"code":"zh-CN","url":"../../../features/photo-delivery/"},{"code":"en-US","url":"./"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="CaptionMeta"><img src="../../../assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="../../">Home</a>
+      <a href="../../../blog/en-US/">Guides</a>
+      <a href="../../about.html">About</a>
+      <a href="../../support.html">Support</a>
+      <label class="language-picker"><span class="visually-hidden">Language</span><select data-locale-switcher aria-label="Language"><option value="zh-CN">简体中文</option><option value="en-US">English</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../#features">Features</a></nav>
+        <p class="category">Verified feature</p>
+        <h1>Photo delivery queue</h1>
+        <p class="tagline">Queue processed photos, deliver them through configured servers, and review task results.</p>
+        <p class="feature-problem"><strong>The problem it solves:</strong> Field photo delivery can fail when files, server settings, and retry state are managed in separate places.</p>
+      </header>
+      <figure class="feature-media"><img src="../../../assets/screenshots/02-captionmeta-upload.png" alt="Queue processed photos, deliver them through configured servers, and review task results." loading="eager"><figcaption>Queue processed photos, deliver them through configured servers, and review task results.</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>What you can do</h2><ul><li>Queue processed photo files for delivery.</li><li>Support configured FTP, FTPS, SFTP, HTTP, SMB, and WebDAV clients.</li><li>Retry selected transient HTTP failures and keep upload task results for review.</li></ul></section>
+        <section><h2>Available options</h2><ul><li>FTP, FTPS, SFTP, HTTP, SMB, and WebDAV server profiles.</li></ul></section>
+        <section><h2>Supported inputs</h2><ul><li>Processed local photo files and a configured delivery server profile.</li></ul></section>
+        <section><h2>Outputs</h2><ul><li>A queued upload task and its success or failure result.</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>Workflow</h2><ol><li>Configure a delivery server profile.</li><li>Choose processed photos and add them to the upload queue.</li><li>Monitor the queue, retry eligible failures, and review history.</li></ol></section>
+      <section class="feature-limitations"><h2>Limitations</h2><ul><li>Delivery requires a reachable server and credentials configured by the user; the app does not provide hosted photo storage.</li></ul></section>
+      <section class="feature-faq"><h2>Common questions</h2><details><summary>Which delivery protocols are supported?</summary><p>The upload module contains clients and configuration models for FTP, FTPS, SFTP, HTTP, SMB, and WebDAV.</p></details></section>
+      <section class="feature-evidence"><h2>Project evidence</h2><ul class="evidence-list"><li><code>core/core_upload/src/main/java/com/wkq/iptc/upload/UploadDispatcher.kt</code></li><li><code>core/core_upload/src/main/java/com/wkq/iptc/upload/http/RetryInterceptor.kt</code></li><li><code>core/core_upload/consumer-rules.pro</code></li></ul></section>
+      <a class="primary-action" href="../../../blog/en-US/photo-delivery-queue/">Read the related guide</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <a href="../../privacy.html">Privacy</a>
+      <a href="../../about.html">About</a>
+      <a href="../../support.html">Support</a>
+    </nav>
+  </footer>
+</body>
+</html>

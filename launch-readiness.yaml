@@ -1,0 +1,31 @@
+schemaVersion: '1.0'
+website:
+  status: generated
+  entry: index.html
+  output: .
+content:
+  verifiedFeatures: 4
+  readyFeatures: 4
+  skippedFeatures: []
+seoGeo:
+  status: blocked
+  websiteUrl: ''
+aso:
+  status: draft
+  googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+localization:
+- locale: zh-CN
+  status: source
+  listingValid: true
+  screenshotReviewRequired: false
+- locale: en-US
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+publishReady: false
+warnings:
+- websiteUrl is missing; canonical URLs, hreflang URLs, Open Graph URLs, and sitemap
+  locations are blocked
+- editorial.publishedAt is missing; blog pages remain drafts and omit Article/HowTo
+  date markup
+- en-US content status is machine-draft

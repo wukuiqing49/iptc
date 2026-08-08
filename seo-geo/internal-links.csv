@@ -1,0 +1,25 @@
+locale,source,target,anchor,reason
+zh-CN,/,/features/metadata-editor/,IPTC、EXIF 与 XMP 编辑,home feature discovery
+zh-CN,/features/metadata-editor/,/blog/metadata-editor/,IPTC、EXIF 与 XMP 编辑,task education
+zh-CN,/blog/metadata-editor/,/features/metadata-editor/,IPTC、EXIF 与 XMP 编辑,feature verification
+zh-CN,/,/features/privacy-cleanup/,隐私元数据清理,home feature discovery
+zh-CN,/features/privacy-cleanup/,/blog/privacy-cleanup/,隐私元数据清理,task education
+zh-CN,/blog/privacy-cleanup/,/features/privacy-cleanup/,隐私元数据清理,feature verification
+zh-CN,/,/features/batch-presets/,批量预设,home feature discovery
+zh-CN,/features/batch-presets/,/blog/batch-presets/,批量预设,task education
+zh-CN,/blog/batch-presets/,/features/batch-presets/,批量预设,feature verification
+zh-CN,/,/features/photo-delivery/,照片交付队列,home feature discovery
+zh-CN,/features/photo-delivery/,/blog/photo-delivery/,照片交付队列,task education
+zh-CN,/blog/photo-delivery/,/features/photo-delivery/,照片交付队列,feature verification
+en-US,/en-US/,/en-US/features/iptc-exif-and-xmp-editing/,"IPTC, EXIF, and XMP editing",home feature discovery
+en-US,/en-US/features/iptc-exif-and-xmp-editing/,/blog/en-US/iptc-exif-and-xmp-editing/,"IPTC, EXIF, and XMP editing",task education
+en-US,/blog/en-US/iptc-exif-and-xmp-editing/,/en-US/features/iptc-exif-and-xmp-editing/,"IPTC, EXIF, and XMP editing",feature verification
+en-US,/en-US/,/en-US/features/private-metadata-cleanup/,Private metadata cleanup,home feature discovery
+en-US,/en-US/features/private-metadata-cleanup/,/blog/en-US/private-metadata-cleanup/,Private metadata cleanup,task education
+en-US,/blog/en-US/private-metadata-cleanup/,/en-US/features/private-metadata-cleanup/,Private metadata cleanup,feature verification
+en-US,/en-US/,/en-US/features/batch-presets/,Batch presets,home feature discovery
+en-US,/en-US/features/batch-presets/,/blog/en-US/batch-presets/,Batch presets,task education
+en-US,/blog/en-US/batch-presets/,/en-US/features/batch-presets/,Batch presets,feature verification
+en-US,/en-US/,/en-US/features/photo-delivery-queue/,Photo delivery queue,home feature discovery
+en-US,/en-US/features/photo-delivery-queue/,/blog/en-US/photo-delivery-queue/,Photo delivery queue,task education
+en-US,/blog/en-US/photo-delivery-queue/,/en-US/features/photo-delivery-queue/,Photo delivery queue,feature verification

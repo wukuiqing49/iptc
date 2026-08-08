@@ -1,0 +1,41 @@
+schemaVersion: "1.0"
+projectPath: "C:\\work\\AI\\PressIPTC"
+outputRoot: "."
+createdAt: "2026-08-08"
+updatedAt: "2026-08-08"
+status: "draft"
+stages:
+  analyzer:
+    status: "verified"
+    output: "app-info.yaml"
+    validatedAt: "2026-08-08"
+    error: ""
+  website:
+    status: "generated"
+    output: "index.html"
+    validatedAt: "2026-08-08"
+    error: ""
+  seoGeo:
+    status: "generated"
+    output: "seo-geo/"
+    validatedAt: "2026-08-08"
+    error: ""
+  aso:
+    status: "generated"
+    output: "aso/"
+    validatedAt: "2026-08-08"
+    error: ""
+  blog:
+    status: "generated"
+    output: "blog/"
+    validatedAt: "2026-08-08"
+    error: ""
+review:
+  status: "needs-review"
+  requiredItems:
+    - "Confirm production Google Play URL"
+    - "Confirm production website domain"
+    - "Review translated copy before publication"
+    - "Replace test release signing configuration"
+  reviewer: ""
+  reviewedAt: ""

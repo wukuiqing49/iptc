@@ -1,0 +1,10 @@
+sourceLocale: zh-CN
+locales:
+- locale: zh-CN
+  status: source
+  reviewer: ''
+  reviewedAt: ''
+- locale: en-US
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''

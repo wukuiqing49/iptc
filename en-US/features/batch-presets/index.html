@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batch presets - CaptionMeta</title>
+  <meta name="description" content="Reuse IPTC presets across a group of photos while retaining per-photo overrides.">
+  <meta name="theme-color" content="#1976D2">
+  
+  
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Batch presets","description":"Reuse IPTC presets across a group of photos while retaining per-photo overrides.","mainEntity":{"@id":"#batch-presets-app"}},{"@type":"SoftwareApplication","@id":"#batch-presets-app","name":"CaptionMeta","operatingSystem":"Android","featureList":["Create and reuse metadata templates or presets.","Apply batch values to multiple selected photos.","Use per-photo overrides when one image needs a different caption or field value."]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can one photo override a batch metadata value?","acceptedAnswer":{"@type":"Answer","text":"Yes. Workflow resolver tests cover per-photo values taking precedence over batch values for configured fields."}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"en-US","autoRedirect":false,"rememberSelection":true,"storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US"},"locales":[{"code":"zh-CN","url":"../../../features/batch-presets/"},{"code":"en-US","url":"./"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="CaptionMeta"><img src="../../../assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="../../">Home</a>
+      <a href="../../../blog/en-US/">Guides</a>
+      <a href="../../about.html">About</a>
+      <a href="../../support.html">Support</a>
+      <label class="language-picker"><span class="visually-hidden">Language</span><select data-locale-switcher aria-label="Language"><option value="zh-CN">简体中文</option><option value="en-US">English</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../#features">Features</a></nav>
+        <p class="category">Verified feature</p>
+        <h1>Batch presets</h1>
+        <p class="tagline">Reuse IPTC presets across a group of photos while retaining per-photo overrides.</p>
+        <p class="feature-problem"><strong>The problem it solves:</strong> Repeated photo assignments need consistent metadata without retyping the same fields for every image.</p>
+      </header>
+      <figure class="feature-media"><img src="../../../assets/screenshots/02-captionmeta-upload.png" alt="Reuse IPTC presets across a group of photos while retaining per-photo overrides." loading="eager"><figcaption>Reuse IPTC presets across a group of photos while retaining per-photo overrides.</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>What you can do</h2><ul><li>Create and reuse metadata templates or presets.</li><li>Apply batch values to multiple selected photos.</li><li>Use per-photo overrides when one image needs a different caption or field value.</li></ul></section>
+        <section><h2>Available options</h2><ul><li>Preset fields, batch values, per-photo overrides, byline, location, and delivery settings.</li></ul></section>
+        <section><h2>Supported inputs</h2><ul><li>A selected group of local photos and a saved metadata preset.</li></ul></section>
+        <section><h2>Outputs</h2><ul><li>A batch of processed photo copies with resolved metadata values.</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>Workflow</h2><ol><li>Choose or create an IPTC preset.</li><li>Select batch fields and photos to process.</li><li>Review per-photo overrides and write resolved values to processed copies.</li></ol></section>
+      <section class="feature-limitations"><h2>Limitations</h2><ul><li>A preset only affects fields configured for that workflow; empty or disabled fields are not implied to contain data.</li></ul></section>
+      <section class="feature-faq"><h2>Common questions</h2><details><summary>Can one photo override a batch metadata value?</summary><p>Yes. Workflow resolver tests cover per-photo values taking precedence over batch values for configured fields.</p></details></section>
+      <section class="feature-evidence"><h2>Project evidence</h2><ul class="evidence-list"><li><code>core/core_exif/src/test/java/com/wkq/iptc/feature/press/model/MetadataTemplateWorkflowTest.kt</code></li><li><code>feature/feature_app/src/test/java/com/wkq/iptc/feature/press/workflow/WorkflowResolverTest.kt</code></li><li><code>feature/feature_app/src/main/res/values/strings.xml</code></li></ul></section>
+      <a class="primary-action" href="../../../blog/en-US/batch-presets/">Read the related guide</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <a href="../../privacy.html">Privacy</a>
+      <a href="../../about.html">About</a>
+      <a href="../../support.html">Support</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private metadata cleanup - CaptionMeta</title>
+  <meta name="description" content="Inspect and clean selected EXIF, IPTC, and XMP data before sharing a processed photo copy.">
+  <meta name="theme-color" content="#1976D2">
+  
+  
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Private metadata cleanup","description":"Inspect and clean selected EXIF, IPTC, and XMP data before sharing a processed photo copy.","mainEntity":{"@id":"#privacy-cleanup-app"}},{"@type":"SoftwareApplication","@id":"#privacy-cleanup-app","name":"CaptionMeta","operatingSystem":"Android","featureList":["Inspect tracked EXIF, IPTC, and XMP metadata categories.","Scrub selected private metadata from a processed photo copy.","Keep the original file separate from the cleaned output workflow."]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does cleanup change my original photo?","acceptedAnswer":{"@type":"Answer","text":"The documented workflow creates processed photo data for handling and delivery; keep your original source file as needed and review the saved result."}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"en-US","autoRedirect":false,"rememberSelection":true,"storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US"},"locales":[{"code":"zh-CN","url":"../../../features/privacy-cleanup/"},{"code":"en-US","url":"./"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="CaptionMeta"><img src="../../../assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="../../">Home</a>
+      <a href="../../../blog/en-US/">Guides</a>
+      <a href="../../about.html">About</a>
+      <a href="../../support.html">Support</a>
+      <label class="language-picker"><span class="visually-hidden">Language</span><select data-locale-switcher aria-label="Language"><option value="zh-CN">简体中文</option><option value="en-US">English</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../#features">Features</a></nav>
+        <p class="category">Verified feature</p>
+        <h1>Private metadata cleanup</h1>
+        <p class="tagline">Inspect and clean selected EXIF, IPTC, and XMP data before sharing a processed photo copy.</p>
+        <p class="feature-problem"><strong>The problem it solves:</strong> A photo can carry location, camera, and other metadata that should not be included in every delivery.</p>
+      </header>
+      <figure class="feature-media"><img src="../../../assets/screenshots/02-captionmeta-upload.png" alt="Inspect and clean selected EXIF, IPTC, and XMP data before sharing a processed photo copy." loading="eager"><figcaption>Inspect and clean selected EXIF, IPTC, and XMP data before sharing a processed photo copy.</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>What you can do</h2><ul><li>Inspect tracked EXIF, IPTC, and XMP metadata categories.</li><li>Scrub selected private metadata from a processed photo copy.</li><li>Keep the original file separate from the cleaned output workflow.</li></ul></section>
+        <section><h2>Available options</h2><ul><li>Location, camera, and other tracked metadata categories exposed by the cleanup workflow.</li></ul></section>
+        <section><h2>Supported inputs</h2><ul><li>Local photos containing EXIF, IPTC, or XMP metadata.</li></ul></section>
+        <section><h2>Outputs</h2><ul><li>A processed photo copy with selected metadata removed.</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>Workflow</h2><ol><li>Select the photo to inspect.</li><li>Review the metadata categories available for cleanup.</li><li>Run cleanup and use the processed copy for the intended delivery.</li></ol></section>
+      <section class="feature-limitations"><h2>Limitations</h2><ul><li>Cleanup is based on metadata categories implemented by the current app version; review the output before publication.</li></ul></section>
+      <section class="feature-faq"><h2>Common questions</h2><details><summary>Does cleanup change my original photo?</summary><p>The documented workflow creates processed photo data for handling and delivery; keep your original source file as needed and review the saved result.</p></details></section>
+      <section class="feature-evidence"><h2>Project evidence</h2><ul class="evidence-list"><li><code>core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt</code></li><li><code>core/core_exif/src/test/java/com/wkq/util/exif/MetadataScrubberTest.kt</code></li><li><code>doc/privacy_policy.html</code></li></ul></section>
+      <a class="primary-action" href="../../../blog/en-US/private-metadata-cleanup/">Read the related guide</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <a href="../../privacy.html">Privacy</a>
+      <a href="../../about.html">About</a>
+      <a href="../../support.html">Support</a>
+    </nav>
+  </footer>
+</body>
+</html>

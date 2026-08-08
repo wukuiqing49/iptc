@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CaptionMeta",
+  "operatingSystem": "Android",
+  "applicationCategory": "Photography",
+  "description": "CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。",
+  "featureList": [
+    "IPTC、EXIF 与 XMP 编辑",
+    "隐私元数据清理",
+    "批量预设",
+    "照片交付队列"
+  ],
+  "publisher": {
+    "@id": "https://heyehoi.cn/#organization"
+  }
+}

@@ -1,0 +1,35 @@
+schemaVersion: '1.0'
+app: CaptionMeta
+topics:
+- contentId: metadata-editor
+  title: IPTC、EXIF 与 XMP 编辑：在 CaptionMeta 中能做什么
+  template: standard-article
+  status: draft
+  evidence:
+  - core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt
+  - core/core_exif/src/test/java/com/wkq/iptc/feature/press/metadata/IptcAndXmpVerificationTest.kt
+  - feature/feature_app/src/main/res/values/strings.xml
+- contentId: privacy-cleanup
+  title: 隐私元数据清理：在 CaptionMeta 中能做什么
+  template: standard-article
+  status: draft
+  evidence:
+  - core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt
+  - core/core_exif/src/test/java/com/wkq/util/exif/MetadataScrubberTest.kt
+  - doc/privacy_policy.html
+- contentId: batch-presets
+  title: 批量预设：在 CaptionMeta 中能做什么
+  template: standard-article
+  status: draft
+  evidence:
+  - core/core_exif/src/test/java/com/wkq/iptc/feature/press/model/MetadataTemplateWorkflowTest.kt
+  - feature/feature_app/src/test/java/com/wkq/iptc/feature/press/workflow/WorkflowResolverTest.kt
+  - feature/feature_app/src/main/res/values/strings.xml
+- contentId: photo-delivery
+  title: 照片交付队列：在 CaptionMeta 中能做什么
+  template: standard-article
+  status: draft
+  evidence:
+  - core/core_upload/src/main/java/com/wkq/iptc/upload/UploadDispatcher.kt
+  - core/core_upload/src/main/java/com/wkq/iptc/upload/http/RetryInterceptor.kt
+  - core/core_upload/consumer-rules.pro

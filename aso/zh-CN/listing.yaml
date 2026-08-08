@@ -1,0 +1,36 @@
+schemaVersion: '1.0'
+locale: zh-CN
+status: draft
+appName: CaptionMeta
+shortDescription: CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。
+fullDescription: '为摄影师、记者、图片机构和现场团队统一管理照片说明、关键词、署名、版权与交付流程。
+
+
+  IPTC、EXIF 与 XMP 编辑: 查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。 读取并检查支持的 EXIF、IPTC 和 XMP 元数据。
+  将说明、标题、关键词、署名、版权、权利和位置写入处理后的照片副本。 使用单张照片的值细化或覆盖批量值。
+
+
+  隐私元数据清理: 在分享处理后的照片副本前，检查并清理选定的 EXIF、IPTC 和 XMP 信息。 检查已跟踪的 EXIF、IPTC 和 XMP 元数据类别。
+  从处理后的照片副本中清理选定的隐私元数据。 将原始文件与清理后的输出流程分开处理。
+
+
+  批量预设: 复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。 创建并复用元数据模板或预设。 将批量值应用到多张选中的照片。 在单张照片需要不同说明或字段值时使用单张覆盖。
+
+
+  照片交付队列: 将处理后的照片加入队列，通过已配置的服务器完成交付并查看结果。 将处理后的照片加入交付队列。 支持已配置的 FTP、FTPS、SFTP、HTTP、SMB
+  和 WebDAV 客户端。 对部分临时 HTTP 失败进行重试，并保留上传任务结果供检查。
+
+
+  Google Play 地址确认后即可从这里前往下载。'
+characterCounts:
+  appName: 11
+  shortDescription: 63
+  fullDescription: 562
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []

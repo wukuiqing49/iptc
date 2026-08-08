@@ -1,0 +1,11 @@
+locale,page,primary_query,supporting_queries,intent,status
+zh-CN,/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+zh-CN,/features/metadata-editor/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+zh-CN,/features/privacy-cleanup/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+zh-CN,/features/batch-presets/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+zh-CN,/features/photo-delivery/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+en-US,/en-US/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+en-US,/en-US/features/iptc-exif-and-xmp-editing/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+en-US,/en-US/features/private-metadata-cleanup/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+en-US,/en-US/features/batch-presets/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+en-US,/en-US/features/photo-delivery-queue/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft

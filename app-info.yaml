@@ -1,0 +1,324 @@
+schemaVersion: "1.0"
+sourceProject: "C:\\work\\AI\\PressIPTC"
+analyzedAt: "2026-08-08"
+analysis:
+  status: "verified"
+  analyzerVersion: "1.0"
+  selectedModule: "app"
+  selectedVariant: "release"
+  validatedAt: "2026-08-08"
+  errors: []
+  warnings:
+    - "The project release build uses a repository test keystore; verify signing before publication."
+    - "The application manifest enables cleartext traffic; review transport policy before publication."
+
+name: "CaptionMeta"
+packageName: "com.wkq.caption"
+version:
+  name: "1.2.5"
+  code: "125"
+  minSdk: 24
+  targetSdk: 36
+developer:
+  name: "AndroidManTou"
+  email: "wukuiqing@gmail.com"
+
+category: "Photography"
+description:
+  short: "Edit IPTC, EXIF, and XMP photo metadata, clean private data, and prepare photo deliveries on Android."
+  full: "CaptionMeta is an Android photo metadata tool for photographers, journalists, agencies, and field teams. Review and edit IPTC, EXIF, and XMP fields, reuse metadata presets, clean private metadata, and prepare processed photo copies for delivery."
+  valueProposition: "Keep photo captions, credits, rights, keywords, and delivery metadata consistent from capture to handoff."
+targetUsers:
+  - "Photographers"
+  - "Photojournalists"
+  - "Photo agencies"
+  - "Field teams"
+  - "Documentary and event teams"
+useCases:
+  - "Prepare news and event photos with consistent captions and credits."
+  - "Apply reusable IPTC presets to a batch of local photos."
+  - "Review or clean private metadata before sharing a processed copy."
+  - "Send prepared photo files through a configured delivery server."
+
+features:
+  - id: "metadata-editor"
+    name: "IPTC, EXIF, and XMP metadata editing"
+    description: "Review and edit photo metadata fields before creating a processed photo copy."
+    evidence:
+      - "core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt"
+      - "core/core_exif/src/test/java/com/wkq/iptc/feature/press/metadata/IptcAndXmpVerificationTest.kt"
+      - "feature/feature_app/src/main/res/values/strings.xml"
+    confidence: "verified"
+    details:
+      problem: "Photo handoffs become inconsistent when captions, credits, rights, or keywords are edited differently for every image."
+      capabilities:
+        - "Read and inspect supported EXIF, IPTC, and XMP metadata."
+        - "Write captions, headlines, keywords, bylines, copyright, rights, and location fields into processed photo copies."
+        - "Use per-photo values to refine or override batch values where needed."
+      supportedInputs:
+        - "Local photo files selected from the Android device."
+      supportedOutputs:
+        - "Processed photo copies with the selected metadata fields written."
+      options:
+        - "IPTC core and extended fields, XMP fields, EXIF handling, and location values."
+      steps:
+        - "Select a local photo or a group of photos."
+        - "Choose a preset or enter metadata fields such as caption, headline, keywords, byline, and rights."
+        - "Review the result and save the processed copy for sharing or delivery."
+      limitations:
+        - "Available fields and write behavior depend on the selected file and the metadata fields enabled in the workflow."
+      searchIntents:
+        - "IPTC metadata editor for Android"
+        - "photo caption and keyword editor"
+        - "EXIF and XMP metadata editor"
+      faq:
+        - question: "Can CaptionMeta edit IPTC and XMP metadata on Android?"
+          answer: "Yes. The project contains IPTC and XMP writer and verification code for the photo metadata workflow."
+    blog:
+      template: "standard-article"
+
+  - id: "privacy-cleanup"
+    name: "Private metadata cleanup"
+    description: "Inspect and remove selected private EXIF, IPTC, and XMP metadata before sharing a processed copy."
+    evidence:
+      - "core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt"
+      - "core/core_exif/src/test/java/com/wkq/util/exif/MetadataScrubberTest.kt"
+      - "doc/privacy_policy.html"
+    confidence: "verified"
+    details:
+      problem: "A photo can carry location, camera, and other metadata that should not be included in every delivery."
+      capabilities:
+        - "Inspect tracked EXIF, IPTC, and XMP metadata categories."
+        - "Scrub selected private metadata from a processed photo copy."
+        - "Keep the original file separate from the cleaned output workflow."
+      supportedInputs:
+        - "Local photos containing EXIF, IPTC, or XMP metadata."
+      supportedOutputs:
+        - "A processed photo copy with the selected metadata removed."
+      options:
+        - "Location, camera, and other tracked metadata categories exposed by the cleanup workflow."
+      steps:
+        - "Select the photo to inspect."
+        - "Review the metadata categories available for cleanup."
+        - "Run cleanup and use the processed copy for the intended delivery."
+      limitations:
+        - "Cleanup is based on the metadata categories implemented by the current app version; review the output before publication."
+      searchIntents:
+        - "remove EXIF metadata Android"
+        - "photo metadata privacy cleaner"
+        - "clean GPS data from photos"
+      faq:
+        - question: "Does cleanup change my original photo?"
+          answer: "The documented workflow creates processed photo data for handling and delivery; review the saved result and keep your original source file as needed."
+    blog:
+      template: "standard-article"
+
+  - id: "batch-presets"
+    name: "Batch metadata presets"
+    description: "Reuse IPTC presets and apply shared metadata values across a group of photos."
+    evidence:
+      - "core/core_exif/src/test/java/com/wkq/iptc/feature/press/model/MetadataTemplateWorkflowTest.kt"
+      - "feature/feature_app/src/test/java/com/wkq/iptc/feature/press/workflow/WorkflowResolverTest.kt"
+      - "feature/feature_app/src/main/res/values/strings.xml"
+    confidence: "verified"
+    details:
+      problem: "Repeated photo assignments need consistent metadata without retyping the same fields for every image."
+      capabilities:
+        - "Create and reuse metadata templates or presets."
+        - "Apply batch values to multiple selected photos."
+        - "Use per-photo overrides when one image needs a different caption or field value."
+      supportedInputs:
+        - "A selected group of local photos and a saved metadata preset."
+      supportedOutputs:
+        - "A batch of processed photo copies with resolved metadata values."
+      options:
+        - "Preset fields, batch values, per-photo overrides, byline, location, and delivery settings."
+      steps:
+        - "Choose or create an IPTC preset."
+        - "Select the batch fields and photos to process."
+        - "Review per-photo overrides and write the resolved values to processed copies."
+      limitations:
+        - "A preset only affects the fields configured for that workflow; empty or disabled fields are not implied to contain data."
+      searchIntents:
+        - "batch IPTC metadata editor"
+        - "IPTC preset for photos"
+        - "bulk photo caption editor Android"
+      faq:
+        - question: "Can one photo override a batch metadata value?"
+          answer: "Yes. The workflow resolver tests cover per-photo values taking precedence over batch values for configured fields."
+    blog:
+      template: "standard-article"
+
+  - id: "photo-delivery"
+    name: "Photo delivery queue"
+    description: "Prepare processed photo files and send them through configured delivery protocols with queue and retry handling."
+    evidence:
+      - "core/core_upload/src/main/java/com/wkq/iptc/upload/UploadDispatcher.kt"
+      - "core/core_upload/src/main/java/com/wkq/iptc/upload/http/RetryInterceptor.kt"
+      - "core/core_upload/consumer-rules.pro"
+    confidence: "verified"
+    details:
+      problem: "Field photo delivery can fail when files, server settings, and retry state are managed in separate places."
+      capabilities:
+        - "Queue processed photo files for delivery."
+        - "Support configured FTP, FTPS, SFTP, HTTP, SMB, and WebDAV clients."
+        - "Retry selected transient HTTP failures and keep upload task results for review."
+      supportedInputs:
+        - "Processed local photo files and a configured delivery server profile."
+      supportedOutputs:
+        - "A queued upload task and its success or failure result."
+      options:
+        - "FTP, FTPS, SFTP, HTTP, SMB, and WebDAV server profiles."
+      steps:
+        - "Configure a delivery server profile."
+        - "Choose processed photos and add them to the upload queue."
+        - "Monitor the queue, retry eligible failures, and review history."
+      limitations:
+        - "Delivery requires a reachable server and credentials configured by the user; the app does not provide a hosted photo storage service."
+      searchIntents:
+        - "photo upload queue Android"
+        - "SFTP photo delivery app"
+        - "FTP WebDAV photo uploader"
+      faq:
+        - question: "Which delivery protocols are supported?"
+          answer: "The upload module contains clients and configuration models for FTP, FTPS, SFTP, HTTP, SMB, and WebDAV."
+    blog:
+      template: "standard-article"
+
+technicalHighlights:
+  - "Kotlin, XML layouts, and ViewBinding"
+  - "compileSdk and targetSdk 36; minSdk 24"
+  - "CameraX custom capture flow"
+  - "Room and WorkManager-backed processing and upload workflows"
+  - "Google Sign-In, Play Billing, and Firebase integrations"
+
+keywords:
+  primary:
+    - "IPTC metadata editor Android"
+    - "photo metadata editor"
+    - "EXIF editor Android"
+    - "photo caption editor"
+  secondary:
+    - "XMP metadata editor"
+    - "photo keywords"
+    - "remove EXIF metadata"
+    - "batch IPTC metadata"
+    - "SFTP photo delivery"
+    - "privacy clean photos"
+  branded:
+    - "CaptionMeta"
+    - "CaptionMeta IPTC"
+  excluded:
+    - "online photo metadata editor"
+    - "free unlimited storage"
+    - "guaranteed secure upload"
+
+brand:
+  productName: "CaptionMeta"
+  tagline: "Photo metadata, ready for the field."
+  voice:
+    - "Precise"
+    - "Practical"
+    - "Privacy-aware"
+  colors:
+    - "#1976D2"
+    - "#0D65B5"
+    - "#F5F9FF"
+  logo: "app-launch-system/config/assets/icon/captionmeta-icon.png"
+
+assets:
+  root: "app-launch-system/config/assets"
+  icon: "icon/captionmeta-icon.png"
+  coverImage: "screenshots/captionmeta-home.png"
+  socialImage: "screenshots/captionmeta-home.png"
+  screenshots:
+    - "screenshots/captionmeta-home.png"
+    - "screenshots/captionmeta-upload.png"
+
+languages:
+  source: "zh-CN"
+  targets:
+    - "en-US"
+  availableInApp:
+    - "en-US"
+    - "zh-CN"
+    - "zh-TW"
+    - "ja-JP"
+    - "ko-KR"
+    - "de-DE"
+    - "fr-FR"
+    - "es-419"
+    - "pt-PT"
+    - "it-IT"
+    - "ru-RU"
+    - "ar"
+  routing:
+    autoDetect: true
+    rememberSelection: true
+    sourceAtRoot: true
+    aliases:
+      zh: "zh-CN"
+      en: "en-US"
+
+screenshots:
+  - path: "screenshots/captionmeta-home.png"
+    locale: "zh-CN"
+    screen: "Capture home"
+    caption: "当前设备上的 CaptionMeta 拍摄首页"
+  - path: "screenshots/captionmeta-upload.png"
+    locale: "zh-CN"
+    screen: "Upload queue"
+    caption: "当前设备上的照片上传队列"
+
+googlePlayUrl: "https://play.google.com/store/apps/details?id=com.wkq.caption"
+websiteUrl: ""
+editorial:
+  publishedAt: ""
+  updatedAt: "2026-08-08"
+support:
+  email: "wukuiqing@gmail.com"
+  url: ""
+privacy:
+  policyUrl: ""
+  dataPractices:
+    - "Photos and metadata are processed by the Android app workflow on the device and may be sent to a server only when the user configures a delivery profile and starts delivery."
+    - "The app can request camera, location, and media access to support capture, GPS metadata, and photo selection workflows."
+    - "Google Sign-In, Play Billing, and Firebase services are integrated for account, purchase, and app operation features; review the full privacy policy before publication."
+
+permissions:
+  - "android.permission.CAMERA"
+  - "android.permission.ACCESS_FINE_LOCATION"
+  - "android.permission.ACCESS_COARSE_LOCATION"
+  - "android.permission.READ_MEDIA_IMAGES"
+  - "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+  - "android.permission.INTERNET"
+unknowns:
+  - "Public Google Play listing URL"
+  - "Production website domain"
+  - "Final release signing configuration"
+  - "Native review status for translated website copy"
+claimsToAvoid:
+  - "Guaranteed privacy or secure delivery"
+  - "Cloud storage provided by CaptionMeta"
+  - "Unlimited or free pricing claims"
+  - "Ratings, awards, customer counts, or market leadership"
+
+evidence:
+  - path: "app/src/main/AndroidManifest.xml"
+    supports:
+      - "Package-facing permissions and application entry point"
+  - path: "app/build.gradle"
+    supports:
+      - "Android SDK and release version configuration"
+  - path: "feature/feature_app/src/main/res/values/strings.xml"
+    supports:
+      - "User-visible IPTC, preset, batch, and upload terminology"
+  - path: "core/core_exif/src/test/java/com/wkq/iptc/feature/press/metadata/IptcAndXmpVerificationTest.kt"
+    supports:
+      - "IPTC and XMP writing and verification"
+  - path: "core/core_exif/src/test/java/com/wkq/util/exif/MetadataScrubberTest.kt"
+    supports:
+      - "Metadata cleanup behavior"
+  - path: "core/core_upload/src/main/java/com/wkq/iptc/upload/UploadDispatcher.kt"
+    supports:
+      - "Upload dispatch and delivery workflow"

@@ -1,0 +1,177 @@
+locale: "zh-CN"
+languageName: "简体中文"
+direction: "ltr"
+reviewStatus: "source"
+
+navigation:
+  primaryLabel: "主导航"
+  footerLabel: "页脚导航"
+  home: "首页"
+  features: "功能"
+  screenshots: "应用截图"
+  support: "支持"
+  privacy: "隐私"
+  about: "关于"
+  blog: "指南"
+  language: "语言"
+  backToApp: "返回应用首页"
+
+common:
+  skipToContent: "跳转到主要内容"
+  googlePlayCta: "前往 Google Play"
+  availability: "Google Play 链接待发布"
+  rights: "保留所有权利。"
+  notFoundTitle: "页面未找到"
+  notFoundCopy: "请求的页面不存在。"
+  returnHome: "返回首页"
+
+home:
+  pageTitle: "CaptionMeta - Android 照片元数据工具"
+  metaDescription: "CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。"
+  category: "Android 摄影工具"
+  tagline: "让照片元数据随时可交付。"
+  shortDescription: "为摄影师、记者、图片机构和现场团队统一管理照片说明、关键词、署名、版权与交付流程。"
+  fullDescription: "CaptionMeta 是面向 Android 的照片元数据工具。你可以查看和编辑 IPTC、EXIF、XMP 字段，复用元数据预设，清理隐私元数据，并将处理后的照片副本用于交付。"
+  heroScreenshotAlt: "CaptionMeta 拍摄首页真实截图"
+  heroScreenshotCaption: "当前设备上的 CaptionMeta 拍摄首页"
+  featuresHeading: "从拍摄到交付，围绕元数据工作"
+  featuresIntro: "以下能力来自当前 Android 项目源码、测试和已安装应用界面。"
+  features:
+    metadata-editor:
+      name: "IPTC、EXIF 与 XMP 编辑"
+      description: "查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。"
+    privacy-cleanup:
+      name: "隐私元数据清理"
+      description: "在分享处理后的照片副本前，检查并清理选定的 EXIF、IPTC 和 XMP 信息。"
+    batch-presets:
+      name: "批量预设"
+      description: "复用 IPTC 预设，将共同字段应用到一组照片，并保留单张照片覆盖能力。"
+    photo-delivery:
+      name: "照片交付队列"
+      description: "将处理后的照片加入队列，通过已配置的服务器完成交付并查看结果。"
+  screenshotsHeading: "查看应用界面"
+  screenshotsIntro: "来自当前连接设备上已安装应用的真实截图。"
+  workflowHeading: "适合移动照片工作流"
+  workflowIntro: "把重复的元数据填写、隐私检查和文件交付集中在同一套 Android 工具中。"
+  workflowSteps:
+    - "拍摄或从本地相册选择照片。"
+    - "选择预设并填写说明、关键词、署名和权利字段。"
+    - "批量处理，必要时为单张照片覆盖字段。"
+    - "检查处理结果，再加入交付队列。"
+  closingHeading: "准备好整理下一组照片了吗？"
+  closingCopy: "Google Play 地址确认后即可从这里前往下载。"
+
+featureDetails:
+  metadata-editor:
+    problem: "当每张照片的说明、署名、权利或关键词都被单独编辑时，交付内容容易不一致。"
+    capabilities:
+      - "读取并检查支持的 EXIF、IPTC 和 XMP 元数据。"
+      - "将说明、标题、关键词、署名、版权、权利和位置写入处理后的照片副本。"
+      - "使用单张照片的值细化或覆盖批量值。"
+    supportedInputs:
+      - "从 Android 设备选择的本地照片文件。"
+    supportedOutputs:
+      - "写入所选元数据字段的处理后照片副本。"
+    options:
+      - "IPTC 核心与扩展字段、XMP 字段、EXIF 处理和位置值。"
+    steps:
+      - "选择一张或一组本地照片。"
+      - "选择预设，或填写说明、标题、关键词、署名和权利字段。"
+      - "检查结果并保存处理后的副本，用于分享或交付。"
+    limitations:
+      - "可用字段和写入行为取决于所选文件以及工作流中启用的元数据字段。"
+    faq:
+      - question: "CaptionMeta 能在 Android 上编辑 IPTC 和 XMP 吗？"
+        answer: "可以。项目中包含 IPTC 和 XMP 写入器及验证测试，用于当前照片元数据工作流。"
+  privacy-cleanup:
+    problem: "照片可能携带位置、相机和其他元数据，而这些信息并不适合出现在每一次交付中。"
+    capabilities:
+      - "检查已跟踪的 EXIF、IPTC 和 XMP 元数据类别。"
+      - "从处理后的照片副本中清理选定的隐私元数据。"
+      - "将原始文件与清理后的输出流程分开处理。"
+    supportedInputs:
+      - "包含 EXIF、IPTC 或 XMP 元数据的本地照片。"
+    supportedOutputs:
+      - "移除选定元数据后的处理照片副本。"
+    options:
+      - "工作流中提供的位置、相机和其他已跟踪元数据类别。"
+    steps:
+      - "选择要检查的照片。"
+      - "查看可清理的元数据类别。"
+      - "执行清理，并将处理后的副本用于交付。"
+    limitations:
+      - "清理范围基于当前版本实现的元数据类别；发布前请检查输出结果。"
+    faq:
+      - question: "清理会修改我的原始照片吗？"
+        answer: "文档描述的是处理照片数据并用于交付的流程；请按需要保留原始文件并检查保存的结果。"
+  batch-presets:
+    problem: "重复处理一批照片时，如果每次都重新输入相同字段，就很难保持一致。"
+    capabilities:
+      - "创建并复用元数据模板或预设。"
+      - "将批量值应用到多张选中的照片。"
+      - "在单张照片需要不同说明或字段值时使用单张覆盖。"
+    supportedInputs:
+      - "一组本地照片和一个已保存的元数据预设。"
+    supportedOutputs:
+      - "带有解析后元数据值的一组处理照片副本。"
+    options:
+      - "预设字段、批量值、单张覆盖、署名、位置和交付设置。"
+    steps:
+      - "选择或创建 IPTC 预设。"
+      - "选择批量字段和要处理的照片。"
+      - "检查单张覆盖值，并将最终值写入处理后的副本。"
+    limitations:
+      - "预设只影响该工作流配置的字段；空字段或停用字段不会被推断为有值。"
+    faq:
+      - question: "单张照片可以覆盖批量元数据吗？"
+        answer: "可以。工作流解析器测试覆盖了单张照片值优先于批量值的行为。"
+  photo-delivery:
+    problem: "现场照片交付容易受到文件、服务器设置和失败重试状态分散管理的影响。"
+    capabilities:
+      - "将处理后的照片加入交付队列。"
+      - "支持已配置的 FTP、FTPS、SFTP、HTTP、SMB 和 WebDAV 客户端。"
+      - "对部分临时 HTTP 失败进行重试，并保留上传任务结果供检查。"
+    supportedInputs:
+      - "处理后的本地照片和已配置的交付服务器配置。"
+    supportedOutputs:
+      - "上传队列任务及其成功或失败结果。"
+    options:
+      - "FTP、FTPS、SFTP、HTTP、SMB 和 WebDAV 服务器配置。"
+    steps:
+      - "配置交付服务器。"
+      - "选择处理后的照片并加入上传队列。"
+      - "查看队列、重试符合条件的失败任务，并检查历史记录。"
+    limitations:
+      - "交付需要用户配置的可访问服务器和凭据；应用不提供托管照片存储服务。"
+    faq:
+      - question: "支持哪些照片交付协议？"
+        answer: "上传模块包含 FTP、FTPS、SFTP、HTTP、SMB 和 WebDAV 的客户端与配置模型。"
+
+privacy:
+  pageTitle: "隐私 - CaptionMeta"
+  metaDescription: "CaptionMeta 的照片、元数据、位置权限和第三方服务处理说明。"
+  heading: "隐私说明"
+  lastUpdatedLabel: "最后更新"
+  content:
+    - heading: "数据处理范围"
+      paragraphs:
+        - "CaptionMeta 在 Android 工作流中处理照片和元数据。只有当用户配置交付配置并启动交付时，处理后的文件才会发送到用户指定的服务器。"
+        - "应用可能请求相机、位置和媒体访问权限，以支持拍摄、GPS 元数据和照片选择流程。"
+    - heading: "第三方服务"
+      paragraphs:
+        - "项目集成 Google 登录、Google Play Billing 和 Firebase，用于账户、购买和应用运行相关能力。正式发布前请核对完整隐私政策和商店数据安全申报。"
+
+support:
+  pageTitle: "支持 - CaptionMeta"
+  metaDescription: "获取 CaptionMeta 的版本信息、功能说明和支持联系方式。"
+  heading: "支持"
+  intro: "查看 CaptionMeta 的功能说明，或通过开发者邮箱联系支持团队。"
+  faqHeading: "常见问题"
+  faq:
+    - question: "CaptionMeta 支持哪些系统？"
+      answer: "当前项目的 minSdk 为 24，目标 SDK 为 36。"
+    - question: "Google Play 下载链接在哪里？"
+      answer: "正式商店地址尚未在项目官网配置中确认，页面会在确认后更新。"
+  contactHeading: "联系支持"
+  contactCopy: "如需帮助、反馈元数据处理问题或询问发布信息，请发送邮件给开发者。"
+  contactCta: "发送邮件"

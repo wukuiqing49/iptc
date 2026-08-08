@@ -1,0 +1,10 @@
+schemaVersion: '1.0'
+locales:
+- locale: zh-CN
+  status: source
+  listingValid: true
+  screenshotReviewRequired: false
+- locale: en-US
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true

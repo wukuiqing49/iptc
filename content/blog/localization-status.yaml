@@ -1,0 +1,6 @@
+sourceLocale: zh-CN
+locales:
+- locale: zh-CN
+  status: source
+- locale: en-US
+  status: machine-draft

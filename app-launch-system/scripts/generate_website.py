@@ -685,9 +685,9 @@ def esc(value: object) -> str:
 
 VIDEO_LABELS = {
     "en": {
-        "heading": "Watch the SiteReport walkthrough",
-        "intro": "See how SiteReport turns field inspection evidence into a shareable report.",
-        "title": "SiteReport video walkthrough",
+        "heading": "Watch the app walkthrough",
+        "intro": "See how the app supports the photo metadata workflow.",
+        "title": "App video walkthrough",
         "link": "Watch on YouTube",
     },
     "zh": {
@@ -827,12 +827,10 @@ def render_overview_section(content: dict, locale: str) -> str:
 
 
 def seo_primary_query(locale: str, app: dict) -> str:
-    language = locale.split("-")[0].lower()
-    return str(
-        SEO_PRIMARY_QUERIES.get(language)
-        or nested(app, "keywords.primary.0", "")
-        or nested(app, "name", "")
-    )
+    primary = nested(app, "keywords.primary", []) or []
+    if isinstance(primary, list) and primary:
+        return str(primary[0])
+    return str(nested(app, "name", ""))
 
 
 def render_template(name: str, values: dict[str, str]) -> str:

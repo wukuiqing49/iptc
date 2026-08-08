@@ -1,0 +1,48 @@
+schemaVersion: '1.0'
+locale: en-US
+status: draft
+appName: CaptionMeta
+shortDescription: CaptionMeta
+fullDescription: 'Keep captions, keywords, credits, rights, and delivery workflows
+  consistent for photography teams on Android.
+
+
+  IPTC, EXIF, and XMP editing: Review and edit captions, headlines, keywords, bylines,
+  copyright, rights, and location metadata. Read and inspect supported EXIF, IPTC,
+  and XMP metadata. Write captions, headlines, keywords, bylines, copyright, rights,
+  and location fields into processed photo copies. Use per-photo values to refine
+  or override batch values.
+
+
+  Private metadata cleanup: Inspect and clean selected EXIF, IPTC, and XMP data before
+  sharing a processed photo copy. Inspect tracked EXIF, IPTC, and XMP metadata categories.
+  Scrub selected private metadata from a processed photo copy. Keep the original file
+  separate from the cleaned output workflow.
+
+
+  Batch presets: Reuse IPTC presets across a group of photos while retaining per-photo
+  overrides. Create and reuse metadata templates or presets. Apply batch values to
+  multiple selected photos. Use per-photo overrides when one image needs a different
+  caption or field value.
+
+
+  Photo delivery queue: Queue processed photos, deliver them through configured servers,
+  and review task results. Queue processed photo files for delivery. Support configured
+  FTP, FTPS, SFTP, HTTP, SMB, and WebDAV clients. Retry selected transient HTTP failures
+  and keep upload task results for review.
+
+
+  The download call to action will link to Google Play once the public listing is
+  confirmed.'
+characterCounts:
+  appName: 11
+  shortDescription: 11
+  fullDescription: 1435
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []
