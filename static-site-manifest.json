@@ -4,6 +4,7 @@
   "files": [
     "404.html",
     "_headers",
+    "_worker.js",
     "about.html",
     "assets/app.js",
     "assets/blog.css",
@@ -39,6 +40,7 @@
     "features/metadata-editor/index.html",
     "features/photo-delivery/index.html",
     "features/privacy-cleanup/index.html",
+    "google939576fea7c9232c.html",
     "index.html",
     "localization-status.yaml",
     "privacy.html",

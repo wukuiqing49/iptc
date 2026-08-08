@@ -273,6 +273,9 @@ screenshots:
 googlePlayUrl: "https://play.google.com/store/apps/details?id=com.wkq.caption"
 websiteUrl: "https://iptc.pages.dev/"
 videoUrl: "https://www.youtube.com/watch?v=9OyA3yWH864"
+searchConsole:
+  verificationFileName: "google939576fea7c9232c.html"
+  verificationContent: "google-site-verification: google939576fea7c9232c.html"
 editorial:
   publishedAt: ""
   updatedAt: "2026-08-08"
