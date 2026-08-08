@@ -1,0 +1,47 @@
+schemaVersion: '1.0'
+locale: es-419
+status: draft
+appName: CaptionMeta
+shortDescription: CaptionMeta
+fullDescription: 'Mantén consistentes los pies de foto, palabras clave, créditos,
+  derechos y flujos de entrega de equipos fotográficos en Android.
+
+
+  Edición IPTC, EXIF y XMP: Revisa y edita pies de foto, titulares, palabras clave,
+  autores, copyright, derechos y ubicación. Leer e inspeccionar metadatos EXIF, IPTC
+  y XMP compatibles Escribir pies de foto, titulares, palabras clave, autores, copyright,
+  derechos y ubicación en copias procesadas Usar valores por foto para ajustar o reemplazar
+  valores del lote
+
+
+  Limpieza de metadatos privados: Inspecciona y limpia datos EXIF, IPTC y XMP seleccionados
+  antes de compartir una copia procesada. Inspeccionar categorías de metadatos EXIF,
+  IPTC y XMP registradas Eliminar metadatos privados seleccionados de una copia procesada
+  Mantener separado el archivo original del flujo de salida limpio
+
+
+  Ajustes preestablecidos por lote: Reutiliza ajustes IPTC en un grupo de fotos y
+  conserva las modificaciones individuales. Crear y reutilizar plantillas o ajustes
+  de metadatos Aplicar valores por lote a varias fotos seleccionadas Usar modificaciones
+  por foto cuando una imagen necesita otro pie de foto o campo
+
+
+  Cola de entrega de fotos: Pon fotos procesadas en cola, entrégalas mediante servidores
+  configurados y revisa los resultados. Poner archivos procesados en una cola de entrega
+  Usar clientes configurados de FTP, FTPS, SFTP, HTTP, SMB y WebDAV Reintentar algunos
+  fallos HTTP temporales y conservar los resultados de las tareas
+
+
+  Cuando se confirme la ficha pública de la tienda, este enlace llevará a Google Play.'
+characterCounts:
+  appName: 11
+  shortDescription: 11
+  fullDescription: 1537
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []

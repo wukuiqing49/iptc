@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko-KR" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPTC, EXIF, XMP 편집: what it does in CaptionMeta - CaptionMeta</title>
+  <meta name="description" content="캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다. Learn the exact problem, options, verified steps, and known limitations.">
+  <meta name="theme-color" content="#1976D2">
+  <link rel="canonical" href="https://iptc.pages.dev/blog/ko-KR/iptc-exif-xmp-편집/">
+  <link rel="alternate" hreflang="zh-CN" href="https://iptc.pages.dev/blog/metadata-editor/">
+  <link rel="alternate" hreflang="en-US" href="https://iptc.pages.dev/blog/en-US/iptc-exif-and-xmp-editing/">
+  <link rel="alternate" hreflang="ja-JP" href="https://iptc.pages.dev/blog/ja-JP/iptc-exif-xmpの編集/">
+  <link rel="alternate" hreflang="ko-KR" href="https://iptc.pages.dev/blog/ko-KR/iptc-exif-xmp-편집/">
+  <link rel="alternate" hreflang="de-DE" href="https://iptc.pages.dev/blog/de-DE/iptc-exif-und-xmp-bearbeitung/">
+  <link rel="alternate" hreflang="fr-FR" href="https://iptc.pages.dev/blog/fr-FR/modification-iptc-exif-et-xmp/">
+  <link rel="alternate" hreflang="es-419" href="https://iptc.pages.dev/blog/es-419/edición-iptc-exif-y-xmp/">
+  <link rel="alternate" hreflang="pt-PT" href="https://iptc.pages.dev/blog/pt-PT/edição-iptc-exif-e-xmp/">
+  <link rel="alternate" hreflang="it-IT" href="https://iptc.pages.dev/blog/it-IT/modifica-iptc-exif-e-xmp/">
+  <link rel="alternate" hreflang="ru-RU" href="https://iptc.pages.dev/blog/ru-RU/редактирование-iptc-exif-и-xmp/">
+  <link rel="alternate" hreflang="ar" href="https://iptc.pages.dev/blog/ar/تحرير-iptc-وexif-وxmp/">
+  <link rel="alternate" hreflang="x-default" href="https://iptc.pages.dev/blog/metadata-editor/">
+  
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <link rel="stylesheet" href="../../../assets/blog.css">
+  
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"ko-KR","autoRedirect":false,"rememberSelection":true,"defaultLocale":"en-US","storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US","ja":"ja-JP","ko":"ko-KR","de":"de-DE","fr":"fr-FR","es":"es-419","pt":"pt-PT","it":"it-IT","ru":"ru-RU","ar":"ar"},"locales":[{"code":"zh-CN","url":"https://iptc.pages.dev/blog/metadata-editor/"},{"code":"en-US","url":"https://iptc.pages.dev/blog/en-US/iptc-exif-and-xmp-editing/"},{"code":"ja-JP","url":"https://iptc.pages.dev/blog/ja-JP/iptc-exif-xmpの編集/"},{"code":"ko-KR","url":"https://iptc.pages.dev/blog/ko-KR/iptc-exif-xmp-편집/"},{"code":"de-DE","url":"https://iptc.pages.dev/blog/de-DE/iptc-exif-und-xmp-bearbeitung/"},{"code":"fr-FR","url":"https://iptc.pages.dev/blog/fr-FR/modification-iptc-exif-et-xmp/"},{"code":"es-419","url":"https://iptc.pages.dev/blog/es-419/edición-iptc-exif-y-xmp/"},{"code":"pt-PT","url":"https://iptc.pages.dev/blog/pt-PT/edição-iptc-exif-e-xmp/"},{"code":"it-IT","url":"https://iptc.pages.dev/blog/it-IT/modifica-iptc-exif-e-xmp/"},{"code":"ru-RU","url":"https://iptc.pages.dev/blog/ru-RU/редактирование-iptc-exif-и-xmp/"},{"code":"ar","url":"https://iptc.pages.dev/blog/ar/تحرير-iptc-وexif-وxmp/"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="blog-page article-page">
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <a class="brand" href="../../../ko-KR/" aria-label="CaptionMeta">
+      <img src="../../../assets/icon.png" alt="" width="40" height="40">
+      <span>CaptionMeta</span>
+    </a>
+    <nav aria-label="기본 탐색">
+      <a href="../../../ko-KR/">홈</a>
+      <a href="../" aria-current="page">가이드</a>
+      <a href="../../../ko-KR/about.html">회사 정보</a>
+      <a href="../../../ko-KR/support.html">지원</a>
+      <label class="language-picker"><span class="visually-hidden">언어</span><select data-locale-switcher aria-label="언어"><option value="zh-CN">简体中文</option><option value="en-US">English</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="de-DE">Deutsch</option><option value="fr-FR">Français</option><option value="es-419">Español (Latinoamérica)</option><option value="pt-PT">Português (Portugal)</option><option value="it-IT">Italiano</option><option value="ru-RU">Русский</option><option value="ar">العربية</option></select></label>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="article-header">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../../ko-KR/">홈</a><span aria-hidden="true">/</span><a href="../">가이드</a></nav>
+        <p class="article-kicker">Feature guide</p>
+        <h1>IPTC, EXIF, XMP 편집: what it does in CaptionMeta</h1>
+        <p class="article-dek">캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다. Learn the exact problem, options, verified steps, and known limitations.</p>
+        <div class="article-meta">Publisher 上海促动科技有限公司</div>
+      </header>
+
+      <figure class="article-hero"><img src="../../../assets/screenshots/02-captionmeta-upload.png" alt="IPTC, EXIF, XMP 편집: what it does in CaptionMeta" loading="eager"><figcaption>캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.</figcaption></figure>
+
+      <div class="article-layout">
+        <aside class="article-toc" aria-label="On this page">
+          <p>On this page</p>
+          <nav><a href="#what">What this feature helps you do</a><a href="#workflow">Where it fits in the workflow</a><a href="#review">What to check before export</a><a href="#limitations">What to keep in mind</a></nav>
+        </aside>
+        <div class="article-body">
+          <p>사진마다 캡션, 크레딧, 권리 또는 키워드를 다르게 편집하면 전달 내용이 일관되지 않을 수 있습니다.</p><section id="what"><h2>What this feature helps you do</h2><ul><li>지원되는 EXIF, IPTC, XMP 메타데이터를 읽고 확인하기</li><li>캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 필드를 처리한 사진 사본에 쓰기</li><li>사진별 값으로 일괄 값을 세밀하게 조정하거나 재정의하기</li></ul></section><section id="workflow"><h2>Where it fits in the workflow</h2><ol><li>사진 한 장 또는 여러 장을 선택합니다</li><li>프리셋을 선택하거나 캡션, 제목, 키워드, 작성자와 권리 정보를 입력합니다</li><li>결과를 확인하고 처리된 사본을 저장합니다</li></ol></section><section id="review"><h2>What to check before export</h2><ul><li>IPTC 기본·확장 필드, XMP 필드, EXIF 처리와 위치 값</li></ul></section><section id="limitations"><h2>What to keep in mind</h2><ul><li>사용 가능한 필드와 기록 동작은 선택한 파일과 작업 흐름에서 활성화한 필드에 따라 달라집니다.</li></ul></section>
+        </div>
+      </div>
+    </article>
+
+    <section class="related-band" aria-labelledby="related-title">
+      <div class="related-heading">
+        <h2 id="related-title">Related features</h2>
+        <a class="text-link" href="../">View all articles <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="article-grid article-grid-compact">
+        <article class="article-card"><div class="article-card-content"><p class="article-kicker">Feature guide</p><h3><a href="../비공개-메타데이터-정리/">비공개 메타데이터 정리: what it does in CaptionMeta</a></h3><p>사진 사본을 공유하기 전에 선택한 EXIF, IPTC, XMP 데이터를 확인하고 삭제합니다. Learn the exact problem, options, verified steps, and known limitations.</p></div></article><article class="article-card"><div class="article-card-content"><p class="article-kicker">Feature guide</p><h3><a href="../일괄-프리셋/">일괄 프리셋: what it does in CaptionMeta</a></h3><p>여러 사진에 IPTC 프리셋을 재사용하면서 사진별 재정의도 유지합니다. Learn the exact problem, options, verified steps, and known limitations.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. All rights reserved.</p>
+    <nav aria-label="푸터 탐색">
+      <a href="../">가이드</a>
+      <a href="../../../ko-KR/privacy.html">개인정보</a>
+      <a href="../../../ko-KR/about.html">회사 정보</a>
+      <a href="../../../ko-KR/support.html">지원</a>
+    </nav>
+  </footer>
+  <script src="../../../assets/blog.js" defer></script>
+</body>
+</html>

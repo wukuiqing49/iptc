@@ -1,0 +1,38 @@
+schemaVersion: '1.0'
+locale: ko-KR
+status: draft
+appName: CaptionMeta
+shortDescription: Android에서 IPTC, EXIF, XMP 사진 메타데이터를 편집하고 비공개 데이터를 정리해 사진을 전달하세요.
+fullDescription: 'Android에서 사진 팀의 캡션, 키워드, 크레딧, 권리 정보와 전달 작업을 일관되게 관리합니다.
+
+
+  IPTC, EXIF, XMP 편집: 캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다. 지원되는 EXIF,
+  IPTC, XMP 메타데이터를 읽고 확인하기 캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 필드를 처리한 사진 사본에 쓰기 사진별 값으로
+  일괄 값을 세밀하게 조정하거나 재정의하기
+
+
+  비공개 메타데이터 정리: 사진 사본을 공유하기 전에 선택한 EXIF, IPTC, XMP 데이터를 확인하고 삭제합니다. 추적되는 EXIF, IPTC,
+  XMP 메타데이터 범주를 확인하기 처리된 사진 사본에서 선택한 비공개 메타데이터를 제거하기 원본 파일과 정리된 출력 흐름을 분리하기
+
+
+  일괄 프리셋: 여러 사진에 IPTC 프리셋을 재사용하면서 사진별 재정의도 유지합니다. 메타데이터 템플릿 또는 프리셋을 만들어 재사용하기 선택한
+  여러 사진에 일괄 값을 적용하기 한 사진에 다른 캡션이나 필드 값이 필요할 때 사진별로 재정의하기
+
+
+  사진 전달 대기열: 처리한 사진을 대기열에 넣고 설정된 서버로 전달한 뒤 결과를 확인합니다. 처리된 사진 파일을 전달 대기열에 넣기 설정된 FTP,
+  FTPS, SFTP, HTTP, SMB와 WebDAV 클라이언트 사용하기 일부 일시적 HTTP 실패를 재시도하고 업로드 결과를 확인하기
+
+
+  공개 스토어가 확인되면 이 페이지에서 Google Play로 이동할 수 있습니다.'
+characterCounts:
+  appName: 11
+  shortDescription: 64
+  fullDescription: 741
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []

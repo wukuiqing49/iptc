@@ -8,3 +8,39 @@ locales:
   status: machine-draft
   reviewer: ''
   reviewedAt: ''
+- locale: ja-JP
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: ko-KR
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: de-DE
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: fr-FR
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: es-419
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: pt-PT
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: it-IT
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: ru-RU
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''
+- locale: ar
+  status: machine-draft
+  reviewer: ''
+  reviewedAt: ''

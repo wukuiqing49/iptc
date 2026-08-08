@@ -1,0 +1,118 @@
+locale: "pt-PT"
+languageName: "Português (Portugal)"
+direction: "ltr"
+reviewStatus: "machine-draft"
+
+navigation:
+  primaryLabel: "Navegação principal"
+  footerLabel: "Navegação do rodapé"
+  home: "Início"
+  features: "Funcionalidades"
+  screenshots: "Capturas de ecrã"
+  support: "Suporte"
+  privacy: "Privacidade"
+  about: "Empresa"
+  blog: "Guias"
+  language: "Idioma"
+  backToApp: "Voltar à aplicação"
+
+common:
+  skipToContent: "Saltar para o conteúdo"
+  googlePlayCta: "Obter no Google Play"
+  availability: "A ligação do Google Play estará disponível em breve"
+  rights: "Todos os direitos reservados."
+  notFoundTitle: "Página não encontrada"
+  notFoundCopy: "A página pedida não existe."
+  returnHome: "Voltar ao início"
+
+home:
+  pageTitle: "CaptionMeta - Ferramenta de metadados fotográficos para Android"
+  metaDescription: "Edite metadados IPTC, EXIF e XMP no Android, limpe dados privados e prepare fotografias para entrega."
+  category: "Ferramenta de fotografia para Android"
+  tagline: "Metadados fotográficos prontos para o terreno."
+  shortDescription: "Mantenha legendas, palavras-chave, créditos, direitos e fluxos de entrega consistentes para equipas de fotografia no Android."
+  fullDescription: "CaptionMeta é uma ferramenta Android para metadados fotográficos. Reveja e edite campos IPTC, EXIF e XMP, reutilize predefinições, limpe metadados privados e prepare cópias processadas para entrega."
+  heroScreenshotAlt: "Ecrã real da aplicação CaptionMeta"
+  heroScreenshotCaption: "Interface real do CaptionMeta num dispositivo ligado"
+  featuresHeading: "Um fluxo de metadados da captura à entrega"
+  featuresIntro: "Estas capacidades baseiam-se no código-fonte Android, nos testes e nos ecrãs da aplicação atual."
+  features:
+    metadata-editor: {name: "Edição IPTC, EXIF e XMP", description: "Reveja e edite legendas, títulos, palavras-chave, autores, direitos de autor, direitos e localização."}
+    privacy-cleanup: {name: "Limpeza de metadados privados", description: "Inspecione e limpe dados EXIF, IPTC e XMP selecionados antes de partilhar uma cópia processada."}
+    batch-presets: {name: "Predefinições em lote", description: "Reutilize predefinições IPTC num grupo de fotografias mantendo substituições por fotografia."}
+    photo-delivery: {name: "Fila de entrega de fotografias", description: "Coloque fotografias processadas em fila, envie-as através de servidores configurados e reveja os resultados."}
+  screenshotsHeading: "Veja a aplicação"
+  screenshotsIntro: "Ecrãs reais capturados da aplicação instalada num dispositivo Android ligado."
+  workflowHeading: "Encaixa num fluxo fotográfico móvel"
+  workflowIntro: "Reúna a introdução repetida de metadados, as verificações de privacidade e a entrega de ficheiros numa ferramenta Android."
+  workflowSteps:
+    - "Capture uma fotografia ou selecione imagens locais."
+    - "Escolha uma predefinição e preencha legendas, palavras-chave, créditos e direitos."
+    - "Processe o lote, com substituições por fotografia quando necessário."
+    - "Reveja o resultado e adicione os ficheiros processados à fila de entrega."
+  closingHeading: "Pronto para preparar o próximo conjunto de fotografias?"
+  closingCopy: "Quando a ficha pública da loja estiver confirmada, esta ação abrirá o Google Play."
+
+featureDetails:
+  metadata-editor:
+    problem: "As entregas tornam-se inconsistentes quando legendas, créditos, direitos ou palavras-chave são editados de forma diferente para cada imagem."
+    capabilities: ["Ler e inspecionar metadados EXIF, IPTC e XMP suportados", "Escrever legendas, títulos, palavras-chave, autores, direitos de autor, direitos e localização em cópias processadas", "Usar valores por fotografia para ajustar ou substituir valores de lote"]
+    supportedInputs: ["Ficheiros fotográficos locais selecionados no dispositivo Android"]
+    supportedOutputs: ["Cópias fotográficas processadas com os campos de metadados selecionados"]
+    options: ["Campos IPTC principais e alargados, campos XMP, tratamento EXIF e valores de localização"]
+    steps: ["Selecione uma fotografia ou um grupo de fotografias locais", "Escolha uma predefinição ou introduza legendas, títulos, palavras-chave, autor e direitos", "Reveja o resultado e guarde a cópia processada"]
+    limitations: ["Os campos disponíveis e o comportamento de escrita dependem do ficheiro selecionado e dos campos ativados no fluxo."]
+    faq: [{question: "O CaptionMeta pode editar metadados IPTC e XMP no Android?", answer: "Sim. O projeto contém escrita IPTC e XMP e testes de verificação para o fluxo atual de metadados fotográficos."}]
+  privacy-cleanup:
+    problem: "Uma fotografia pode conter localização, câmara e outros metadados que não devem ser incluídos em todas as entregas."
+    capabilities: ["Inspecionar categorias de metadados EXIF, IPTC e XMP acompanhadas", "Remover metadados privados selecionados de uma cópia processada", "Manter o ficheiro original separado do fluxo de saída limpo"]
+    supportedInputs: ["Fotografias locais com metadados EXIF, IPTC ou XMP"]
+    supportedOutputs: ["Cópia fotográfica processada sem os metadados selecionados"]
+    options: ["Categorias de localização, câmara e outros metadados acompanhados pelo fluxo de limpeza"]
+    steps: ["Selecione a fotografia a inspecionar", "Reveja as categorias disponíveis para limpeza", "Execute a limpeza e use a cópia na entrega"]
+    limitations: ["A limpeza baseia-se nas categorias implementadas na versão atual; reveja o resultado antes da publicação."]
+    faq: [{question: "A limpeza altera a fotografia original?", answer: "O fluxo documentado cria dados fotográficos processados para gestão e entrega. Guarde o original se necessário e reveja o resultado guardado."}]
+  batch-presets:
+    problem: "As tarefas repetidas precisam de metadados consistentes sem voltar a introduzir os mesmos campos para cada fotografia."
+    capabilities: ["Criar e reutilizar modelos ou predefinições de metadados", "Aplicar valores de lote a várias fotografias selecionadas", "Usar substituições por fotografia quando uma imagem precisa de outra legenda ou campo"]
+    supportedInputs: ["Um grupo de fotografias locais selecionadas e uma predefinição guardada"]
+    supportedOutputs: ["Um conjunto de cópias processadas com valores de metadados resolvidos"]
+    options: ["Campos da predefinição, valores de lote, substituições por fotografia, autor, localização e definições de entrega"]
+    steps: ["Escolha ou crie uma predefinição IPTC", "Selecione os campos e fotografias a processar", "Reveja as substituições e escreva os valores finais"]
+    limitations: ["Uma predefinição só afeta os campos configurados para esse fluxo; campos vazios ou desativados não são considerados preenchidos."]
+    faq: [{question: "Uma fotografia pode substituir um valor de metadados do lote?", answer: "Sim. Os testes do resolvedor do fluxo cobrem a prioridade dos valores por fotografia sobre os valores de lote configurados."}]
+  photo-delivery:
+    problem: "A entrega de fotografias no terreno pode falhar quando ficheiros, servidores e estado de repetição são geridos separadamente."
+    capabilities: ["Colocar ficheiros processados numa fila de entrega", "Suportar clientes configurados de FTP, FTPS, SFTP, HTTP, SMB e WebDAV", "Repetir algumas falhas HTTP temporárias e guardar resultados das tarefas"]
+    supportedInputs: ["Ficheiros fotográficos locais processados e perfil de servidor configurado"]
+    supportedOutputs: ["Tarefa de carregamento em fila com resultado de sucesso ou falha"]
+    options: ["Perfis de servidor FTP, FTPS, SFTP, HTTP, SMB e WebDAV"]
+    steps: ["Configure um perfil de servidor de entrega", "Escolha fotografias processadas e adicione-as à fila", "Monitorize a fila, repita falhas elegíveis e reveja o histórico"]
+    limitations: ["A entrega requer um servidor acessível e credenciais configuradas pelo utilizador. A aplicação não fornece armazenamento fotográfico alojado."]
+    faq: [{question: "Que protocolos de entrega são suportados?", answer: "O módulo de carregamento inclui clientes e modelos de configuração para FTP, FTPS, SFTP, HTTP, SMB e WebDAV."}]
+
+privacy:
+  pageTitle: "Privacidade - CaptionMeta"
+  metaDescription: "Como o CaptionMeta trata fotografias, metadados, permissões de localização e serviços integrados."
+  heading: "Privacidade"
+  lastUpdatedLabel: "Última atualização"
+  content:
+    - heading: "Práticas de dados"
+      paragraphs: ["O CaptionMeta processa fotografias e metadados através do fluxo Android. Os ficheiros processados só podem ser enviados para um servidor configurado pelo utilizador quando a entrega é configurada e iniciada.", "A aplicação pode pedir acesso à câmara, localização e multimédia para captura, metadados GPS e seleção de fotografias."]
+    - heading: "Serviços integrados"
+      paragraphs: ["O projeto integra Google Sign-In, Google Play Billing e Firebase para conta, compras e funcionamento da aplicação. Reveja a política completa e a declaração de segurança de dados antes da publicação."]
+
+support:
+  pageTitle: "Suporte - CaptionMeta"
+  metaDescription: "Informações de versão, orientação das funcionalidades e contacto de suporte do CaptionMeta."
+  heading: "Suporte"
+  intro: "Leia a orientação das funcionalidades ou contacte o programador para obter ajuda com o CaptionMeta."
+  faqHeading: "Perguntas frequentes"
+  faq:
+    - question: "Que versões do Android são suportadas?"
+      answer: "O projeto atual define minSdk como 24 e targetSdk como 36."
+    - question: "Onde está a ligação de transferência do Google Play?"
+      answer: "O URL público da loja está registado na configuração do site."
+  contactHeading: "Contactar o suporte"
+  contactCopy: "Para obter ajuda ou enviar comentários sobre o fluxo de metadados, envie um e-mail ao programador."
+  contactCta: "Enviar e-mail ao suporte"

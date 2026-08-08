@@ -1021,6 +1021,56 @@ def feature_page_path(locale: str, source: str, slug: str) -> str:
 
 
 def feature_labels(locale: str) -> dict[str, str]:
+    language = locale.split("-")[0].lower()
+    localized = {
+        "ja": {
+            "kicker": "確認済みの機能", "problem": "解決する課題", "capabilities": "できること", "inputs": "対応する入力",
+            "outputs": "出力", "options": "利用できる設定", "steps": "ワークフロー", "limitations": "制限事項",
+            "faq": "よくある質問", "evidence": "プロジェクトの根拠", "blog": "関連ガイドを読む", "breadcrumb": "パンくずリスト",
+        },
+        "ko": {
+            "kicker": "검증된 기능", "problem": "해결하는 문제", "capabilities": "할 수 있는 작업", "inputs": "지원 입력",
+            "outputs": "출력", "options": "사용 가능한 옵션", "steps": "작업 흐름", "limitations": "제한 사항",
+            "faq": "자주 묻는 질문", "evidence": "프로젝트 근거", "blog": "관련 가이드 읽기", "breadcrumb": "이동 경로",
+        },
+        "de": {
+            "kicker": "Verifizierte Funktion", "problem": "Welches Problem sie löst", "capabilities": "Was Sie tun können", "inputs": "Unterstützte Eingaben",
+            "outputs": "Ausgaben", "options": "Verfügbare Optionen", "steps": "Workflow", "limitations": "Einschränkungen",
+            "faq": "Häufige Fragen", "evidence": "Projektbelege", "blog": "Zugehörige Anleitung lesen", "breadcrumb": "Brotkrümelnavigation",
+        },
+        "fr": {
+            "kicker": "Fonctionnalité vérifiée", "problem": "Le problème résolu", "capabilities": "Ce que vous pouvez faire", "inputs": "Entrées prises en charge",
+            "outputs": "Sorties", "options": "Options disponibles", "steps": "Flux de travail", "limitations": "Limites",
+            "faq": "Questions fréquentes", "evidence": "Éléments du projet", "blog": "Lire le guide associé", "breadcrumb": "Fil d’Ariane",
+        },
+        "es": {
+            "kicker": "Función verificada", "problem": "El problema que resuelve", "capabilities": "Qué puedes hacer", "inputs": "Entradas compatibles",
+            "outputs": "Resultados", "options": "Opciones disponibles", "steps": "Flujo de trabajo", "limitations": "Limitaciones",
+            "faq": "Preguntas frecuentes", "evidence": "Evidencia del proyecto", "blog": "Leer la guía relacionada", "breadcrumb": "Ruta de navegación",
+        },
+        "pt": {
+            "kicker": "Funcionalidade verificada", "problem": "O problema que resolve", "capabilities": "O que pode fazer", "inputs": "Entradas suportadas",
+            "outputs": "Resultados", "options": "Opções disponíveis", "steps": "Fluxo de trabalho", "limitations": "Limitações",
+            "faq": "Perguntas frequentes", "evidence": "Evidência do projeto", "blog": "Ler o guia relacionado", "breadcrumb": "Trilho de navegação",
+        },
+        "it": {
+            "kicker": "Funzionalità verificata", "problem": "Il problema che risolve", "capabilities": "Cosa puoi fare", "inputs": "Input supportati",
+            "outputs": "Output", "options": "Opzioni disponibili", "steps": "Flusso di lavoro", "limitations": "Limitazioni",
+            "faq": "Domande frequenti", "evidence": "Prove del progetto", "blog": "Leggi la guida correlata", "breadcrumb": "Breadcrumb",
+        },
+        "ru": {
+            "kicker": "Проверенная возможность", "problem": "Какую задачу она решает", "capabilities": "Что можно сделать", "inputs": "Поддерживаемые входные данные",
+            "outputs": "Результаты", "options": "Доступные настройки", "steps": "Процесс работы", "limitations": "Ограничения",
+            "faq": "Частые вопросы", "evidence": "Подтверждение проекта", "blog": "Читать связанное руководство", "breadcrumb": "Хлебные крошки",
+        },
+        "ar": {
+            "kicker": "ميزة موثقة", "problem": "المشكلة التي تحلها", "capabilities": "ما يمكنك فعله", "inputs": "المدخلات المدعومة",
+            "outputs": "المخرجات", "options": "الخيارات المتاحة", "steps": "سير العمل", "limitations": "القيود",
+            "faq": "الأسئلة الشائعة", "evidence": "أدلة المشروع", "blog": "اقرأ الدليل المرتبط", "breadcrumb": "مسار التنقل",
+        },
+    }
+    if language in localized:
+        return localized[language]
     if locale.split("-")[0].lower() == "zh":
         return {
             "kicker": "已验证功能",
@@ -1233,6 +1283,7 @@ def render_feature_pages(
                 "currentLocale": locale,
                 "autoRedirect": locale == source and auto_detect,
                 "rememberSelection": remember_selection,
+                "defaultLocale": "en-US" if any(str(item).lower() == "en-us" for item in locales) else source,
                 "storageKey": f"{package_name}:locale",
                 "aliases": aliases,
                 "locales": routes,
@@ -1439,6 +1490,7 @@ def render_blog(
             "currentLocale": current,
             "autoRedirect": current == source and auto_detect,
             "rememberSelection": remember_selection,
+            "defaultLocale": "en-US" if any(str(item).lower() == "en-us" for item in locales) else source,
             "storageKey": f"{package_name}:locale",
             "aliases": aliases,
             "locales": route_items,

@@ -1,16 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://iptc.pages.dev/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/features/إعدادات-مسبقة-للدفعات/</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/features/تحرير-iptc-وexif-وxmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/features/تنظيف-البيانات-الوصفية-الخاصة/</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/features/قائمة-انتظار-تسليم-الصور/</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ar/support.html</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ar/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ar/إعدادات-مسبقة-للدفعات/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ar/تحرير-iptc-وexif-وxmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ar/تنظيف-البيانات-الوصفية-الخاصة/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ar/قائمة-انتظار-تسليم-الصور/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/batch-presets/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/de-DE/foto-übergabewarteschlange/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/de-DE/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/de-DE/iptc-exif-und-xmp-bearbeitung/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/de-DE/private-metadaten-bereinigen/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/de-DE/stapelvorlagen/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/en-US/batch-presets/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/en-US/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/en-US/iptc-exif-and-xmp-editing/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/en-US/photo-delivery-queue/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/en-US/private-metadata-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/es-419/ajustes-preestablecidos-por-lote/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/es-419/cola-de-entrega-de-fotos/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/es-419/edición-iptc-exif-y-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/es-419/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/es-419/limpieza-de-metadatos-privados/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/fr-FR/file-de-livraison-photo/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/fr-FR/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/fr-FR/modification-iptc-exif-et-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/fr-FR/nettoyage-des-métadonnées-privées/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/fr-FR/préréglages-par-lot/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/it-IT/coda-di-consegna-foto/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/it-IT/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/it-IT/modifica-iptc-exif-e-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/it-IT/preset-in-batch/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/it-IT/pulizia-dei-metadati-privati/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ja-JP/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ja-JP/iptc-exif-xmpの編集/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ja-JP/一括プリセット/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ja-JP/写真納品キュー/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ja-JP/非公開メタデータの整理/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ko-KR/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ko-KR/iptc-exif-xmp-편집/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ko-KR/비공개-메타데이터-정리/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ko-KR/사진-전달-대기열/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ko-KR/일괄-프리셋/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/metadata-editor/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/photo-delivery/</loc></url>
   <url><loc>https://iptc.pages.dev/blog/privacy-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/pt-PT/edição-iptc-exif-e-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/pt-PT/fila-de-entrega-de-fotografias/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/pt-PT/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/pt-PT/limpeza-de-metadados-privados/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/pt-PT/predefinições-em-lote/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ru-RU/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ru-RU/очередь-передачи-фотографий/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ru-RU/очистка-личных-метаданных/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ru-RU/редактирование-iptc-exif-и-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/ru-RU/шаблоны-для-пакетной-обработки/</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/features/foto-übergabewarteschlange/</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/features/iptc-exif-und-xmp-bearbeitung/</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/features/private-metadaten-bereinigen/</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/features/stapelvorlagen/</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/de-DE/support.html</loc></url>
   <url><loc>https://iptc.pages.dev/en-US/</loc></url>
   <url><loc>https://iptc.pages.dev/en-US/about.html</loc></url>
   <url><loc>https://iptc.pages.dev/en-US/features/batch-presets/</loc></url>
@@ -19,11 +80,67 @@
   <url><loc>https://iptc.pages.dev/en-US/features/private-metadata-cleanup/</loc></url>
   <url><loc>https://iptc.pages.dev/en-US/privacy.html</loc></url>
   <url><loc>https://iptc.pages.dev/en-US/support.html</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/features/ajustes-preestablecidos-por-lote/</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/features/cola-de-entrega-de-fotos/</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/features/edición-iptc-exif-y-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/features/limpieza-de-metadatos-privados/</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/es-419/support.html</loc></url>
   <url><loc>https://iptc.pages.dev/features/batch-presets/</loc></url>
   <url><loc>https://iptc.pages.dev/features/metadata-editor/</loc></url>
   <url><loc>https://iptc.pages.dev/features/photo-delivery/</loc></url>
   <url><loc>https://iptc.pages.dev/features/privacy-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/features/file-de-livraison-photo/</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/features/modification-iptc-exif-et-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/features/nettoyage-des-métadonnées-privées/</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/features/préréglages-par-lot/</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/fr-FR/support.html</loc></url>
   <url><loc>https://iptc.pages.dev/</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/features/coda-di-consegna-foto/</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/features/modifica-iptc-exif-e-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/features/preset-in-batch/</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/features/pulizia-dei-metadati-privati/</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/it-IT/support.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/features/一括プリセット/</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/features/写真納品キュー/</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/features/非公開メタデータの整理/</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ja-JP/support.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/features/비공개-메타데이터-정리/</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/features/사진-전달-대기열/</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/features/일괄-프리셋/</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ko-KR/support.html</loc></url>
   <url><loc>https://iptc.pages.dev/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/features/edição-iptc-exif-e-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/features/fila-de-entrega-de-fotografias/</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/features/limpeza-de-metadados-privados/</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/features/predefinições-em-lote/</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/pt-PT/support.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/features/очередь-передачи-фотографий/</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/features/очистка-личных-метаданных/</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/features/редактирование-iptc-exif-и-xmp/</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/features/шаблоны-для-пакетной-обработки/</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/ru-RU/support.html</loc></url>
   <url><loc>https://iptc.pages.dev/support.html</loc></url>
 </urlset>

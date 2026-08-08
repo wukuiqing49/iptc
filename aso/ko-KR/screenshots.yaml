@@ -1,0 +1,14 @@
+schemaVersion: '1.0'
+locale: ko-KR
+status: draft
+items:
+- position: 1
+  asset: assets/screenshots/01-captionmeta-home.png
+  screen: Capture home
+  caption: 当前设备上的 CaptionMeta 拍摄首页
+  reviewRequired: true
+- position: 2
+  asset: assets/screenshots/02-captionmeta-upload.png
+  screen: Upload queue
+  caption: 当前设备上的照片上传队列
+  reviewRequired: true

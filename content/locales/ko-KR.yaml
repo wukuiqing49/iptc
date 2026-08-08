@@ -1,0 +1,118 @@
+locale: "ko-KR"
+languageName: "한국어"
+direction: "ltr"
+reviewStatus: "machine-draft"
+
+navigation:
+  primaryLabel: "기본 탐색"
+  footerLabel: "푸터 탐색"
+  home: "홈"
+  features: "기능"
+  screenshots: "스크린샷"
+  support: "지원"
+  privacy: "개인정보"
+  about: "회사 정보"
+  blog: "가이드"
+  language: "언어"
+  backToApp: "앱으로 돌아가기"
+
+common:
+  skipToContent: "본문으로 이동"
+  googlePlayCta: "Google Play에서 받기"
+  availability: "Google Play 링크를 준비 중입니다"
+  rights: "All rights reserved."
+  notFoundTitle: "페이지를 찾을 수 없습니다"
+  notFoundCopy: "요청한 페이지가 존재하지 않습니다."
+  returnHome: "홈으로 돌아가기"
+
+home:
+  pageTitle: "CaptionMeta - Android 사진 메타데이터 도구"
+  metaDescription: "Android에서 IPTC, EXIF, XMP 사진 메타데이터를 편집하고 비공개 데이터를 정리해 사진을 전달하세요."
+  category: "Android 사진 도구"
+  tagline: "현장에서 바로 쓸 수 있는 사진 메타데이터."
+  shortDescription: "Android에서 사진 팀의 캡션, 키워드, 크레딧, 권리 정보와 전달 작업을 일관되게 관리합니다."
+  fullDescription: "CaptionMeta는 Android 사진 메타데이터 도구입니다. IPTC, EXIF, XMP 필드를 확인하고 편집하며, 메타데이터 프리셋을 재사용하고 비공개 메타데이터를 정리한 사진 사본을 전달할 수 있습니다."
+  heroScreenshotAlt: "실제 CaptionMeta 앱 화면"
+  heroScreenshotCaption: "연결된 기기에 표시된 CaptionMeta 화면"
+  featuresHeading: "촬영부터 전달까지 이어지는 메타데이터 작업"
+  featuresIntro: "현재 Android 소스 코드, 테스트와 설치된 앱 화면에서 확인된 기능입니다."
+  features:
+    metadata-editor: {name: "IPTC, EXIF, XMP 편집", description: "캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다."}
+    privacy-cleanup: {name: "비공개 메타데이터 정리", description: "사진 사본을 공유하기 전에 선택한 EXIF, IPTC, XMP 데이터를 확인하고 삭제합니다."}
+    batch-presets: {name: "일괄 프리셋", description: "여러 사진에 IPTC 프리셋을 재사용하면서 사진별 재정의도 유지합니다."}
+    photo-delivery: {name: "사진 전달 대기열", description: "처리한 사진을 대기열에 넣고 설정된 서버로 전달한 뒤 결과를 확인합니다."}
+  screenshotsHeading: "앱 살펴보기"
+  screenshotsIntro: "연결된 Android 기기에서 캡처한 실제 앱 화면입니다."
+  workflowHeading: "모바일 사진 작업에 맞는 흐름"
+  workflowIntro: "반복 입력, 개인정보 확인과 파일 전달을 하나의 Android 도구에서 처리합니다."
+  workflowSteps:
+    - "사진을 촬영하거나 기기의 로컬 이미지를 선택합니다."
+    - "프리셋을 선택하고 캡션, 키워드, 크레딧과 권리 정보를 입력합니다."
+    - "필요하면 사진별 값을 재정의하면서 일괄 처리합니다."
+    - "결과를 확인하고 처리한 파일을 전달 대기열에 추가합니다."
+  closingHeading: "다음 사진 묶음을 준비해 보세요."
+  closingCopy: "공개 스토어가 확인되면 이 페이지에서 Google Play로 이동할 수 있습니다."
+
+featureDetails:
+  metadata-editor:
+    problem: "사진마다 캡션, 크레딧, 권리 또는 키워드를 다르게 편집하면 전달 내용이 일관되지 않을 수 있습니다."
+    capabilities: ["지원되는 EXIF, IPTC, XMP 메타데이터를 읽고 확인하기", "캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 필드를 처리한 사진 사본에 쓰기", "사진별 값으로 일괄 값을 세밀하게 조정하거나 재정의하기"]
+    supportedInputs: ["Android 기기에서 선택한 로컬 사진 파일"]
+    supportedOutputs: ["선택한 메타데이터를 기록한 처리된 사진 사본"]
+    options: ["IPTC 기본·확장 필드, XMP 필드, EXIF 처리와 위치 값"]
+    steps: ["사진 한 장 또는 여러 장을 선택합니다", "프리셋을 선택하거나 캡션, 제목, 키워드, 작성자와 권리 정보를 입력합니다", "결과를 확인하고 처리된 사본을 저장합니다"]
+    limitations: ["사용 가능한 필드와 기록 동작은 선택한 파일과 작업 흐름에서 활성화한 필드에 따라 달라집니다."]
+    faq: [{question: "CaptionMeta는 Android에서 IPTC와 XMP를 편집하나요?", answer: "예. 현재 사진 메타데이터 작업 흐름에는 IPTC와 XMP 기록 코드 및 검증 테스트가 포함되어 있습니다."}]
+  privacy-cleanup:
+    problem: "사진에는 위치, 카메라와 기타 메타데이터가 포함될 수 있어 모든 전달에 넣어야 하는 것은 아닙니다."
+    capabilities: ["추적되는 EXIF, IPTC, XMP 메타데이터 범주를 확인하기", "처리된 사진 사본에서 선택한 비공개 메타데이터를 제거하기", "원본 파일과 정리된 출력 흐름을 분리하기"]
+    supportedInputs: ["EXIF, IPTC 또는 XMP 메타데이터가 있는 로컬 사진"]
+    supportedOutputs: ["선택한 메타데이터를 제거한 처리된 사진 사본"]
+    options: ["위치, 카메라와 정리 흐름에서 추적하는 기타 메타데이터 범주"]
+    steps: ["확인할 사진을 선택합니다", "정리할 수 있는 메타데이터 범주를 검토합니다", "정리를 실행하고 처리된 사본을 전달에 사용합니다"]
+    limitations: ["정리 범위는 현재 앱 버전에 구현된 메타데이터 범주를 기준으로 하므로 게시 전에 출력 결과를 확인하세요."]
+    faq: [{question: "정리하면 원본 사진이 바뀌나요?", answer: "문서화된 흐름은 전달을 위한 처리된 사진 데이터를 만듭니다. 필요하면 원본을 보관하고 저장된 결과를 확인하세요."}]
+  batch-presets:
+    problem: "반복 작업에서 같은 필드를 사진마다 다시 입력하면 일관성을 유지하기 어렵습니다."
+    capabilities: ["메타데이터 템플릿 또는 프리셋을 만들어 재사용하기", "선택한 여러 사진에 일괄 값을 적용하기", "한 사진에 다른 캡션이나 필드 값이 필요할 때 사진별로 재정의하기"]
+    supportedInputs: ["선택한 로컬 사진 묶음과 저장된 메타데이터 프리셋"]
+    supportedOutputs: ["해결된 메타데이터 값이 들어간 처리된 사진 사본 묶음"]
+    options: ["프리셋 필드, 일괄 값, 사진별 재정의, 작성자, 위치와 전달 설정"]
+    steps: ["IPTC 프리셋을 선택하거나 만듭니다", "처리할 일괄 필드와 사진을 선택합니다", "사진별 재정의를 검토하고 최종 값을 처리된 사본에 기록합니다"]
+    limitations: ["프리셋은 해당 작업 흐름에 설정된 필드만 변경하며, 비어 있거나 비활성화된 필드에 값이 있다고 간주하지 않습니다."]
+    faq: [{question: "사진 한 장이 일괄 메타데이터를 재정의할 수 있나요?", answer: "예. 작업 흐름 해석 테스트는 설정된 필드에서 사진별 값이 일괄 값보다 우선하는 동작을 다룹니다."}]
+  photo-delivery:
+    problem: "파일, 서버 설정과 재시도 상태를 따로 관리하면 현장 사진 전달이 실패하기 쉽습니다."
+    capabilities: ["처리된 사진 파일을 전달 대기열에 넣기", "설정된 FTP, FTPS, SFTP, HTTP, SMB와 WebDAV 클라이언트 사용하기", "일부 일시적 HTTP 실패를 재시도하고 업로드 결과를 확인하기"]
+    supportedInputs: ["처리된 로컬 사진과 설정된 전달 서버 프로필"]
+    supportedOutputs: ["업로드 대기열 작업과 성공 또는 실패 결과"]
+    options: ["FTP, FTPS, SFTP, HTTP, SMB와 WebDAV 서버 프로필"]
+    steps: ["전달 서버 프로필을 설정합니다", "처리된 사진을 선택해 업로드 대기열에 추가합니다", "대기열을 확인하고 재시도 가능한 실패를 다시 실행한 뒤 기록을 검토합니다"]
+    limitations: ["전달에는 사용자가 설정한 접근 가능한 서버와 인증 정보가 필요하며, 앱은 호스팅 사진 저장소를 제공하지 않습니다."]
+    faq: [{question: "어떤 사진 전달 프로토콜을 지원하나요?", answer: "업로드 모듈에는 FTP, FTPS, SFTP, HTTP, SMB와 WebDAV 클라이언트 및 설정 모델이 있습니다."}]
+
+privacy:
+  pageTitle: "개인정보 - CaptionMeta"
+  metaDescription: "CaptionMeta가 사진, 메타데이터, 위치 권한과 통합 서비스를 처리하는 방식입니다."
+  heading: "개인정보"
+  lastUpdatedLabel: "최종 업데이트"
+  content:
+    - heading: "데이터 처리"
+      paragraphs: ["CaptionMeta는 Android 작업 흐름에서 사진과 메타데이터를 처리합니다. 사용자가 전달을 설정하고 시작한 경우에만 처리된 파일이 지정 서버로 전송될 수 있습니다.", "앱은 촬영, GPS 메타데이터와 사진 선택을 위해 카메라, 위치와 미디어 접근을 요청할 수 있습니다."]
+    - heading: "통합 서비스"
+      paragraphs: ["계정, 구매와 앱 운영 기능을 위해 Google 로그인, Google Play Billing과 Firebase를 통합합니다. 게시 전에 전체 개인정보 처리방침과 스토어 데이터 안전성 선언을 검토하세요."]
+
+support:
+  pageTitle: "지원 - CaptionMeta"
+  metaDescription: "CaptionMeta 버전 정보, 기능 안내와 지원 연락처입니다."
+  heading: "지원"
+  intro: "기능 안내를 확인하거나 CaptionMeta에 대해 개발자에게 문의하세요."
+  faqHeading: "자주 묻는 질문"
+  faq:
+    - question: "지원하는 Android 버전은 무엇인가요?"
+      answer: "현재 프로젝트는 minSdk 24와 targetSdk 36을 사용합니다."
+    - question: "Google Play 다운로드 링크는 어디에 있나요?"
+      answer: "공개 스토어 URL이 웹사이트 설정에 등록되어 있습니다."
+  contactHeading: "지원 문의"
+  contactCopy: "도움말, 메타데이터 작업 흐름 의견 또는 게시 관련 질문은 개발자에게 이메일로 보내세요."
+  contactCta: "지원팀에 이메일 보내기"

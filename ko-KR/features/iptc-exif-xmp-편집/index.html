@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko-KR" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPTC, EXIF, XMP 편집 - CaptionMeta</title>
+  <meta name="description" content="캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.">
+  <meta name="theme-color" content="#1976D2">
+  <link rel="canonical" href="https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/">
+  <link rel="alternate" hreflang="zh-CN" href="https://iptc.pages.dev/features/metadata-editor/">
+  <link rel="alternate" hreflang="en-US" href="https://iptc.pages.dev/en-US/features/iptc-exif-and-xmp-editing/">
+  <link rel="alternate" hreflang="ja-JP" href="https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/">
+  <link rel="alternate" hreflang="ko-KR" href="https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/">
+  <link rel="alternate" hreflang="de-DE" href="https://iptc.pages.dev/de-DE/features/iptc-exif-und-xmp-bearbeitung/">
+  <link rel="alternate" hreflang="fr-FR" href="https://iptc.pages.dev/fr-FR/features/modification-iptc-exif-et-xmp/">
+  <link rel="alternate" hreflang="es-419" href="https://iptc.pages.dev/es-419/features/edición-iptc-exif-y-xmp/">
+  <link rel="alternate" hreflang="pt-PT" href="https://iptc.pages.dev/pt-PT/features/edição-iptc-exif-e-xmp/">
+  <link rel="alternate" hreflang="it-IT" href="https://iptc.pages.dev/it-IT/features/modifica-iptc-exif-e-xmp/">
+  <link rel="alternate" hreflang="ru-RU" href="https://iptc.pages.dev/ru-RU/features/редактирование-iptc-exif-и-xmp/">
+  <link rel="alternate" hreflang="ar" href="https://iptc.pages.dev/ar/features/تحرير-iptc-وexif-وxmp/">
+  <link rel="alternate" hreflang="x-default" href="https://iptc.pages.dev/features/metadata-editor/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IPTC, EXIF, XMP 편집">
+  <meta property="og:description" content="캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.">
+  <meta property="og:url" content="https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/">
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"IPTC, EXIF, XMP 편집","description":"캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.","mainEntity":{"@id":"https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/#app"},"url":"https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/"},{"@type":"SoftwareApplication","@id":"https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/#app","name":"CaptionMeta","operatingSystem":"Android","featureList":["지원되는 EXIF, IPTC, XMP 메타데이터를 읽고 확인하기","캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 필드를 처리한 사진 사본에 쓰기","사진별 값으로 일괄 값을 세밀하게 조정하거나 재정의하기"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CaptionMeta는 Android에서 IPTC와 XMP를 편집하나요?","acceptedAnswer":{"@type":"Answer","text":"예. 현재 사진 메타데이터 작업 흐름에는 IPTC와 XMP 기록 코드 및 검증 테스트가 포함되어 있습니다."}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"ko-KR","autoRedirect":false,"rememberSelection":true,"defaultLocale":"en-US","storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US","ja":"ja-JP","ko":"ko-KR","de":"de-DE","fr":"fr-FR","es":"es-419","pt":"pt-PT","it":"it-IT","ru":"ru-RU","ar":"ar"},"locales":[{"code":"zh-CN","url":"https://iptc.pages.dev/features/metadata-editor/"},{"code":"en-US","url":"https://iptc.pages.dev/en-US/features/iptc-exif-and-xmp-editing/"},{"code":"ja-JP","url":"https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/"},{"code":"ko-KR","url":"https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/"},{"code":"de-DE","url":"https://iptc.pages.dev/de-DE/features/iptc-exif-und-xmp-bearbeitung/"},{"code":"fr-FR","url":"https://iptc.pages.dev/fr-FR/features/modification-iptc-exif-et-xmp/"},{"code":"es-419","url":"https://iptc.pages.dev/es-419/features/edición-iptc-exif-y-xmp/"},{"code":"pt-PT","url":"https://iptc.pages.dev/pt-PT/features/edição-iptc-exif-e-xmp/"},{"code":"it-IT","url":"https://iptc.pages.dev/it-IT/features/modifica-iptc-exif-e-xmp/"},{"code":"ru-RU","url":"https://iptc.pages.dev/ru-RU/features/редактирование-iptc-exif-и-xmp/"},{"code":"ar","url":"https://iptc.pages.dev/ar/features/تحرير-iptc-وexif-وxmp/"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="CaptionMeta"><img src="../../../assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+    <nav aria-label="기본 탐색">
+      <a href="../../">홈</a>
+      <a href="../../../blog/ko-KR/">가이드</a>
+      <a href="../../about.html">회사 정보</a>
+      <a href="../../support.html">지원</a>
+      <label class="language-picker"><span class="visually-hidden">언어</span><select data-locale-switcher aria-label="언어"><option value="zh-CN">简体中文</option><option value="en-US">English</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="de-DE">Deutsch</option><option value="fr-FR">Français</option><option value="es-419">Español (Latinoamérica)</option><option value="pt-PT">Português (Portugal)</option><option value="it-IT">Italiano</option><option value="ru-RU">Русский</option><option value="ar">العربية</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="이동 경로"><a href="../../">홈</a><span aria-hidden="true">/</span><a href="../../#features">기능</a></nav>
+        <p class="category">검증된 기능</p>
+        <h1>IPTC, EXIF, XMP 편집</h1>
+        <p class="tagline">캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.</p>
+        <p class="feature-problem"><strong>해결하는 문제:</strong> 사진마다 캡션, 크레딧, 권리 또는 키워드를 다르게 편집하면 전달 내용이 일관되지 않을 수 있습니다.</p>
+      </header>
+      <figure class="feature-media"><img src="../../../assets/screenshots/02-captionmeta-upload.png" alt="캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다." loading="eager"><figcaption>캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>할 수 있는 작업</h2><ul><li>지원되는 EXIF, IPTC, XMP 메타데이터를 읽고 확인하기</li><li>캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 필드를 처리한 사진 사본에 쓰기</li><li>사진별 값으로 일괄 값을 세밀하게 조정하거나 재정의하기</li></ul></section>
+        <section><h2>사용 가능한 옵션</h2><ul><li>IPTC 기본·확장 필드, XMP 필드, EXIF 처리와 위치 값</li></ul></section>
+        <section><h2>지원 입력</h2><ul><li>Android 기기에서 선택한 로컬 사진 파일</li></ul></section>
+        <section><h2>출력</h2><ul><li>선택한 메타데이터를 기록한 처리된 사진 사본</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>작업 흐름</h2><ol><li>사진 한 장 또는 여러 장을 선택합니다</li><li>프리셋을 선택하거나 캡션, 제목, 키워드, 작성자와 권리 정보를 입력합니다</li><li>결과를 확인하고 처리된 사본을 저장합니다</li></ol></section>
+      <section class="feature-limitations"><h2>제한 사항</h2><ul><li>사용 가능한 필드와 기록 동작은 선택한 파일과 작업 흐름에서 활성화한 필드에 따라 달라집니다.</li></ul></section>
+      <section class="feature-faq"><h2>자주 묻는 질문</h2><details><summary>CaptionMeta는 Android에서 IPTC와 XMP를 편집하나요?</summary><p>예. 현재 사진 메타데이터 작업 흐름에는 IPTC와 XMP 기록 코드 및 검증 테스트가 포함되어 있습니다.</p></details></section>
+      <section class="feature-evidence"><h2>프로젝트 근거</h2><ul class="evidence-list"><li><code>core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt</code></li><li><code>core/core_exif/src/test/java/com/wkq/iptc/feature/press/metadata/IptcAndXmpVerificationTest.kt</code></li><li><code>feature/feature_app/src/main/res/values/strings.xml</code></li></ul></section>
+      <a class="primary-action" href="../../../blog/ko-KR/iptc-exif-xmp-편집/">관련 가이드 읽기</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. All rights reserved.</p>
+    <nav aria-label="푸터 탐색">
+      <a href="../../privacy.html">개인정보</a>
+      <a href="../../about.html">회사 정보</a>
+      <a href="../../support.html">지원</a>
+    </nav>
+  </footer>
+</body>
+</html>

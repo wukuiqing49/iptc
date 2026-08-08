@@ -22,8 +22,53 @@ localization:
   status: machine-draft
   listingValid: true
   screenshotReviewRequired: true
+- locale: ja-JP
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: ko-KR
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: de-DE
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: fr-FR
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: es-419
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: pt-PT
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: it-IT
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: ru-RU
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: ar
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
 publishReady: false
 warnings:
 - editorial.publishedAt is missing; blog pages remain drafts and omit Article/HowTo
   date markup
 - en-US content status is machine-draft
+- ja-JP content status is machine-draft
+- ko-KR content status is machine-draft
+- de-DE content status is machine-draft
+- fr-FR content status is machine-draft
+- es-419 content status is machine-draft
+- pt-PT content status is machine-draft
+- it-IT content status is machine-draft
+- ru-RU content status is machine-draft
+- ar content status is machine-draft

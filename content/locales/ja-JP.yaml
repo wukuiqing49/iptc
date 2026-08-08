@@ -1,0 +1,118 @@
+locale: "ja-JP"
+languageName: "日本語"
+direction: "ltr"
+reviewStatus: "machine-draft"
+
+navigation:
+  primaryLabel: "メインナビゲーション"
+  footerLabel: "フッターナビゲーション"
+  home: "ホーム"
+  features: "機能"
+  screenshots: "スクリーンショット"
+  support: "サポート"
+  privacy: "プライバシー"
+  about: "会社情報"
+  blog: "ガイド"
+  language: "言語"
+  backToApp: "アプリに戻る"
+
+common:
+  skipToContent: "本文へ移動"
+  googlePlayCta: "Google Play で入手"
+  availability: "Google Play のリンクは準備中です"
+  rights: "All rights reserved."
+  notFoundTitle: "ページが見つかりません"
+  notFoundCopy: "指定されたページは存在しません。"
+  returnHome: "ホームに戻る"
+
+home:
+  pageTitle: "CaptionMeta - Android 写真メタデータツール"
+  metaDescription: "AndroidでIPTC、EXIF、XMP写真メタデータを編集し、非公開データを整理して写真を納品できます。"
+  category: "Android写真ツール"
+  tagline: "現場で使える写真メタデータ。"
+  shortDescription: "Androidで写真チームのキャプション、キーワード、クレジット、権利情報、納品ワークフローを整えます。"
+  fullDescription: "CaptionMetaはAndroid向けの写真メタデータツールです。IPTC、EXIF、XMPの項目を確認・編集し、プリセットを再利用して、非公開メタデータを整理した写真コピーを納品できます。"
+  heroScreenshotAlt: "CaptionMetaの実際のアプリ画面"
+  heroScreenshotCaption: "接続端末に表示されたCaptionMetaの画面"
+  featuresHeading: "撮影から納品までのメタデータワークフロー"
+  featuresIntro: "現在のAndroidソースコード、テスト、インストール済みアプリ画面で確認できる機能です。"
+  features:
+    metadata-editor: {name: "IPTC、EXIF、XMPの編集", description: "キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。"}
+    privacy-cleanup: {name: "非公開メタデータの整理", description: "写真コピーを共有する前に、選択したEXIF、IPTC、XMPデータを確認して削除します。"}
+    batch-presets: {name: "一括プリセット", description: "IPTCプリセットを複数の写真で再利用し、写真ごとの上書きも保持します。"}
+    photo-delivery: {name: "写真納品キュー", description: "処理した写真をキューに入れ、設定済みサーバーへ納品して結果を確認します。"}
+  screenshotsHeading: "アプリを見る"
+  screenshotsIntro: "接続されたAndroid端末で取得した実際のアプリ画面です。"
+  workflowHeading: "モバイル写真ワークフローに対応"
+  workflowIntro: "メタデータ入力、プライバシー確認、ファイル納品を1つのAndroidツールにまとめます。"
+  workflowSteps:
+    - "写真を撮影するか、端末内の画像を選択します。"
+    - "プリセットを選び、キャプション、キーワード、クレジット、権利情報を入力します。"
+    - "必要に応じて写真ごとの値を上書きし、一括処理します。"
+    - "結果を確認し、処理したファイルを納品キューに追加します。"
+  closingHeading: "次の写真セットを準備しませんか？"
+  closingCopy: "公開ストアの確認後、このページからGoogle Playへ移動できます。"
+
+featureDetails:
+  metadata-editor:
+    problem: "写真ごとにキャプション、クレジット、権利、キーワードを別々に編集すると、納品内容が不統一になります。"
+    capabilities: ["対応するEXIF、IPTC、XMPメタデータを読み取り確認する", "キャプション、見出し、キーワード、署名、著作権、権利、位置情報を書き込む", "写真ごとの値で一括値を細かく調整または上書きする"]
+    supportedInputs: ["Android端末から選択したローカル写真ファイル"]
+    supportedOutputs: ["選択したメタデータを書き込んだ処理済み写真コピー"]
+    options: ["IPTCコア・拡張項目、XMP項目、EXIF処理、位置情報"]
+    steps: ["写真を1枚または複数選択する", "プリセットを選ぶか、キャプション、見出し、キーワード、署名、権利情報を入力する", "結果を確認して処理済みコピーを保存する"]
+    limitations: ["利用できる項目と書き込み動作は、選択したファイルとワークフローで有効な項目によって異なります。"]
+    faq: [{question: "CaptionMetaはAndroidでIPTCとXMPを編集できますか？", answer: "はい。現在の写真メタデータワークフローにはIPTCとXMPの書き込み処理と検証テストがあります。"}]
+  privacy-cleanup:
+    problem: "写真には位置、カメラ、その他のメタデータが含まれることがあり、すべての納品に含めるべきとは限りません。"
+    capabilities: ["追跡対象のEXIF、IPTC、XMPメタデータ分類を確認する", "処理済み写真コピーから選択した非公開メタデータを削除する", "元ファイルと整理後の出力ワークフローを分けて扱う"]
+    supportedInputs: ["EXIF、IPTC、XMPメタデータを含むローカル写真"]
+    supportedOutputs: ["選択したメタデータを削除した処理済み写真コピー"]
+    options: ["位置、カメラ、その他の追跡対象メタデータ分類"]
+    steps: ["確認する写真を選択する", "整理できるメタデータ分類を確認する", "整理を実行し、コピーを納品に使用する"]
+    limitations: ["整理範囲は現在のアプリ版で実装された分類に基づくため、公開前に出力を確認してください。"]
+    faq: [{question: "整理すると元の写真は変更されますか？", answer: "記載されたワークフローは処理済み写真データを作成します。必要に応じて元ファイルを保持し、保存結果を確認してください。"}]
+  batch-presets:
+    problem: "同じ項目を写真ごとに入力し直すと、繰り返しの納品で一貫性を保ちにくくなります。"
+    capabilities: ["メタデータテンプレートまたはプリセットを作成して再利用する", "選択した複数の写真に一括値を適用する", "写真ごとに異なるキャプションや項目が必要な場合に上書きする"]
+    supportedInputs: ["選択したローカル写真のグループと保存済みメタデータプリセット"]
+    supportedOutputs: ["解決済みメタデータ値を持つ処理済み写真コピーの一括出力"]
+    options: ["プリセット項目、一括値、写真ごとの上書き、署名、位置、納品設定"]
+    steps: ["IPTCプリセットを選ぶか作成する", "処理する項目と写真を選択する", "写真ごとの上書きを確認して処理済みコピーへ書き込む"]
+    limitations: ["プリセットは設定されたワークフロー項目だけに影響し、空または無効の項目に値があるとは限りません。"]
+    faq: [{question: "1枚の写真で一括メタデータを上書きできますか？", answer: "はい。ワークフローの解決処理では、設定された項目について写真ごとの値が一括値より優先されます。"}]
+  photo-delivery:
+    problem: "ファイル、サーバー設定、再試行状態を別々に管理すると、現場からの写真納品が失敗しやすくなります。"
+    capabilities: ["処理済み写真ファイルを納品キューに入れる", "設定済みのFTP、FTPS、SFTP、HTTP、SMB、WebDAVクライアントを使う", "一部の一時的なHTTP失敗を再試行し、タスク結果を確認する"]
+    supportedInputs: ["処理済みローカル写真と設定済み納品サーバープロファイル"]
+    supportedOutputs: ["アップロードキューのタスクと成功または失敗の結果"]
+    options: ["FTP、FTPS、SFTP、HTTP、SMB、WebDAVのサーバープロファイル"]
+    steps: ["納品サーバープロファイルを設定する", "処理済み写真を選び、アップロードキューに追加する", "キューを確認し、対象の失敗を再試行して履歴を見る"]
+    limitations: ["納品にはユーザーが設定した到達可能なサーバーと認証情報が必要です。アプリはホスト型写真ストレージを提供しません。"]
+    faq: [{question: "どの納品プロトコルに対応していますか？", answer: "アップロードモジュールにはFTP、FTPS、SFTP、HTTP、SMB、WebDAVのクライアントと設定モデルがあります。"}]
+
+privacy:
+  pageTitle: "プライバシー - CaptionMeta"
+  metaDescription: "CaptionMetaが写真、メタデータ、位置情報権限、統合サービスを扱う方法。"
+  heading: "プライバシー"
+  lastUpdatedLabel: "最終更新"
+  content:
+    - heading: "データの取り扱い"
+      paragraphs: ["CaptionMetaはAndroidワークフローで写真とメタデータを処理します。ユーザーが納品を設定して開始した場合に限り、処理済みファイルが指定サーバーへ送信されることがあります。", "撮影、GPSメタデータ、写真選択のために、カメラ、位置情報、メディアへのアクセスを求めることがあります。"]
+    - heading: "統合サービス"
+      paragraphs: ["アカウント、購入、アプリ運用のためにGoogleログイン、Google Play Billing、Firebaseを統合しています。公開前に完全なプライバシーポリシーとストアのデータ安全性申告を確認してください。"]
+
+support:
+  pageTitle: "サポート - CaptionMeta"
+  metaDescription: "CaptionMetaのバージョン情報、機能ガイド、サポート窓口。"
+  heading: "サポート"
+  intro: "機能ガイドを読むか、CaptionMetaについて開発者へお問い合わせください。"
+  faqHeading: "よくある質問"
+  faq:
+    - question: "対応するAndroidバージョンは？"
+      answer: "現在のプロジェクトはminSdk 24、targetSdk 36です。"
+    - question: "Google Playのダウンロードリンクはどこですか？"
+      answer: "公開ストアURLはウェブサイト設定に登録済みです。"
+  contactHeading: "サポートに連絡"
+  contactCopy: "ヘルプ、メタデータワークフローへのご意見、公開に関する質問は開発者へメールしてください。"
+  contactCta: "サポートにメールする"

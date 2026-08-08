@@ -1,0 +1,37 @@
+schemaVersion: '1.0'
+locale: ja-JP
+status: draft
+appName: CaptionMeta
+shortDescription: AndroidでIPTC、EXIF、XMP写真メタデータを編集し、非公開データを整理して写真を納品できます。
+fullDescription: 'Androidで写真チームのキャプション、キーワード、クレジット、権利情報、納品ワークフローを整えます。
+
+
+  IPTC、EXIF、XMPの編集: キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。 対応するEXIF、IPTC、XMPメタデータを読み取り確認する
+  キャプション、見出し、キーワード、署名、著作権、権利、位置情報を書き込む 写真ごとの値で一括値を細かく調整または上書きする
+
+
+  非公開メタデータの整理: 写真コピーを共有する前に、選択したEXIF、IPTC、XMPデータを確認して削除します。 追跡対象のEXIF、IPTC、XMPメタデータ分類を確認する
+  処理済み写真コピーから選択した非公開メタデータを削除する 元ファイルと整理後の出力ワークフローを分けて扱う
+
+
+  一括プリセット: IPTCプリセットを複数の写真で再利用し、写真ごとの上書きも保持します。 メタデータテンプレートまたはプリセットを作成して再利用する 選択した複数の写真に一括値を適用する
+  写真ごとに異なるキャプションや項目が必要な場合に上書きする
+
+
+  写真納品キュー: 処理した写真をキューに入れ、設定済みサーバーへ納品して結果を確認します。 処理済み写真ファイルを納品キューに入れる 設定済みのFTP、FTPS、SFTP、HTTP、SMB、WebDAVクライアントを使う
+  一部の一時的なHTTP失敗を再試行し、タスク結果を確認する
+
+
+  公開ストアの確認後、このページからGoogle Playへ移動できます。'
+characterCounts:
+  appName: 11
+  shortDescription: 54
+  fullDescription: 657
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []

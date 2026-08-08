@@ -239,6 +239,15 @@ languages:
   source: "zh-CN"
   targets:
     - "en-US"
+    - "ja-JP"
+    - "ko-KR"
+    - "de-DE"
+    - "fr-FR"
+    - "es-419"
+    - "pt-PT"
+    - "it-IT"
+    - "ru-RU"
+    - "ar"
   availableInApp:
     - "en-US"
     - "zh-CN"
@@ -259,6 +268,15 @@ languages:
     aliases:
       zh: "zh-CN"
       en: "en-US"
+      ja: "ja-JP"
+      ko: "ko-KR"
+      de: "de-DE"
+      fr: "fr-FR"
+      es: "es-419"
+      pt: "pt-PT"
+      it: "it-IT"
+      ru: "ru-RU"
+      ar: "ar"
 
 screenshots:
   - path: "screenshots/captionmeta-home.png"

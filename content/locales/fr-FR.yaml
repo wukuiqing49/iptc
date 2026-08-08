@@ -1,0 +1,118 @@
+locale: "fr-FR"
+languageName: "Français"
+direction: "ltr"
+reviewStatus: "machine-draft"
+
+navigation:
+  primaryLabel: "Navigation principale"
+  footerLabel: "Navigation du pied de page"
+  home: "Accueil"
+  features: "Fonctionnalités"
+  screenshots: "Captures d’écran"
+  support: "Assistance"
+  privacy: "Confidentialité"
+  about: "Entreprise"
+  blog: "Guides"
+  language: "Langue"
+  backToApp: "Retour à l’application"
+
+common:
+  skipToContent: "Aller au contenu"
+  googlePlayCta: "Disponible sur Google Play"
+  availability: "Le lien Google Play sera bientôt disponible"
+  rights: "Tous droits réservés."
+  notFoundTitle: "Page introuvable"
+  notFoundCopy: "La page demandée n’existe pas."
+  returnHome: "Retour à l’accueil"
+
+home:
+  pageTitle: "CaptionMeta - Outil de métadonnées photo pour Android"
+  metaDescription: "Modifiez les métadonnées IPTC, EXIF et XMP sur Android, nettoyez les données privées et préparez vos photos pour la livraison."
+  category: "Outil photo Android"
+  tagline: "Des métadonnées photo prêtes pour le terrain."
+  shortDescription: "Gardez les légendes, mots-clés, crédits, droits et flux de livraison cohérents pour les équipes photo sur Android."
+  fullDescription: "CaptionMeta est un outil Android pour les métadonnées photo. Vérifiez et modifiez les champs IPTC, EXIF et XMP, réutilisez des préréglages, nettoyez les métadonnées privées et préparez des copies photo traitées pour la livraison."
+  heroScreenshotAlt: "Écran réel de l’application CaptionMeta"
+  heroScreenshotCaption: "Interface réelle de CaptionMeta sur un appareil connecté"
+  featuresHeading: "Un flux de métadonnées, de la prise de vue à la livraison"
+  featuresIntro: "Ces capacités sont fondées sur le code source Android, les tests et les écrans de l’application actuelle."
+  features:
+    metadata-editor: {name: "Modification IPTC, EXIF et XMP", description: "Vérifiez et modifiez les légendes, titres, mots-clés, auteurs, droits d’auteur, droits et lieux."}
+    privacy-cleanup: {name: "Nettoyage des métadonnées privées", description: "Inspectez et supprimez certaines données EXIF, IPTC et XMP avant de partager une copie traitée."}
+    batch-presets: {name: "Préréglages par lot", description: "Réutilisez des préréglages IPTC sur plusieurs photos tout en conservant les remplacements individuels."}
+    photo-delivery: {name: "File de livraison photo", description: "Mettez les photos traitées en file, livrez-les via des serveurs configurés et vérifiez les résultats."}
+  screenshotsHeading: "Voir l’application"
+  screenshotsIntro: "Écrans réels capturés depuis l’application installée sur un appareil Android connecté."
+  workflowHeading: "S’intègre au flux photo mobile"
+  workflowIntro: "Réunissez la saisie répétée, les contrôles de confidentialité et la livraison des fichiers dans un outil Android."
+  workflowSteps:
+    - "Prenez une photo ou sélectionnez des images locales."
+    - "Choisissez un préréglage et renseignez les légendes, mots-clés, crédits et droits."
+    - "Traitez le lot, avec des remplacements par photo si nécessaire."
+    - "Vérifiez le résultat et ajoutez les fichiers traités à la file de livraison."
+  closingHeading: "Prêt à préparer la prochaine série de photos ?"
+  closingCopy: "Une fois la fiche publique confirmée, cet appel ouvrira Google Play."
+
+featureDetails:
+  metadata-editor:
+    problem: "Les livraisons deviennent incohérentes lorsque les légendes, crédits, droits ou mots-clés sont modifiés différemment pour chaque image."
+    capabilities: ["Lire et inspecter les métadonnées EXIF, IPTC et XMP prises en charge", "Écrire les légendes, titres, mots-clés, auteurs, droits d’auteur, droits et lieux dans des copies traitées", "Utiliser des valeurs par photo pour préciser ou remplacer les valeurs du lot"]
+    supportedInputs: ["Fichiers photo locaux sélectionnés sur l’appareil Android"]
+    supportedOutputs: ["Copies photo traitées avec les champs de métadonnées choisis"]
+    options: ["Champs IPTC principaux et étendus, champs XMP, traitement EXIF et valeurs de lieu"]
+    steps: ["Sélectionner une photo ou un groupe de photos locales", "Choisir un préréglage ou saisir les légendes, titres, mots-clés, auteurs et droits", "Vérifier le résultat et enregistrer la copie traitée"]
+    limitations: ["Les champs disponibles et le comportement d’écriture dépendent du fichier choisi et des champs activés dans le flux."]
+    faq: [{question: "CaptionMeta peut-il modifier les métadonnées IPTC et XMP sur Android ?", answer: "Oui. Le projet contient des fonctions d’écriture IPTC et XMP ainsi que des tests de vérification pour le flux actuel."}]
+  privacy-cleanup:
+    problem: "Une photo peut contenir un lieu, un appareil et d’autres métadonnées qui ne doivent pas figurer dans chaque livraison."
+    capabilities: ["Inspecter les catégories EXIF, IPTC et XMP suivies", "Supprimer certaines métadonnées privées d’une copie photo traitée", "Séparer le fichier original du flux de sortie nettoyé"]
+    supportedInputs: ["Photos locales contenant des métadonnées EXIF, IPTC ou XMP"]
+    supportedOutputs: ["Copie photo traitée dont les métadonnées choisies ont été supprimées"]
+    options: ["Catégories de lieu, d’appareil et autres métadonnées suivies par le flux de nettoyage"]
+    steps: ["Sélectionner la photo à inspecter", "Examiner les catégories de métadonnées disponibles pour le nettoyage", "Lancer le nettoyage et utiliser la copie pour la livraison"]
+    limitations: ["Le nettoyage dépend des catégories implémentées dans la version actuelle ; vérifiez la sortie avant publication."]
+    faq: [{question: "Le nettoyage modifie-t-il ma photo originale ?", answer: "Le flux documenté crée des données photo traitées pour la gestion et la livraison. Conservez l’original si nécessaire et vérifiez le résultat enregistré."}]
+  batch-presets:
+    problem: "Les travaux répétés deviennent difficiles à maintenir de façon cohérente lorsque les mêmes champs sont saisis pour chaque photo."
+    capabilities: ["Créer et réutiliser des modèles ou préréglages de métadonnées", "Appliquer des valeurs de lot à plusieurs photos sélectionnées", "Remplacer une valeur pour une photo qui nécessite une légende ou un champ différent"]
+    supportedInputs: ["Un groupe de photos locales sélectionnées et un préréglage enregistré"]
+    supportedOutputs: ["Un lot de copies photo traitées avec les valeurs de métadonnées résolues"]
+    options: ["Champs du préréglage, valeurs de lot, remplacements par photo, auteur, lieu et paramètres de livraison"]
+    steps: ["Choisir ou créer un préréglage IPTC", "Sélectionner les champs et les photos à traiter", "Vérifier les remplacements par photo et écrire les valeurs finales"]
+    limitations: ["Un préréglage agit uniquement sur les champs configurés pour le flux ; les champs vides ou désactivés ne sont pas considérés comme renseignés."]
+    faq: [{question: "Une photo peut-elle remplacer une valeur de métadonnée du lot ?", answer: "Oui. Les tests du résolveur de flux couvrent la priorité des valeurs par photo sur les valeurs de lot configurées."}]
+  photo-delivery:
+    problem: "La livraison sur le terrain peut échouer lorsque les fichiers, les serveurs et les reprises sont gérés séparément."
+    capabilities: ["Mettre les fichiers photo traités en file de livraison", "Prendre en charge les clients FTP, FTPS, SFTP, HTTP, SMB et WebDAV configurés", "Réessayer certains échecs HTTP temporaires et conserver les résultats des tâches"]
+    supportedInputs: ["Fichiers photo locaux traités et profil de serveur configuré"]
+    supportedOutputs: ["Tâche d’envoi en file avec résultat de réussite ou d’échec"]
+    options: ["Profils de serveurs FTP, FTPS, SFTP, HTTP, SMB et WebDAV"]
+    steps: ["Configurer un profil de serveur de livraison", "Choisir les photos traitées et les ajouter à la file", "Surveiller la file, relancer les échecs admissibles et consulter l’historique"]
+    limitations: ["La livraison nécessite un serveur accessible et des identifiants configurés par l’utilisateur. L’application ne fournit pas de stockage photo hébergé."]
+    faq: [{question: "Quels protocoles de livraison sont pris en charge ?", answer: "Le module d’envoi contient des clients et des modèles de configuration pour FTP, FTPS, SFTP, HTTP, SMB et WebDAV."}]
+
+privacy:
+  pageTitle: "Confidentialité - CaptionMeta"
+  metaDescription: "Comment CaptionMeta traite les photos, métadonnées, autorisations de localisation et services intégrés."
+  heading: "Confidentialité"
+  lastUpdatedLabel: "Dernière mise à jour"
+  content:
+    - heading: "Traitement des données"
+      paragraphs: ["CaptionMeta traite les photos et métadonnées dans le flux Android. Les fichiers traités peuvent être envoyés à un serveur configuré par l’utilisateur uniquement lorsque la livraison est configurée et lancée.", "L’application peut demander l’accès à l’appareil photo, à la localisation et aux médias pour la prise de vue, les données GPS et la sélection de photos."]
+    - heading: "Services intégrés"
+      paragraphs: ["Google Sign-In, Google Play Billing et Firebase sont intégrés pour le compte, les achats et le fonctionnement de l’application. Vérifiez la politique complète et la déclaration de sécurité des données avant publication."]
+
+support:
+  pageTitle: "Assistance - CaptionMeta"
+  metaDescription: "Informations de version, aide sur les fonctionnalités et contact de support CaptionMeta."
+  heading: "Assistance"
+  intro: "Consultez les guides de fonctionnalités ou contactez le développeur au sujet de CaptionMeta."
+  faqHeading: "Questions fréquentes"
+  faq:
+    - question: "Quelles versions d’Android sont prises en charge ?"
+      answer: "Le projet actuel définit minSdk à 24 et targetSdk à 36."
+    - question: "Où trouver le téléchargement Google Play ?"
+      answer: "L’URL publique du store est enregistrée dans la configuration du site."
+  contactHeading: "Contacter l’assistance"
+  contactCopy: "Pour obtenir de l’aide ou envoyer un retour sur le flux de métadonnées, écrivez au développeur."
+  contactCta: "Écrire au support"

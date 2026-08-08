@@ -1,0 +1,48 @@
+schemaVersion: '1.0'
+locale: fr-FR
+status: draft
+appName: CaptionMeta
+shortDescription: CaptionMeta
+fullDescription: 'Gardez les légendes, mots-clés, crédits, droits et flux de livraison
+  cohérents pour les équipes photo sur Android.
+
+
+  Modification IPTC, EXIF et XMP: Vérifiez et modifiez les légendes, titres, mots-clés,
+  auteurs, droits d’auteur, droits et lieux. Lire et inspecter les métadonnées EXIF,
+  IPTC et XMP prises en charge Écrire les légendes, titres, mots-clés, auteurs, droits
+  d’auteur, droits et lieux dans des copies traitées Utiliser des valeurs par photo
+  pour préciser ou remplacer les valeurs du lot
+
+
+  Nettoyage des métadonnées privées: Inspectez et supprimez certaines données EXIF,
+  IPTC et XMP avant de partager une copie traitée. Inspecter les catégories EXIF,
+  IPTC et XMP suivies Supprimer certaines métadonnées privées d’une copie photo traitée
+  Séparer le fichier original du flux de sortie nettoyé
+
+
+  Préréglages par lot: Réutilisez des préréglages IPTC sur plusieurs photos tout en
+  conservant les remplacements individuels. Créer et réutiliser des modèles ou préréglages
+  de métadonnées Appliquer des valeurs de lot à plusieurs photos sélectionnées Remplacer
+  une valeur pour une photo qui nécessite une légende ou un champ différent
+
+
+  File de livraison photo: Mettez les photos traitées en file, livrez-les via des
+  serveurs configurés et vérifiez les résultats. Mettre les fichiers photo traités
+  en file de livraison Prendre en charge les clients FTP, FTPS, SFTP, HTTP, SMB et
+  WebDAV configurés Réessayer certains échecs HTTP temporaires et conserver les résultats
+  des tâches
+
+
+  Une fois la fiche publique confirmée, cet appel ouvrira Google Play.'
+characterCounts:
+  appName: 11
+  shortDescription: 11
+  fullDescription: 1545
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []

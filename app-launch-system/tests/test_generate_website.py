@@ -236,7 +236,7 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertNotIn("video-frame", index)
         self.assertFalse(any("{{" in path.read_text(encoding="utf-8") for path in files if path.suffix == ".html"))
 
-    def test_google_play_and_youtube_links_render(self) -> None:
+    def test_google_play_and_youtube_embed_render(self) -> None:
         data = self.app_data()
         data["googlePlayUrl"] = "https://play.google.com/store/apps/details?id=dev.example.pixelnotes"
         data["videoUrl"] = "https://www.youtube.com/watch?v=w5BVcThNpvQ"
@@ -247,12 +247,13 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertIn('href="https://play.google.com/store/apps/details?id=dev.example.pixelnotes"', index)
         self.assertIn('class="google-play-badge"', index)
         self.assertIn('src="assets/google-play-badge.png"', index)
-        self.assertIn('class="hero-video-poster"', index)
-        self.assertIn('src="assets/youtube-poster.jpg"', index)
+        self.assertIn('class="hero-video-frame"', index)
+        self.assertIn('src="https://www.youtube-nocookie.com/embed/w5BVcThNpvQ"', index)
         self.assertIn('hero-video', index)
         self.assertNotIn('video-band', index)
-        self.assertNotIn('<iframe', index)
-        self.assertIn('href="https://www.youtube.com/watch?v=w5BVcThNpvQ"', index)
+        self.assertIn('<iframe', index)
+        self.assertNotIn('hero-video-poster', index)
+        self.assertNotIn('Watch on YouTube', index)
 
     def test_search_console_html_tag_token_renders(self) -> None:
         data = self.app_data()

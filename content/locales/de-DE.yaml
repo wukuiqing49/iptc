@@ -1,0 +1,118 @@
+locale: "de-DE"
+languageName: "Deutsch"
+direction: "ltr"
+reviewStatus: "machine-draft"
+
+navigation:
+  primaryLabel: "Hauptnavigation"
+  footerLabel: "Footer-Navigation"
+  home: "Startseite"
+  features: "Funktionen"
+  screenshots: "Screenshots"
+  support: "Support"
+  privacy: "Datenschutz"
+  about: "Unternehmen"
+  blog: "Anleitungen"
+  language: "Sprache"
+  backToApp: "Zur App"
+
+common:
+  skipToContent: "Zum Inhalt springen"
+  googlePlayCta: "Bei Google Play laden"
+  availability: "Der Google-Play-Link wird vorbereitet"
+  rights: "Alle Rechte vorbehalten."
+  notFoundTitle: "Seite nicht gefunden"
+  notFoundCopy: "Die angeforderte Seite existiert nicht."
+  returnHome: "Zur Startseite"
+
+home:
+  pageTitle: "CaptionMeta - Foto-Metadaten-Tool für Android"
+  metaDescription: "IPTC-, EXIF- und XMP-Fotometadaten auf Android bearbeiten, private Daten bereinigen und Fotos für die Übergabe vorbereiten."
+  category: "Android-Fotografie-Tool"
+  tagline: "Fotometadaten, bereit für den Einsatz."
+  shortDescription: "Bildunterschriften, Keywords, Credits, Rechte und Übergabe-Workflows für Fototeams auf Android konsistent halten."
+  fullDescription: "CaptionMeta ist ein Android-Tool für Fotometadaten. IPTC-, EXIF- und XMP-Felder prüfen und bearbeiten, Metadatenvorlagen wiederverwenden, private Daten bereinigen und bearbeitete Fotokopien für die Übergabe vorbereiten."
+  heroScreenshotAlt: "Echter CaptionMeta-App-Bildschirm"
+  heroScreenshotCaption: "Die echte CaptionMeta-Oberfläche auf einem verbundenen Gerät"
+  featuresHeading: "Ein Metadaten-Workflow von der Aufnahme bis zur Übergabe"
+  featuresIntro: "Diese Funktionen sind durch den aktuellen Android-Quellcode, Tests und App-Bildschirme belegt."
+  features:
+    metadata-editor: {name: "IPTC-, EXIF- und XMP-Bearbeitung", description: "Bildunterschriften, Überschriften, Keywords, Urheber, Copyright, Rechte und Standortdaten prüfen und bearbeiten."}
+    privacy-cleanup: {name: "Private Metadaten bereinigen", description: "Ausgewählte EXIF-, IPTC- und XMP-Daten vor dem Teilen einer bearbeiteten Fotokopie prüfen und entfernen."}
+    batch-presets: {name: "Stapelvorlagen", description: "IPTC-Vorlagen für mehrere Fotos wiederverwenden und individuelle Überschreibungen beibehalten."}
+    photo-delivery: {name: "Foto-Übergabewarteschlange", description: "Bearbeitete Fotos einreihen, über konfigurierte Server übertragen und Aufgabenergebnisse prüfen."}
+  screenshotsHeading: "Die App ansehen"
+  screenshotsIntro: "Echte Screens aus der aktuellen App-Version auf einem verbundenen Android-Gerät."
+  workflowHeading: "Passt in den mobilen Foto-Workflow"
+  workflowIntro: "Wiederholte Metadateneingabe, Datenschutzprüfungen und Dateiübergabe in einem Android-Tool bündeln."
+  workflowSteps:
+    - "Ein Foto aufnehmen oder lokale Bilder auswählen."
+    - "Eine Vorlage wählen und Bildunterschriften, Keywords, Credits und Rechte eintragen."
+    - "Den Stapel verarbeiten und bei Bedarf einzelne Fotos überschreiben."
+    - "Das Ergebnis prüfen und bearbeitete Dateien in die Übergabewarteschlange aufnehmen."
+  closingHeading: "Das nächste Fotoset vorbereiten?"
+  closingCopy: "Nach Bestätigung des öffentlichen Store-Eintrags führt dieser Aufruf zu Google Play."
+
+featureDetails:
+  metadata-editor:
+    problem: "Wenn Bildunterschriften, Credits, Rechte oder Keywords für jedes Bild anders bearbeitet werden, werden Fotoübergaben uneinheitlich."
+    capabilities: ["Unterstützte EXIF-, IPTC- und XMP-Metadaten lesen und prüfen", "Bildunterschriften, Überschriften, Keywords, Urheber, Copyright, Rechte und Standortfelder in bearbeitete Fotokopien schreiben", "Einzelbildwerte zur Verfeinerung oder Überschreibung von Stapelwerten nutzen"]
+    supportedInputs: ["Auf dem Android-Gerät ausgewählte lokale Fotodateien"]
+    supportedOutputs: ["Bearbeitete Fotokopien mit den gewählten Metadatenfeldern"]
+    options: ["IPTC-Kern- und Erweiterungsfelder, XMP-Felder, EXIF-Verarbeitung und Standortwerte"]
+    steps: ["Ein einzelnes Foto oder eine Gruppe lokaler Fotos auswählen", "Eine Vorlage wählen oder Bildunterschriften, Überschriften, Keywords, Urheber und Rechte eingeben", "Das Ergebnis prüfen und die bearbeitete Kopie speichern"]
+    limitations: ["Verfügbare Felder und Schreibverhalten hängen von der ausgewählten Datei und den im Workflow aktivierten Metadatenfeldern ab."]
+    faq: [{question: "Kann CaptionMeta IPTC- und XMP-Metadaten auf Android bearbeiten?", answer: "Ja. Das Projekt enthält IPTC- und XMP-Schreibfunktionen sowie Verifikationstests für den aktuellen Fotometadaten-Workflow."}]
+  privacy-cleanup:
+    problem: "Ein Foto kann Standort-, Kamera- und weitere Metadaten enthalten, die nicht in jede Übergabe gehören."
+    capabilities: ["Erfasste EXIF-, IPTC- und XMP-Metadatenkategorien prüfen", "Ausgewählte private Metadaten aus einer bearbeiteten Fotokopie entfernen", "Originaldatei und bereinigten Ausgabe-Workflow getrennt behandeln"]
+    supportedInputs: ["Lokale Fotos mit EXIF-, IPTC- oder XMP-Metadaten"]
+    supportedOutputs: ["Bearbeitete Fotokopie ohne die ausgewählten Metadaten"]
+    options: ["Standort-, Kamera- und weitere im Bereinigungs-Workflow erfasste Metadatenkategorien"]
+    steps: ["Das zu prüfende Foto auswählen", "Die für die Bereinigung verfügbaren Kategorien prüfen", "Die Bereinigung ausführen und die Kopie für die Übergabe verwenden"]
+    limitations: ["Der Umfang richtet sich nach den in der aktuellen App-Version implementierten Kategorien. Ausgabe vor der Veröffentlichung prüfen."]
+    faq: [{question: "Ändert die Bereinigung mein Originalfoto?", answer: "Der dokumentierte Workflow erstellt Fotodaten für Verarbeitung und Übergabe. Original bei Bedarf behalten und das gespeicherte Ergebnis prüfen."}]
+  batch-presets:
+    problem: "Bei wiederholten Fotoaufträgen ist es schwer, konsistent zu bleiben, wenn dieselben Felder für jedes Bild neu eingegeben werden."
+    capabilities: ["Metadatentemplates oder Vorlagen erstellen und wiederverwenden", "Stapelwerte auf mehrere ausgewählte Fotos anwenden", "Einzelne Fotos mit abweichender Bildunterschrift oder Feldwert überschreiben"]
+    supportedInputs: ["Eine Gruppe lokaler Fotos und eine gespeicherte Metadatenvorlage"]
+    supportedOutputs: ["Mehrere bearbeitete Fotokopien mit aufgelösten Metadatenwerten"]
+    options: ["Vorlagenfelder, Stapelwerte, Einzelbildüberschreibungen, Urheber, Standort und Übergabeeinstellungen"]
+    steps: ["Eine IPTC-Vorlage wählen oder erstellen", "Stapelwerte und zu verarbeitende Fotos auswählen", "Einzelbildüberschreibungen prüfen und die endgültigen Werte schreiben"]
+    limitations: ["Eine Vorlage wirkt nur auf die konfigurierten Felder. Leere oder deaktivierte Felder werden nicht als befüllt angenommen."]
+    faq: [{question: "Kann ein Foto einen Stapel-Metadatenwert überschreiben?", answer: "Ja. Die Workflow-Tests belegen, dass Einzelbildwerte für konfigurierte Felder Vorrang vor Stapelwerten haben."}]
+  photo-delivery:
+    problem: "Die Übergabe von Fotos aus dem Einsatz kann scheitern, wenn Dateien, Servereinstellungen und Wiederholungsstatus getrennt verwaltet werden."
+    capabilities: ["Bearbeitete Fotodateien zur Übergabe einreihen", "Konfigurierte FTP-, FTPS-, SFTP-, HTTP-, SMB- und WebDAV-Clients unterstützen", "Bestimmte vorübergehende HTTP-Fehler wiederholen und Aufgabenergebnisse behalten"]
+    supportedInputs: ["Bearbeitete lokale Fotodateien und ein konfiguriertes Übergabeserverprofil"]
+    supportedOutputs: ["Eine Upload-Aufgabe in der Warteschlange mit Erfolgs- oder Fehlerergebnis"]
+    options: ["Serverprofile für FTP, FTPS, SFTP, HTTP, SMB und WebDAV"]
+    steps: ["Ein Übergabeserverprofil konfigurieren", "Bearbeitete Fotos auswählen und zur Upload-Warteschlange hinzufügen", "Warteschlange überwachen, geeignete Fehler wiederholen und Verlauf prüfen"]
+    limitations: ["Die Übergabe benötigt einen erreichbaren Server und vom Benutzer konfigurierte Zugangsdaten. Die App bietet keinen gehosteten Fotospeicher."]
+    faq: [{question: "Welche Übergabeprotokolle werden unterstützt?", answer: "Das Upload-Modul enthält Clients und Konfigurationsmodelle für FTP, FTPS, SFTP, HTTP, SMB und WebDAV."}]
+
+privacy:
+  pageTitle: "Datenschutz - CaptionMeta"
+  metaDescription: "So verarbeitet CaptionMeta Fotos, Metadaten, Standortberechtigungen und integrierte Dienste."
+  heading: "Datenschutz"
+  lastUpdatedLabel: "Zuletzt aktualisiert"
+  content:
+    - heading: "Datenverarbeitung"
+      paragraphs: ["CaptionMeta verarbeitet Fotos und Metadaten im Android-Workflow. Bearbeitete Dateien können nur dann an einen vom Benutzer konfigurierten Server gesendet werden, wenn die Übergabe eingerichtet und gestartet wird.", "Die App kann für Aufnahme, GPS-Metadaten und Fotoauswahl Zugriff auf Kamera, Standort und Medien anfordern."]
+    - heading: "Integrierte Dienste"
+      paragraphs: ["Google Sign-In, Google Play Billing und Firebase sind für Konto-, Kauf- und App-Funktionen integriert. Vollständige Datenschutzrichtlinie und Datensicherheitsangaben des Stores vor der Veröffentlichung prüfen."]
+
+support:
+  pageTitle: "Support - CaptionMeta"
+  metaDescription: "Versionsinformationen, Funktionshilfe und Supportkontakt für CaptionMeta."
+  heading: "Support"
+  intro: "Funktionshinweise lesen oder den Entwickler bei Fragen zu CaptionMeta kontaktieren."
+  faqHeading: "Häufige Fragen"
+  faq:
+    - question: "Welche Android-Versionen werden unterstützt?"
+      answer: "Das aktuelle Projekt setzt minSdk auf 24 und targetSdk auf 36."
+    - question: "Wo ist der Google-Play-Download?"
+      answer: "Die öffentliche Store-URL ist in der Website-Konfiguration hinterlegt."
+  contactHeading: "Support kontaktieren"
+  contactCopy: "Für Hilfe, Feedback zum Metadaten-Workflow oder Fragen zur Veröffentlichung eine E-Mail an den Entwickler senden."
+  contactCta: "Support per E-Mail"

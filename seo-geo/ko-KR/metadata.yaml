@@ -1,0 +1,23 @@
+schemaVersion: '1.0'
+locale: ko-KR
+pages:
+  /ko-KR/:
+    title: CaptionMeta - Android 사진 메타데이터 도구
+    description: Android에서 IPTC, EXIF, XMP 사진 메타데이터를 편집하고 비공개 데이터를 정리해 사진을 전달하세요.
+    primaryQuery: IPTC metadata editor Android
+  /ko-KR/features/iptc-exif-xmp-편집/:
+    title: IPTC, EXIF, XMP 편집 - CaptionMeta
+    description: 캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.
+    primaryQuery: IPTC metadata editor for Android
+  /ko-KR/features/비공개-메타데이터-정리/:
+    title: 비공개 메타데이터 정리 - CaptionMeta
+    description: 사진 사본을 공유하기 전에 선택한 EXIF, IPTC, XMP 데이터를 확인하고 삭제합니다.
+    primaryQuery: remove EXIF metadata Android
+  /ko-KR/features/일괄-프리셋/:
+    title: 일괄 프리셋 - CaptionMeta
+    description: 여러 사진에 IPTC 프리셋을 재사용하면서 사진별 재정의도 유지합니다.
+    primaryQuery: batch IPTC metadata editor
+  /ko-KR/features/사진-전달-대기열/:
+    title: 사진 전달 대기열 - CaptionMeta
+    description: 처리한 사진을 대기열에 넣고 설정된 서버로 전달한 뒤 결과를 확인합니다.
+    primaryQuery: photo upload queue Android

@@ -23,3 +23,111 @@ en-US,/blog/en-US/batch-presets/,/en-US/features/batch-presets/,Batch presets,fe
 en-US,/en-US/,/en-US/features/photo-delivery-queue/,Photo delivery queue,home feature discovery
 en-US,/en-US/features/photo-delivery-queue/,/blog/en-US/photo-delivery-queue/,Photo delivery queue,task education
 en-US,/blog/en-US/photo-delivery-queue/,/en-US/features/photo-delivery-queue/,Photo delivery queue,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/iptc-exif-xmpの編集/,IPTC、EXIF、XMPの編集,home feature discovery
+ja-JP,/ja-JP/features/iptc-exif-xmpの編集/,/blog/ja-JP/iptc-exif-xmpの編集/,IPTC、EXIF、XMPの編集,task education
+ja-JP,/blog/ja-JP/iptc-exif-xmpの編集/,/ja-JP/features/iptc-exif-xmpの編集/,IPTC、EXIF、XMPの編集,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/非公開メタデータの整理/,非公開メタデータの整理,home feature discovery
+ja-JP,/ja-JP/features/非公開メタデータの整理/,/blog/ja-JP/非公開メタデータの整理/,非公開メタデータの整理,task education
+ja-JP,/blog/ja-JP/非公開メタデータの整理/,/ja-JP/features/非公開メタデータの整理/,非公開メタデータの整理,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/一括プリセット/,一括プリセット,home feature discovery
+ja-JP,/ja-JP/features/一括プリセット/,/blog/ja-JP/一括プリセット/,一括プリセット,task education
+ja-JP,/blog/ja-JP/一括プリセット/,/ja-JP/features/一括プリセット/,一括プリセット,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/写真納品キュー/,写真納品キュー,home feature discovery
+ja-JP,/ja-JP/features/写真納品キュー/,/blog/ja-JP/写真納品キュー/,写真納品キュー,task education
+ja-JP,/blog/ja-JP/写真納品キュー/,/ja-JP/features/写真納品キュー/,写真納品キュー,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/iptc-exif-xmp-편집/,"IPTC, EXIF, XMP 편집",home feature discovery
+ko-KR,/ko-KR/features/iptc-exif-xmp-편집/,/blog/ko-KR/iptc-exif-xmp-편집/,"IPTC, EXIF, XMP 편집",task education
+ko-KR,/blog/ko-KR/iptc-exif-xmp-편집/,/ko-KR/features/iptc-exif-xmp-편집/,"IPTC, EXIF, XMP 편집",feature verification
+ko-KR,/ko-KR/,/ko-KR/features/비공개-메타데이터-정리/,비공개 메타데이터 정리,home feature discovery
+ko-KR,/ko-KR/features/비공개-메타데이터-정리/,/blog/ko-KR/비공개-메타데이터-정리/,비공개 메타데이터 정리,task education
+ko-KR,/blog/ko-KR/비공개-메타데이터-정리/,/ko-KR/features/비공개-메타데이터-정리/,비공개 메타데이터 정리,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/일괄-프리셋/,일괄 프리셋,home feature discovery
+ko-KR,/ko-KR/features/일괄-프리셋/,/blog/ko-KR/일괄-프리셋/,일괄 프리셋,task education
+ko-KR,/blog/ko-KR/일괄-프리셋/,/ko-KR/features/일괄-프리셋/,일괄 프리셋,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/사진-전달-대기열/,사진 전달 대기열,home feature discovery
+ko-KR,/ko-KR/features/사진-전달-대기열/,/blog/ko-KR/사진-전달-대기열/,사진 전달 대기열,task education
+ko-KR,/blog/ko-KR/사진-전달-대기열/,/ko-KR/features/사진-전달-대기열/,사진 전달 대기열,feature verification
+de-DE,/de-DE/,/de-DE/features/iptc-exif-und-xmp-bearbeitung/,"IPTC-, EXIF- und XMP-Bearbeitung",home feature discovery
+de-DE,/de-DE/features/iptc-exif-und-xmp-bearbeitung/,/blog/de-DE/iptc-exif-und-xmp-bearbeitung/,"IPTC-, EXIF- und XMP-Bearbeitung",task education
+de-DE,/blog/de-DE/iptc-exif-und-xmp-bearbeitung/,/de-DE/features/iptc-exif-und-xmp-bearbeitung/,"IPTC-, EXIF- und XMP-Bearbeitung",feature verification
+de-DE,/de-DE/,/de-DE/features/private-metadaten-bereinigen/,Private Metadaten bereinigen,home feature discovery
+de-DE,/de-DE/features/private-metadaten-bereinigen/,/blog/de-DE/private-metadaten-bereinigen/,Private Metadaten bereinigen,task education
+de-DE,/blog/de-DE/private-metadaten-bereinigen/,/de-DE/features/private-metadaten-bereinigen/,Private Metadaten bereinigen,feature verification
+de-DE,/de-DE/,/de-DE/features/stapelvorlagen/,Stapelvorlagen,home feature discovery
+de-DE,/de-DE/features/stapelvorlagen/,/blog/de-DE/stapelvorlagen/,Stapelvorlagen,task education
+de-DE,/blog/de-DE/stapelvorlagen/,/de-DE/features/stapelvorlagen/,Stapelvorlagen,feature verification
+de-DE,/de-DE/,/de-DE/features/foto-übergabewarteschlange/,Foto-Übergabewarteschlange,home feature discovery
+de-DE,/de-DE/features/foto-übergabewarteschlange/,/blog/de-DE/foto-übergabewarteschlange/,Foto-Übergabewarteschlange,task education
+de-DE,/blog/de-DE/foto-übergabewarteschlange/,/de-DE/features/foto-übergabewarteschlange/,Foto-Übergabewarteschlange,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/modification-iptc-exif-et-xmp/,"Modification IPTC, EXIF et XMP",home feature discovery
+fr-FR,/fr-FR/features/modification-iptc-exif-et-xmp/,/blog/fr-FR/modification-iptc-exif-et-xmp/,"Modification IPTC, EXIF et XMP",task education
+fr-FR,/blog/fr-FR/modification-iptc-exif-et-xmp/,/fr-FR/features/modification-iptc-exif-et-xmp/,"Modification IPTC, EXIF et XMP",feature verification
+fr-FR,/fr-FR/,/fr-FR/features/nettoyage-des-métadonnées-privées/,Nettoyage des métadonnées privées,home feature discovery
+fr-FR,/fr-FR/features/nettoyage-des-métadonnées-privées/,/blog/fr-FR/nettoyage-des-métadonnées-privées/,Nettoyage des métadonnées privées,task education
+fr-FR,/blog/fr-FR/nettoyage-des-métadonnées-privées/,/fr-FR/features/nettoyage-des-métadonnées-privées/,Nettoyage des métadonnées privées,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/préréglages-par-lot/,Préréglages par lot,home feature discovery
+fr-FR,/fr-FR/features/préréglages-par-lot/,/blog/fr-FR/préréglages-par-lot/,Préréglages par lot,task education
+fr-FR,/blog/fr-FR/préréglages-par-lot/,/fr-FR/features/préréglages-par-lot/,Préréglages par lot,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/file-de-livraison-photo/,File de livraison photo,home feature discovery
+fr-FR,/fr-FR/features/file-de-livraison-photo/,/blog/fr-FR/file-de-livraison-photo/,File de livraison photo,task education
+fr-FR,/blog/fr-FR/file-de-livraison-photo/,/fr-FR/features/file-de-livraison-photo/,File de livraison photo,feature verification
+es-419,/es-419/,/es-419/features/edición-iptc-exif-y-xmp/,"Edición IPTC, EXIF y XMP",home feature discovery
+es-419,/es-419/features/edición-iptc-exif-y-xmp/,/blog/es-419/edición-iptc-exif-y-xmp/,"Edición IPTC, EXIF y XMP",task education
+es-419,/blog/es-419/edición-iptc-exif-y-xmp/,/es-419/features/edición-iptc-exif-y-xmp/,"Edición IPTC, EXIF y XMP",feature verification
+es-419,/es-419/,/es-419/features/limpieza-de-metadatos-privados/,Limpieza de metadatos privados,home feature discovery
+es-419,/es-419/features/limpieza-de-metadatos-privados/,/blog/es-419/limpieza-de-metadatos-privados/,Limpieza de metadatos privados,task education
+es-419,/blog/es-419/limpieza-de-metadatos-privados/,/es-419/features/limpieza-de-metadatos-privados/,Limpieza de metadatos privados,feature verification
+es-419,/es-419/,/es-419/features/ajustes-preestablecidos-por-lote/,Ajustes preestablecidos por lote,home feature discovery
+es-419,/es-419/features/ajustes-preestablecidos-por-lote/,/blog/es-419/ajustes-preestablecidos-por-lote/,Ajustes preestablecidos por lote,task education
+es-419,/blog/es-419/ajustes-preestablecidos-por-lote/,/es-419/features/ajustes-preestablecidos-por-lote/,Ajustes preestablecidos por lote,feature verification
+es-419,/es-419/,/es-419/features/cola-de-entrega-de-fotos/,Cola de entrega de fotos,home feature discovery
+es-419,/es-419/features/cola-de-entrega-de-fotos/,/blog/es-419/cola-de-entrega-de-fotos/,Cola de entrega de fotos,task education
+es-419,/blog/es-419/cola-de-entrega-de-fotos/,/es-419/features/cola-de-entrega-de-fotos/,Cola de entrega de fotos,feature verification
+pt-PT,/pt-PT/,/pt-PT/features/edição-iptc-exif-e-xmp/,"Edição IPTC, EXIF e XMP",home feature discovery
+pt-PT,/pt-PT/features/edição-iptc-exif-e-xmp/,/blog/pt-PT/edição-iptc-exif-e-xmp/,"Edição IPTC, EXIF e XMP",task education
+pt-PT,/blog/pt-PT/edição-iptc-exif-e-xmp/,/pt-PT/features/edição-iptc-exif-e-xmp/,"Edição IPTC, EXIF e XMP",feature verification
+pt-PT,/pt-PT/,/pt-PT/features/limpeza-de-metadados-privados/,Limpeza de metadados privados,home feature discovery
+pt-PT,/pt-PT/features/limpeza-de-metadados-privados/,/blog/pt-PT/limpeza-de-metadados-privados/,Limpeza de metadados privados,task education
+pt-PT,/blog/pt-PT/limpeza-de-metadados-privados/,/pt-PT/features/limpeza-de-metadados-privados/,Limpeza de metadados privados,feature verification
+pt-PT,/pt-PT/,/pt-PT/features/predefinições-em-lote/,Predefinições em lote,home feature discovery
+pt-PT,/pt-PT/features/predefinições-em-lote/,/blog/pt-PT/predefinições-em-lote/,Predefinições em lote,task education
+pt-PT,/blog/pt-PT/predefinições-em-lote/,/pt-PT/features/predefinições-em-lote/,Predefinições em lote,feature verification
+pt-PT,/pt-PT/,/pt-PT/features/fila-de-entrega-de-fotografias/,Fila de entrega de fotografias,home feature discovery
+pt-PT,/pt-PT/features/fila-de-entrega-de-fotografias/,/blog/pt-PT/fila-de-entrega-de-fotografias/,Fila de entrega de fotografias,task education
+pt-PT,/blog/pt-PT/fila-de-entrega-de-fotografias/,/pt-PT/features/fila-de-entrega-de-fotografias/,Fila de entrega de fotografias,feature verification
+it-IT,/it-IT/,/it-IT/features/modifica-iptc-exif-e-xmp/,"Modifica IPTC, EXIF e XMP",home feature discovery
+it-IT,/it-IT/features/modifica-iptc-exif-e-xmp/,/blog/it-IT/modifica-iptc-exif-e-xmp/,"Modifica IPTC, EXIF e XMP",task education
+it-IT,/blog/it-IT/modifica-iptc-exif-e-xmp/,/it-IT/features/modifica-iptc-exif-e-xmp/,"Modifica IPTC, EXIF e XMP",feature verification
+it-IT,/it-IT/,/it-IT/features/pulizia-dei-metadati-privati/,Pulizia dei metadati privati,home feature discovery
+it-IT,/it-IT/features/pulizia-dei-metadati-privati/,/blog/it-IT/pulizia-dei-metadati-privati/,Pulizia dei metadati privati,task education
+it-IT,/blog/it-IT/pulizia-dei-metadati-privati/,/it-IT/features/pulizia-dei-metadati-privati/,Pulizia dei metadati privati,feature verification
+it-IT,/it-IT/,/it-IT/features/preset-in-batch/,Preset in batch,home feature discovery
+it-IT,/it-IT/features/preset-in-batch/,/blog/it-IT/preset-in-batch/,Preset in batch,task education
+it-IT,/blog/it-IT/preset-in-batch/,/it-IT/features/preset-in-batch/,Preset in batch,feature verification
+it-IT,/it-IT/,/it-IT/features/coda-di-consegna-foto/,Coda di consegna foto,home feature discovery
+it-IT,/it-IT/features/coda-di-consegna-foto/,/blog/it-IT/coda-di-consegna-foto/,Coda di consegna foto,task education
+it-IT,/blog/it-IT/coda-di-consegna-foto/,/it-IT/features/coda-di-consegna-foto/,Coda di consegna foto,feature verification
+ru-RU,/ru-RU/,/ru-RU/features/редактирование-iptc-exif-и-xmp/,"Редактирование IPTC, EXIF и XMP",home feature discovery
+ru-RU,/ru-RU/features/редактирование-iptc-exif-и-xmp/,/blog/ru-RU/редактирование-iptc-exif-и-xmp/,"Редактирование IPTC, EXIF и XMP",task education
+ru-RU,/blog/ru-RU/редактирование-iptc-exif-и-xmp/,/ru-RU/features/редактирование-iptc-exif-и-xmp/,"Редактирование IPTC, EXIF и XMP",feature verification
+ru-RU,/ru-RU/,/ru-RU/features/очистка-личных-метаданных/,Очистка личных метаданных,home feature discovery
+ru-RU,/ru-RU/features/очистка-личных-метаданных/,/blog/ru-RU/очистка-личных-метаданных/,Очистка личных метаданных,task education
+ru-RU,/blog/ru-RU/очистка-личных-метаданных/,/ru-RU/features/очистка-личных-метаданных/,Очистка личных метаданных,feature verification
+ru-RU,/ru-RU/,/ru-RU/features/шаблоны-для-пакетной-обработки/,Шаблоны для пакетной обработки,home feature discovery
+ru-RU,/ru-RU/features/шаблоны-для-пакетной-обработки/,/blog/ru-RU/шаблоны-для-пакетной-обработки/,Шаблоны для пакетной обработки,task education
+ru-RU,/blog/ru-RU/шаблоны-для-пакетной-обработки/,/ru-RU/features/шаблоны-для-пакетной-обработки/,Шаблоны для пакетной обработки,feature verification
+ru-RU,/ru-RU/,/ru-RU/features/очередь-передачи-фотографий/,Очередь передачи фотографий,home feature discovery
+ru-RU,/ru-RU/features/очередь-передачи-фотографий/,/blog/ru-RU/очередь-передачи-фотографий/,Очередь передачи фотографий,task education
+ru-RU,/blog/ru-RU/очередь-передачи-фотографий/,/ru-RU/features/очередь-передачи-фотографий/,Очередь передачи фотографий,feature verification
+ar,/ar/,/ar/features/تحرير-iptc-وexif-وxmp/,تحرير IPTC وEXIF وXMP,home feature discovery
+ar,/ar/features/تحرير-iptc-وexif-وxmp/,/blog/ar/تحرير-iptc-وexif-وxmp/,تحرير IPTC وEXIF وXMP,task education
+ar,/blog/ar/تحرير-iptc-وexif-وxmp/,/ar/features/تحرير-iptc-وexif-وxmp/,تحرير IPTC وEXIF وXMP,feature verification
+ar,/ar/,/ar/features/تنظيف-البيانات-الوصفية-الخاصة/,تنظيف البيانات الوصفية الخاصة,home feature discovery
+ar,/ar/features/تنظيف-البيانات-الوصفية-الخاصة/,/blog/ar/تنظيف-البيانات-الوصفية-الخاصة/,تنظيف البيانات الوصفية الخاصة,task education
+ar,/blog/ar/تنظيف-البيانات-الوصفية-الخاصة/,/ar/features/تنظيف-البيانات-الوصفية-الخاصة/,تنظيف البيانات الوصفية الخاصة,feature verification
+ar,/ar/,/ar/features/إعدادات-مسبقة-للدفعات/,إعدادات مسبقة للدفعات,home feature discovery
+ar,/ar/features/إعدادات-مسبقة-للدفعات/,/blog/ar/إعدادات-مسبقة-للدفعات/,إعدادات مسبقة للدفعات,task education
+ar,/blog/ar/إعدادات-مسبقة-للدفعات/,/ar/features/إعدادات-مسبقة-للدفعات/,إعدادات مسبقة للدفعات,feature verification
+ar,/ar/,/ar/features/قائمة-انتظار-تسليم-الصور/,قائمة انتظار تسليم الصور,home feature discovery
+ar,/ar/features/قائمة-انتظار-تسليم-الصور/,/blog/ar/قائمة-انتظار-تسليم-الصور/,قائمة انتظار تسليم الصور,task education
+ar,/blog/ar/قائمة-انتظار-تسليم-الصور/,/ar/features/قائمة-انتظار-تسليم-الصور/,قائمة انتظار تسليم الصور,feature verification

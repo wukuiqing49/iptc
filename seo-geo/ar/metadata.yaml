@@ -1,0 +1,27 @@
+schemaVersion: '1.0'
+locale: ar
+pages:
+  /ar/:
+    title: CaptionMeta - أداة بيانات الصور الوصفية لنظام Android
+    description: CaptionMeta
+    primaryQuery: IPTC metadata editor Android
+  /ar/features/تحرير-iptc-وexif-وxmp/:
+    title: تحرير IPTC وEXIF وXMP - CaptionMeta
+    description: راجع وحرّر العناوين والترويسات والكلمات المفتاحية والمؤلفين وحقوق
+      النشر والحقوق والموقع.
+    primaryQuery: IPTC metadata editor for Android
+  /ar/features/تنظيف-البيانات-الوصفية-الخاصة/:
+    title: تنظيف البيانات الوصفية الخاصة - CaptionMeta
+    description: افحص ونظّف بيانات EXIF وIPTC وXMP المحددة قبل مشاركة نسخة معالجة
+      من الصورة.
+    primaryQuery: remove EXIF metadata Android
+  /ar/features/إعدادات-مسبقة-للدفعات/:
+    title: إعدادات مسبقة للدفعات - CaptionMeta
+    description: أعد استخدام إعدادات IPTC المسبقة على مجموعة صور مع الحفاظ على التعديلات
+      الفردية.
+    primaryQuery: batch IPTC metadata editor
+  /ar/features/قائمة-انتظار-تسليم-الصور/:
+    title: قائمة انتظار تسليم الصور - CaptionMeta
+    description: ضع الصور المعالجة في قائمة انتظار، وسلّمها عبر خوادم مهيأة، وراجع
+      النتائج.
+    primaryQuery: photo upload queue Android

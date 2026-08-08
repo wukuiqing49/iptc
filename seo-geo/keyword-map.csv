@@ -9,3 +9,48 @@ en-US,/en-US/features/iptc-exif-and-xmp-editing/,IPTC metadata editor for Androi
 en-US,/en-US/features/private-metadata-cleanup/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
 en-US,/en-US/features/batch-presets/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
 en-US,/en-US/features/photo-delivery-queue/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+ja-JP,/ja-JP/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+ja-JP,/ja-JP/features/iptc-exif-xmpの編集/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+ja-JP,/ja-JP/features/非公開メタデータの整理/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+ja-JP,/ja-JP/features/一括プリセット/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+ja-JP,/ja-JP/features/写真納品キュー/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+ko-KR,/ko-KR/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+ko-KR,/ko-KR/features/iptc-exif-xmp-편집/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+ko-KR,/ko-KR/features/비공개-메타데이터-정리/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+ko-KR,/ko-KR/features/일괄-프리셋/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+ko-KR,/ko-KR/features/사진-전달-대기열/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+de-DE,/de-DE/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+de-DE,/de-DE/features/iptc-exif-und-xmp-bearbeitung/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+de-DE,/de-DE/features/private-metadaten-bereinigen/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+de-DE,/de-DE/features/stapelvorlagen/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+de-DE,/de-DE/features/foto-übergabewarteschlange/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+fr-FR,/fr-FR/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+fr-FR,/fr-FR/features/modification-iptc-exif-et-xmp/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+fr-FR,/fr-FR/features/nettoyage-des-métadonnées-privées/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+fr-FR,/fr-FR/features/préréglages-par-lot/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+fr-FR,/fr-FR/features/file-de-livraison-photo/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+es-419,/es-419/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+es-419,/es-419/features/edición-iptc-exif-y-xmp/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+es-419,/es-419/features/limpieza-de-metadatos-privados/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+es-419,/es-419/features/ajustes-preestablecidos-por-lote/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+es-419,/es-419/features/cola-de-entrega-de-fotos/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+pt-PT,/pt-PT/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+pt-PT,/pt-PT/features/edição-iptc-exif-e-xmp/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+pt-PT,/pt-PT/features/limpeza-de-metadados-privados/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+pt-PT,/pt-PT/features/predefinições-em-lote/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+pt-PT,/pt-PT/features/fila-de-entrega-de-fotografias/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+it-IT,/it-IT/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+it-IT,/it-IT/features/modifica-iptc-exif-e-xmp/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+it-IT,/it-IT/features/pulizia-dei-metadati-privati/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+it-IT,/it-IT/features/preset-in-batch/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+it-IT,/it-IT/features/coda-di-consegna-foto/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+ru-RU,/ru-RU/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+ru-RU,/ru-RU/features/редактирование-iptc-exif-и-xmp/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+ru-RU,/ru-RU/features/очистка-личных-метаданных/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+ru-RU,/ru-RU/features/шаблоны-для-пакетной-обработки/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+ru-RU,/ru-RU/features/очередь-передачи-фотографий/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft
+ar,/ar/,IPTC metadata editor Android,CaptionMeta,product discovery,draft
+ar,/ar/features/تحرير-iptc-وexif-وxmp/,IPTC metadata editor for Android,photo caption and keyword editor | EXIF and XMP metadata editor,feature evaluation,draft
+ar,/ar/features/تنظيف-البيانات-الوصفية-الخاصة/,remove EXIF metadata Android,photo metadata privacy cleaner | clean GPS data from photos,feature evaluation,draft
+ar,/ar/features/إعدادات-مسبقة-للدفعات/,batch IPTC metadata editor,IPTC preset for photos | bulk photo caption editor Android,feature evaluation,draft
+ar,/ar/features/قائمة-انتظار-تسليم-الصور/,photo upload queue Android,SFTP photo delivery app | FTP WebDAV photo uploader,feature evaluation,draft

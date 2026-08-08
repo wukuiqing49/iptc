@@ -1,0 +1,48 @@
+schemaVersion: '1.0'
+locale: it-IT
+status: draft
+appName: CaptionMeta
+shortDescription: CaptionMeta
+fullDescription: 'Mantieni coerenti didascalie, parole chiave, crediti, diritti e
+  flussi di consegna per i team fotografici su Android.
+
+
+  Modifica IPTC, EXIF e XMP: Controlla e modifica didascalie, titoli, parole chiave,
+  autori, copyright, diritti e posizione. Leggere e controllare i metadati EXIF, IPTC
+  e XMP supportati Scrivere didascalie, titoli, parole chiave, autori, copyright,
+  diritti e posizione nelle copie elaborate Usare valori per foto per perfezionare
+  o sostituire i valori del batch
+
+
+  Pulizia dei metadati privati: Controlla e pulisci dati EXIF, IPTC e XMP selezionati
+  prima di condividere una copia elaborata. Controllare le categorie di metadati EXIF,
+  IPTC e XMP tracciate Rimuovere metadati privati selezionati da una copia elaborata
+  Tenere separati il file originale e il flusso di output pulito
+
+
+  Preset in batch: Riutilizza preset IPTC su più foto mantenendo le modifiche per
+  singola foto. Creare e riutilizzare modelli o preset di metadati Applicare valori
+  batch a più foto selezionate Usare modifiche per singola foto quando un’immagine
+  richiede una didascalia o un campo diverso
+
+
+  Coda di consegna foto: Metti in coda le foto elaborate, consegnale tramite server
+  configurati e controlla i risultati. Mettere in coda i file fotografici elaborati
+  Supportare client configurati FTP, FTPS, SFTP, HTTP, SMB e WebDAV Riprovare alcuni
+  errori HTTP temporanei e conservare i risultati delle attività
+
+
+  Dopo la conferma della scheda pubblica dello store, questo invito aprirà Google
+  Play.'
+characterCounts:
+  appName: 11
+  shortDescription: 11
+  fullDescription: 1479
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption
+validation:
+  valid: true
+  violations: []

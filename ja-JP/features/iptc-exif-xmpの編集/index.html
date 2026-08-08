@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja-JP" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPTC、EXIF、XMPの編集 - CaptionMeta</title>
+  <meta name="description" content="キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。">
+  <meta name="theme-color" content="#1976D2">
+  <link rel="canonical" href="https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/">
+  <link rel="alternate" hreflang="zh-CN" href="https://iptc.pages.dev/features/metadata-editor/">
+  <link rel="alternate" hreflang="en-US" href="https://iptc.pages.dev/en-US/features/iptc-exif-and-xmp-editing/">
+  <link rel="alternate" hreflang="ja-JP" href="https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/">
+  <link rel="alternate" hreflang="ko-KR" href="https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/">
+  <link rel="alternate" hreflang="de-DE" href="https://iptc.pages.dev/de-DE/features/iptc-exif-und-xmp-bearbeitung/">
+  <link rel="alternate" hreflang="fr-FR" href="https://iptc.pages.dev/fr-FR/features/modification-iptc-exif-et-xmp/">
+  <link rel="alternate" hreflang="es-419" href="https://iptc.pages.dev/es-419/features/edición-iptc-exif-y-xmp/">
+  <link rel="alternate" hreflang="pt-PT" href="https://iptc.pages.dev/pt-PT/features/edição-iptc-exif-e-xmp/">
+  <link rel="alternate" hreflang="it-IT" href="https://iptc.pages.dev/it-IT/features/modifica-iptc-exif-e-xmp/">
+  <link rel="alternate" hreflang="ru-RU" href="https://iptc.pages.dev/ru-RU/features/редактирование-iptc-exif-и-xmp/">
+  <link rel="alternate" hreflang="ar" href="https://iptc.pages.dev/ar/features/تحرير-iptc-وexif-وxmp/">
+  <link rel="alternate" hreflang="x-default" href="https://iptc.pages.dev/features/metadata-editor/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IPTC、EXIF、XMPの編集">
+  <meta property="og:description" content="キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。">
+  <meta property="og:url" content="https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/">
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"IPTC、EXIF、XMPの編集","description":"キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。","mainEntity":{"@id":"https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/#app"},"url":"https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/"},{"@type":"SoftwareApplication","@id":"https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/#app","name":"CaptionMeta","operatingSystem":"Android","featureList":["対応するEXIF、IPTC、XMPメタデータを読み取り確認する","キャプション、見出し、キーワード、署名、著作権、権利、位置情報を書き込む","写真ごとの値で一括値を細かく調整または上書きする"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CaptionMetaはAndroidでIPTCとXMPを編集できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。現在の写真メタデータワークフローにはIPTCとXMPの書き込み処理と検証テストがあります。"}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"ja-JP","autoRedirect":false,"rememberSelection":true,"defaultLocale":"en-US","storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US","ja":"ja-JP","ko":"ko-KR","de":"de-DE","fr":"fr-FR","es":"es-419","pt":"pt-PT","it":"it-IT","ru":"ru-RU","ar":"ar"},"locales":[{"code":"zh-CN","url":"https://iptc.pages.dev/features/metadata-editor/"},{"code":"en-US","url":"https://iptc.pages.dev/en-US/features/iptc-exif-and-xmp-editing/"},{"code":"ja-JP","url":"https://iptc.pages.dev/ja-JP/features/iptc-exif-xmpの編集/"},{"code":"ko-KR","url":"https://iptc.pages.dev/ko-KR/features/iptc-exif-xmp-편집/"},{"code":"de-DE","url":"https://iptc.pages.dev/de-DE/features/iptc-exif-und-xmp-bearbeitung/"},{"code":"fr-FR","url":"https://iptc.pages.dev/fr-FR/features/modification-iptc-exif-et-xmp/"},{"code":"es-419","url":"https://iptc.pages.dev/es-419/features/edición-iptc-exif-y-xmp/"},{"code":"pt-PT","url":"https://iptc.pages.dev/pt-PT/features/edição-iptc-exif-e-xmp/"},{"code":"it-IT","url":"https://iptc.pages.dev/it-IT/features/modifica-iptc-exif-e-xmp/"},{"code":"ru-RU","url":"https://iptc.pages.dev/ru-RU/features/редактирование-iptc-exif-и-xmp/"},{"code":"ar","url":"https://iptc.pages.dev/ar/features/تحرير-iptc-وexif-وxmp/"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="CaptionMeta"><img src="../../../assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+    <nav aria-label="メインナビゲーション">
+      <a href="../../">ホーム</a>
+      <a href="../../../blog/ja-JP/">ガイド</a>
+      <a href="../../about.html">会社情報</a>
+      <a href="../../support.html">サポート</a>
+      <label class="language-picker"><span class="visually-hidden">言語</span><select data-locale-switcher aria-label="言語"><option value="zh-CN">简体中文</option><option value="en-US">English</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="de-DE">Deutsch</option><option value="fr-FR">Français</option><option value="es-419">Español (Latinoamérica)</option><option value="pt-PT">Português (Portugal)</option><option value="it-IT">Italiano</option><option value="ru-RU">Русский</option><option value="ar">العربية</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="パンくずリスト"><a href="../../">ホーム</a><span aria-hidden="true">/</span><a href="../../#features">機能</a></nav>
+        <p class="category">確認済みの機能</p>
+        <h1>IPTC、EXIF、XMPの編集</h1>
+        <p class="tagline">キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。</p>
+        <p class="feature-problem"><strong>解決する課題:</strong> 写真ごとにキャプション、クレジット、権利、キーワードを別々に編集すると、納品内容が不統一になります。</p>
+      </header>
+      <figure class="feature-media"><img src="../../../assets/screenshots/02-captionmeta-upload.png" alt="キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。" loading="eager"><figcaption>キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>できること</h2><ul><li>対応するEXIF、IPTC、XMPメタデータを読み取り確認する</li><li>キャプション、見出し、キーワード、署名、著作権、権利、位置情報を書き込む</li><li>写真ごとの値で一括値を細かく調整または上書きする</li></ul></section>
+        <section><h2>利用できる設定</h2><ul><li>IPTCコア・拡張項目、XMP項目、EXIF処理、位置情報</li></ul></section>
+        <section><h2>対応する入力</h2><ul><li>Android端末から選択したローカル写真ファイル</li></ul></section>
+        <section><h2>出力</h2><ul><li>選択したメタデータを書き込んだ処理済み写真コピー</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>ワークフロー</h2><ol><li>写真を1枚または複数選択する</li><li>プリセットを選ぶか、キャプション、見出し、キーワード、署名、権利情報を入力する</li><li>結果を確認して処理済みコピーを保存する</li></ol></section>
+      <section class="feature-limitations"><h2>制限事項</h2><ul><li>利用できる項目と書き込み動作は、選択したファイルとワークフローで有効な項目によって異なります。</li></ul></section>
+      <section class="feature-faq"><h2>よくある質問</h2><details><summary>CaptionMetaはAndroidでIPTCとXMPを編集できますか？</summary><p>はい。現在の写真メタデータワークフローにはIPTCとXMPの書き込み処理と検証テストがあります。</p></details></section>
+      <section class="feature-evidence"><h2>プロジェクトの根拠</h2><ul class="evidence-list"><li><code>core/core_exif/src/main/java/com/wkq/util/exif/MetadataScrubber.kt</code></li><li><code>core/core_exif/src/test/java/com/wkq/iptc/feature/press/metadata/IptcAndXmpVerificationTest.kt</code></li><li><code>feature/feature_app/src/main/res/values/strings.xml</code></li></ul></section>
+      <a class="primary-action" href="../../../blog/ja-JP/iptc-exif-xmpの編集/">関連ガイドを読む</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. All rights reserved.</p>
+    <nav aria-label="フッターナビゲーション">
+      <a href="../../privacy.html">プライバシー</a>
+      <a href="../../about.html">会社情報</a>
+      <a href="../../support.html">サポート</a>
+    </nav>
+  </footer>
+</body>
+</html>
