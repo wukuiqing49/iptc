@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -250,9 +251,10 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertIn('class="hero-video-frame"', index)
         self.assertIn('src="https://www.youtube-nocookie.com/embed/w5BVcThNpvQ?modestbranding=1&amp;rel=0&amp;playsinline=1&amp;iv_load_policy=3"', index)
         self.assertIn('hero-video', index)
-        self.assertIn('hero-video-only', index)
-        self.assertIn('class="visually-hidden"', index)
-        self.assertNotIn('class="hero-copy"', index)
+        self.assertIn('class="hero-copy"', index)
+        hero = re.search(r'<section class="hero.*?</section>', index, re.DOTALL)
+        self.assertIsNotNone(hero)
+        self.assertNotIn('google-play-action', hero.group(0))
         self.assertNotIn('video-band', index)
         self.assertIn('<iframe', index)
         self.assertNotIn('hero-video-poster', index)

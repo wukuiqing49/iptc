@@ -2096,8 +2096,15 @@ def render_site(
             screenshot.get("caption") if locale == source else ""
         ) or nested(content, "home.heroScreenshotCaption")
         if video_url:
-            hero_class = "hero-video-only"
-            hero_copy = f'<h1 id="hero-title" class="visually-hidden">{esc(app_name)}</h1>'
+            hero_class = ""
+            hero_copy = (
+                '<div class="hero-copy">'
+                f'<p class="category">{esc(nested(content, "home.category"))}</p>'
+                f'<h1 id="hero-title">{esc(app_name)}</h1>'
+                f'<p class="tagline">{esc(nested(content, "home.tagline"))}</p>'
+                f'<p class="summary">{esc(nested(content, "home.fullDescription") or nested(content, "home.shortDescription"))}</p>'
+                '</div>'
+            )
             embed_url = youtube_embed_url(video_url)
             if locale.split("-")[0].lower() == "zh":
                 video_title = f"{app_name} 视频介绍"
