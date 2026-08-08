@@ -114,12 +114,18 @@
     if (!config.autoRedirect) return;
     const saved = config.rememberSelection === false ? "" : readPreference(storageKey);
     const browserLanguages = root.navigator?.languages?.length
-      ? root.navigator.languages
+      ? [...root.navigator.languages, root.navigator.language]
       : [root.navigator?.language].filter(Boolean);
+    try {
+      const resolvedLocale = root.Intl?.DateTimeFormat?.().resolvedOptions?.().locale;
+      if (resolvedLocale) browserLanguages.push(resolvedLocale);
+    } catch (_error) {
+      // Browser locale is optional; navigator.language remains the fallback.
+    }
     const preferred = matchLocale(
       saved ? [saved] : browserLanguages,
       config.locales || [],
-      config.sourceLocale,
+      config.defaultLocale || config.sourceLocale,
       config.aliases,
     );
     if (preferred && localeKey(preferred) !== localeKey(current)) {

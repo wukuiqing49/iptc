@@ -900,6 +900,7 @@ def locale_controls(
         "currentLocale": current,
         "autoRedirect": current == source and auto_detect,
         "rememberSelection": remember_selection,
+        "defaultLocale": "en-US" if any(str(item).lower() == "en-us" for item in locales) else source,
         "storageKey": f"{package_name}:locale",
         "aliases": aliases,
         "locales": routes,
@@ -2043,19 +2044,12 @@ def render_site(
             embed_url = youtube_embed_url(video_url)
             if locale.split("-")[0].lower() == "zh":
                 video_title = f"{app_name} 视频介绍"
-                video_intro = f"观看 {app_name} 如何支持照片元数据工作流。"
-                video_link = "在 YouTube 上观看"
             else:
                 video_title = f"{app_name} video walkthrough"
-                video_intro = f"See how {app_name} supports the photo metadata workflow."
-                video_link = "Watch on YouTube"
             hero_media = (
                 '<figure class="hero-media hero-video">'
                 f'<iframe class="hero-video-frame" src="{esc(embed_url)}" '
-                f'title="{esc(video_title)}" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-                f'<figcaption>{esc(video_intro)}<br>'
-                f'<a href="{esc(video_url)}" target="_blank" rel="noopener noreferrer">'
-                f'{esc(video_link)}</a></figcaption></figure>'
+                f'title="{esc(video_title)}" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure>'
             )
         else:
             hero_media = (
