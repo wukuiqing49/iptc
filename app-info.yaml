@@ -231,6 +231,7 @@ assets:
   icon: "icon/captionmeta-icon.png"
   coverImage: "screenshots/captionmeta-home.png"
   socialImage: "screenshots/captionmeta-home.png"
+  video: "video/captionmeta-intro.mp4"
   screenshots:
     - "screenshots/captionmeta-home.png"
     - "screenshots/captionmeta-upload.png"

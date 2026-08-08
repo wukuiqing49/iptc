@@ -32,6 +32,7 @@ PROJECT_ROOT = SYSTEM_ROOT.parent
 TEMPLATE_ROOT = SYSTEM_ROOT / "templates" / "website-template"
 BLOG_TEMPLATE_ROOT = SYSTEM_ROOT / "templates" / "blog-template"
 IMAGE_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"}
+VIDEO_EXTENSIONS = {".m4v", ".mp4", ".ogv", ".webm"}
 TOKEN_PATTERN = re.compile(r"\{\{[^{}]+\}\}")
 LOCAL_REFERENCE = re.compile(r"(?:href|src)=[\"']([^\"']+)[\"']", re.IGNORECASE)
 SEARCH_CONSOLE_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
@@ -602,7 +603,13 @@ def ensure_inside(path: Path, root: Path) -> None:
         raise GenerationError(f"asset path escapes configured root: {path}") from error
 
 
-def resolve_asset(root: Path, value: object, label: str, required: bool = False) -> Path | None:
+def resolve_asset(
+    root: Path,
+    value: object,
+    label: str,
+    required: bool = False,
+    allowed_extensions: set[str] | None = None,
+) -> Path | None:
     if not isinstance(value, str) or not value.strip():
         if required:
             raise GenerationError(f"missing required asset: {label}")
@@ -614,7 +621,7 @@ def resolve_asset(root: Path, value: object, label: str, required: bool = False)
     ensure_inside(path, root.resolve())
     if not path.is_file():
         raise GenerationError(f"asset does not exist: {path}")
-    if path.suffix.lower() not in IMAGE_EXTENSIONS:
+    if path.suffix.lower() not in (allowed_extensions or IMAGE_EXTENSIONS):
         raise GenerationError(f"unsupported image type for {label}: {path.suffix}")
     return path
 
@@ -639,6 +646,17 @@ def copy_assets(app: dict, app_info_path: Path, stage: Path) -> dict:
         "youtubePoster": "assets/youtube-poster.jpg",
         "screenshots": [],
     }
+    video_source = resolve_asset(
+        asset_root,
+        config.get("video"),
+        "assets.video",
+        allowed_extensions=VIDEO_EXTENSIONS,
+    )
+    if video_source:
+        video_relative = Path("assets") / "video" / video_source.name
+        (stage / video_relative).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(video_source, stage / video_relative)
+        copied["video"] = video_relative.as_posix()
     for key, output_name in (("icon", "icon"), ("coverImage", "cover"), ("socialImage", "social")):
         source = resolve_asset(asset_root, config.get(key), f"assets.{key}")
         if source:
@@ -2096,7 +2114,8 @@ def render_site(
         hero_caption = (
             screenshot.get("caption") if locale == source else ""
         ) or nested(content, "home.heroScreenshotCaption")
-        if video_url:
+        video_asset = str(assets.get("video") or "").strip()
+        if video_url or video_asset:
             hero_class = ""
             hero_copy = (
                 '<div class="hero-copy">'
@@ -2106,7 +2125,16 @@ def render_site(
                 f'<p class="summary">{esc(nested(content, "home.fullDescription") or nested(content, "home.shortDescription"))}</p>'
                 '</div>'
             )
-            embed_url = youtube_embed_url(video_url)
+            local_media = ""
+            embed_url = ""
+            if video_asset:
+                local_media = (
+                    '<figure class="hero-media hero-video">'
+                    f'<video class="hero-video-frame" autoplay muted loop playsinline preload="auto" aria-label="Video player">'
+                    f'<source src="{esc(base_path + video_asset)}" type="video/mp4"></video></figure>'
+                )
+            else:
+                embed_url = youtube_embed_url(video_url)
             if locale.split("-")[0].lower() == "zh":
                 video_title = f"{app_name} 视频介绍"
             else:
@@ -2116,6 +2144,8 @@ def render_site(
                 f'<iframe class="hero-video-frame" src="{esc(embed_url)}" '
                 'title="Video player" loading="eager" allow="autoplay; encrypted-media"></iframe></figure>'
             )
+            if local_media:
+                hero_media = local_media
         else:
             hero_class = ""
             hero_copy = (
