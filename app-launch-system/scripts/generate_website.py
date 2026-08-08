@@ -788,7 +788,8 @@ def youtube_embed_url(value: object) -> str:
         )
     return (
         f"https://www.youtube-nocookie.com/embed/{video_id}"
-        "?modestbranding=1&rel=0&playsinline=1&iv_load_policy=3"
+        "?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&playsinline=1"
+        "&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0"
     )
 
 
@@ -2113,7 +2114,7 @@ def render_site(
             hero_media = (
                 '<figure class="hero-media hero-video">'
                 f'<iframe class="hero-video-frame" src="{esc(embed_url)}" '
-                f'title="{esc(video_title)}" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure>'
+                'title="Video player" loading="eager" allow="autoplay; encrypted-media"></iframe></figure>'
             )
         else:
             hero_class = ""

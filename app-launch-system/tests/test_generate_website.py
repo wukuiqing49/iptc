@@ -249,7 +249,7 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertIn('class="google-play-badge"', index)
         self.assertIn('src="assets/google-play-badge.png"', index)
         self.assertIn('class="hero-video-frame"', index)
-        self.assertIn('src="https://www.youtube-nocookie.com/embed/w5BVcThNpvQ?modestbranding=1&amp;rel=0&amp;playsinline=1&amp;iv_load_policy=3"', index)
+        self.assertIn('src="https://www.youtube-nocookie.com/embed/w5BVcThNpvQ?autoplay=1&amp;mute=1&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;playsinline=1&amp;iv_load_policy=3&amp;disablekb=1&amp;fs=0&amp;cc_load_policy=0"', index)
         self.assertIn('hero-video', index)
         self.assertIn('class="hero-copy"', index)
         hero = re.search(r'<section class="hero.*?</section>', index, re.DOTALL)
