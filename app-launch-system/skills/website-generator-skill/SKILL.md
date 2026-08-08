@@ -16,8 +16,8 @@ Require `app-info.yaml` and the absolute Android project path recorded in `sourc
 1. Read all of `app-info.yaml`. Stop and report schema errors or a missing product name, description, source locale, and at least one verified feature. Resolve target locales from explicit user input, then `languages.targets`, then verified `languages.availableInApp`; when multilingual output is requested and none are available, request locales instead of inventing them.
 2. From the `app-launch-system` root, run `python scripts/launch.py validate-app-info <app-info.yaml>` and stop on errors.
 3. Read [references/site-contract.md](references/site-contract.md).
-4. Inspect every referenced logo and screenshot. Use actual app screens as primary visuals; do not invent UI or use unrelated stock images.
-5. Inspect `<app-launch-system>/config/assets/` when present. Use explicit `assets.icon`, `assets.coverImage`, `assets.socialImage`, and every item in `assets.screenshots` first; fall back to verified Android project assets only when these fields are empty. Copy selected assets into `<project-root>/assets` and preserve their purpose. Never assume screenshots is singular.
+4. Inspect every referenced logo, screenshot, and optional video. Use actual app screens as primary visuals; do not invent UI or use unrelated stock images.
+5. Inspect `<app-launch-system>/config/assets/` when present. Use explicit `assets.icon`, `assets.coverImage`, `assets.socialImage`, `assets.video`, and every item in `assets.screenshots` first; fall back to verified Android project assets only when these fields are empty. Copy selected assets into `<project-root>/assets` and preserve their purpose. Never assume screenshots is singular.
 6. Prepare one complete `<project-root>/content/locales/<locale>.yaml` for every non-source locale, following `../../templates/website-template/locale-content.yaml`. Translate both `home.features` and every content-ready feature's structured `featureDetails`. Never satisfy this requirement by copying source text. A source-locale file is optional for `en` and `zh`; provide a complete source-locale file for other source languages.
 7. From `<project-root>`, run `python app-launch-system/scripts/launch.py generate-website`. This renders into a temporary directory, validates it, then writes `index.html` and the other public files directly to `<project-root>`. It does not create `launch-output/` or another wrapper. Existing website files are protected unless the user explicitly approves `--force`.
 8. Confirm source-locale pages are at the root and every target locale is under its BCP 47 directory. Keep brand names, package names, URLs, and legal identifiers unchanged. Confirm reciprocal route data exists for the same page in every complete locale.
@@ -32,6 +32,8 @@ The generator also writes `aso/`, `seo-geo/`, and `launch-readiness.yaml`. Treat
 
 - Make the app name and actual interface visible in the first viewport.
 - Use `assets.coverImage` for the homepage hero when supplied; use `assets.socialImage` for Open Graph when supplied. Never use a phone screenshot as a social image if an explicit social image exists.
+- When `assets.video` is supplied, use it as a self-hosted MP4/WebM hero video. Render a native `<video autoplay muted loop playsinline preload="auto">` without controls, YouTube UI, external title overlays, user avatars, or user information. Use `videoUrl` as an iframe fallback only when no local video asset exists.
+- Keep the homepage hero balanced: retain the product copy on the left and place the video on the right at a constrained desktop width; stack the two columns on narrow screens. Do not make the video a full-width first viewport by default.
 - State a literal value proposition in the supporting copy and keep headings specific.
 - Tie each feature claim to `features[].evidence`.
 - Generate a feature page and blog only when structured feature details pass the content-ready gate. Keep incomplete verified features as homepage summaries and report them in `launch-readiness.yaml`.
@@ -39,11 +41,11 @@ The generator also writes `aso/`, `seo-geo/`, and `launch-readiness.yaml`. Treat
 - Never emit an empty or placeholder `href` for an unknown `googlePlayUrl`; use visible availability text instead.
 - Include privacy and support pages. Include terms only when legal text or a policy owner is provided.
 - Do not fabricate reviews, user counts, ratings, awards, certifications, customers, pricing, guarantees, or data practices.
-- Use semantic HTML, visible focus states, descriptive alt text, and reduced-motion support.
+- Use semantic HTML, descriptive alt text, and reduced-motion support. Keep focus states visible for links and buttons, but never render a red focus outline or red focus border for the language `<select>`; use the neutral control border in its focused state.
 - Avoid decorative gradients, nested cards, oversized empty hero areas, and visuals that obscure the app.
 
 ## Localization
 
 Use the source locale as factual ground truth and keep it at the project root. Transcreate for local search intent and natural phrasing instead of literal translation. Preserve meaning and claim strength. Format dates, punctuation, numbers, and reading direction by locale; set `dir="rtl"` for right-to-left languages.
 
-For every page, generate `LOCALE_ROUTES_JSON` and a native-language `<select data-locale-switcher>` using only locales where that page exists. Enable automatic detection only on source-locale root pages. Match a saved explicit choice first, then `navigator.languages`, configured aliases, base language, and finally the source locale. Store explicit selection locally, never overwrite it with automatic detection, and never redirect localized subdirectory pages automatically. Mark every non-reviewed locale as `machine-draft` in `<project-root>/localization-status.yaml`.
+For every page, generate `LOCALE_ROUTES_JSON` and a native-language `<select data-locale-switcher>` using only locales where that page exists. Enable automatic detection only on source-locale root pages. Match a saved explicit choice first, then `navigator.languages`, `navigator.language`, the browser's resolved Intl locale, configured aliases, base language, and finally `defaultLocale` (prefer `en-US` when available). Store explicit selection locally, never overwrite it with automatic detection, and never redirect localized subdirectory pages automatically. Mark every non-reviewed locale as `machine-draft` in `<project-root>/localization-status.yaml`.

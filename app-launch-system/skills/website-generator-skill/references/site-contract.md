@@ -32,6 +32,8 @@ python app-launch-system/scripts/launch.py generate-website
 
 Defaults are `app-info.yaml`, the current project root, and `content/locales/`. Use `--force` only for an explicitly approved refresh of existing generated files. Every target in `languages.targets` requires `content/locales/<locale>.yaml`; missing or incomplete target content is a hard failure, not a translation fallback.
 
+When `assets.video` points to a local `.mp4`, `.webm`, `.m4v`, or `.ogv`, copy it to `assets/video/` and render it as the homepage hero media with native video markup: `autoplay`, `muted`, `loop`, `playsinline`, and `preload="auto"`, without `controls`. A local asset is preferred over `videoUrl` because it removes third-party player branding, titles, avatars, and related-content overlays. A YouTube iframe is only a fallback when no local asset exists.
+
 ## URL model
 
 Keep the source locale at the root for both single- and multi-locale sites. Put each non-source locale in a stable BCP 47 directory such as `/en-US/` or `/ja-JP/`. Root pages are also `x-default`; do not duplicate the source locale in another directory.
@@ -53,6 +55,7 @@ Use a product-specific storage key derived from the verified package name. A pag
   "sourceLocale": "en-US",
   "currentLocale": "en-US",
   "autoRedirect": true,
+  "defaultLocale": "en-US",
   "storageKey": "com.example.app:locale",
   "aliases": {"zh-HK": "zh-TW"},
   "locales": [
@@ -73,6 +76,8 @@ Render the language picker with native labels rather than translating every lang
   </select>
 </label>
 ```
+
+Style the language picker as a quiet native control with a neutral 1px border. Its `:focus` and `:focus-visible` states must not use a red outline, red border, or red box-shadow; preserve the same neutral border while keeping the control keyboard-operable and correctly labelled.
 
 ## Structured data
 
