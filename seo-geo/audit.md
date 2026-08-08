@@ -1,8 +1,8 @@
 # SEO and GEO audit
 
-Status: blocked
+Status: draft
 
-- Canonical website URL: missing
+- Canonical website URL: https://iptc.pages.dev/
 - Planned pages: 18
 - Content-ready features: 4
 - Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.

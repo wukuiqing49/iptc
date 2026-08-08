@@ -3,12 +3,12 @@ pages:
 - locale: zh-CN
   path: /
   type: home
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /features/metadata-editor/
   type: feature
   contentId: metadata-editor
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/metadata-editor/
   type: guide
@@ -18,7 +18,7 @@ pages:
   path: /features/privacy-cleanup/
   type: feature
   contentId: privacy-cleanup
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/privacy-cleanup/
   type: guide
@@ -28,7 +28,7 @@ pages:
   path: /features/batch-presets/
   type: feature
   contentId: batch-presets
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/batch-presets/
   type: guide
@@ -38,7 +38,7 @@ pages:
   path: /features/photo-delivery/
   type: feature
   contentId: photo-delivery
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/photo-delivery/
   type: guide
@@ -47,12 +47,12 @@ pages:
 - locale: en-US
   path: /en-US/
   type: home
-  status: blocked
+  status: ready
 - locale: en-US
   path: /en-US/features/iptc-exif-and-xmp-editing/
   type: feature
   contentId: metadata-editor
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/en-US/iptc-exif-and-xmp-editing/
   type: guide
@@ -62,7 +62,7 @@ pages:
   path: /en-US/features/private-metadata-cleanup/
   type: feature
   contentId: privacy-cleanup
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/en-US/private-metadata-cleanup/
   type: guide
@@ -72,7 +72,7 @@ pages:
   path: /en-US/features/batch-presets/
   type: feature
   contentId: batch-presets
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/en-US/batch-presets/
   type: guide
@@ -82,7 +82,7 @@ pages:
   path: /en-US/features/photo-delivery-queue/
   type: feature
   contentId: photo-delivery
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/en-US/photo-delivery-queue/
   type: guide

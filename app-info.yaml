@@ -271,7 +271,8 @@ screenshots:
     caption: "当前设备上的照片上传队列"
 
 googlePlayUrl: "https://play.google.com/store/apps/details?id=com.wkq.caption"
-websiteUrl: ""
+websiteUrl: "https://iptc.pages.dev/"
+videoUrl: "https://www.youtube.com/watch?v=9OyA3yWH864"
 editorial:
   publishedAt: ""
   updatedAt: "2026-08-08"

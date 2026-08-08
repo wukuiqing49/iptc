@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+  <url><loc>https://iptc.pages.dev/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/batch-presets/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/en-US/batch-presets/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/en-US/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/en-US/iptc-exif-and-xmp-editing/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/en-US/photo-delivery-queue/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/en-US/private-metadata-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/metadata-editor/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/photo-delivery/</loc></url>
+  <url><loc>https://iptc.pages.dev/blog/privacy-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/about.html</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/features/batch-presets/</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/features/iptc-exif-and-xmp-editing/</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/features/photo-delivery-queue/</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/features/private-metadata-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/en-US/support.html</loc></url>
+  <url><loc>https://iptc.pages.dev/features/batch-presets/</loc></url>
+  <url><loc>https://iptc.pages.dev/features/metadata-editor/</loc></url>
+  <url><loc>https://iptc.pages.dev/features/photo-delivery/</loc></url>
+  <url><loc>https://iptc.pages.dev/features/privacy-cleanup/</loc></url>
+  <url><loc>https://iptc.pages.dev/</loc></url>
+  <url><loc>https://iptc.pages.dev/privacy.html</loc></url>
+  <url><loc>https://iptc.pages.dev/support.html</loc></url>
 </urlset>

@@ -49,6 +49,7 @@ h2 { font-size: 2.5rem; }
 .hero-media img { width: min(21rem, 68vw); max-height: 34rem; object-fit: contain; }
 .hero-media figcaption { margin-top: 0.65rem; color: var(--muted); font-size: 0.9rem; text-align: center; }
 .hero-video { width: min(34rem, 100%); }
+.hero-video-frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; background: #111; }
 .hero-video-poster { position: relative; display: block; aspect-ratio: 16 / 9; background: #111; border-radius: 8px; overflow: hidden; }
 .hero-video-poster img { width: 100%; height: 100%; object-fit: cover; }
 .video-play-icon { position: absolute; top: 50%; left: 50%; width: 4rem; height: 4rem; border-radius: 50%; background: #ff0033; transform: translate(-50%, -50%); }

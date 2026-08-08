@@ -11,6 +11,7 @@
     "批量预设",
     "照片交付队列"
   ],
+  "url": "https://iptc.pages.dev/",
   "publisher": {
     "@id": "https://heyehoi.cn/#organization"
   }
