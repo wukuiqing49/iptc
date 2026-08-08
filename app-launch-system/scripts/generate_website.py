@@ -786,7 +786,10 @@ def youtube_embed_url(value: object) -> str:
         raise GenerationError(
             "videoUrl must be a valid YouTube watch, youtu.be, or embed URL"
         )
-    return f"https://www.youtube-nocookie.com/embed/{video_id}"
+    return (
+        f"https://www.youtube-nocookie.com/embed/{video_id}"
+        "?modestbranding=1&rel=0&playsinline=1&iv_load_policy=3"
+    )
 
 
 def render_video_poster(video_url: str, locale: str, base_path: str, poster_path: str) -> str:
@@ -2093,6 +2096,8 @@ def render_site(
             screenshot.get("caption") if locale == source else ""
         ) or nested(content, "home.heroScreenshotCaption")
         if video_url:
+            hero_class = "hero-video-only"
+            hero_copy = f'<h1 id="hero-title" class="visually-hidden">{esc(app_name)}</h1>'
             embed_url = youtube_embed_url(video_url)
             if locale.split("-")[0].lower() == "zh":
                 video_title = f"{app_name} 视频介绍"
@@ -2104,6 +2109,16 @@ def render_site(
                 f'title="{esc(video_title)}" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure>'
             )
         else:
+            hero_class = ""
+            hero_copy = (
+                '<div class="hero-copy">'
+                f'<p class="category">{esc(nested(content, "home.category"))}</p>'
+                f'<h1 id="hero-title">{esc(app_name)}</h1>'
+                f'<p class="tagline">{esc(nested(content, "home.tagline"))}</p>'
+                f'<p class="summary">{esc(nested(content, "home.fullDescription") or nested(content, "home.shortDescription"))}</p>'
+                f'{primary_action}'
+                '</div>'
+            )
             hero_media = (
                 f'<figure class="hero-media"><img src="{esc(base_path + str(hero_relative))}" '
                 f'alt="{esc(nested(content, "home.heroScreenshotAlt"))}"><figcaption>{esc(hero_caption)}</figcaption></figure>'
@@ -2217,6 +2232,8 @@ def render_site(
                 nested(content, "home.fullDescription")
                 or nested(content, "home.shortDescription")
             ),
+            "HERO_CLASS": hero_class,
+            "HERO_COPY": hero_copy,
             "PRIMARY_ACTION": primary_action,
             "HERO_MEDIA": hero_media,
             "OVERVIEW_SECTION": render_overview_section(content, locale),

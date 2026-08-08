@@ -33,14 +33,8 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="category">{{CATEGORY}}</p>
-        <h1 id="hero-title">{{APP_NAME}}</h1>
-        <p class="tagline">{{TAGLINE}}</p>
-        <p class="summary">{{SHORT_DESCRIPTION}}</p>
-        {{PRIMARY_ACTION}}
-      </div>
+    <section class="hero {{HERO_CLASS}}" aria-labelledby="hero-title">
+      {{HERO_COPY}}
       {{HERO_MEDIA}}
     </section>
 
