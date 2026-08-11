@@ -123,6 +123,21 @@ launch-readiness.yaml  域名、商店、语言和内容发布门槛
 
 未配置 `websiteUrl` 时，canonical、hreflang、Open Graph 绝对地址和 sitemap 会明确标记为阻塞；未配置 `googlePlayUrl` 时，ASO 会保持草稿/阻塞状态。`analysis.validatedAt` 只表示项目分析时间，不能作为博客发布日期。只有显式配置 `editorial.publishedAt` 后，博客才输出文章日期结构化数据。
 
+### Bing、IndexNow 和 GEO
+
+如果要让 Bing 验证站点并在内容更新后主动通知 Bing，可在 `app-info.yaml` 中填写真实的 `BingSiteAuth.xml` 内容和 8-128 位 IndexNow key：
+
+```yaml
+bing:
+  verificationFileName: "BingSiteAuth.xml"
+  verificationContent: |
+    <?xml version="1.0"?>
+    <users><user>你的Bing验证值</user></users>
+  indexNowKey: "你的IndexNowKey"
+```
+
+生成器会将 `BingSiteAuth.xml`、`<IndexNowKey>.txt`、百分号编码的 `sitemap.xml`、`robots.txt` 和 `llms.txt` 写入公开文件清单。部署后，在 Bing Webmaster Tools 验证域名并提交 `https://你的域名/sitemap.xml`；页面新增或更新时，再使用该 key 调用 IndexNow API。
+
 ## 如何把项目交给 AI
 
 你不需要把 Android 项目代码复制到聊天框，也不需要手动整理功能列表。只要提供项目的绝对路径即可。

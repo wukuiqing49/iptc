@@ -10,6 +10,9 @@ content:
 seoGeo:
   status: draft
   websiteUrl: https://iptc.pages.dev/
+bing:
+  verification: configured
+  indexNow: configured
 aso:
   status: draft
   googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.caption

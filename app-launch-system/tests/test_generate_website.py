@@ -293,6 +293,30 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertIn("_worker.js", manifest["files"])
         self.assertNotIn("_redirects", manifest["files"])
 
+    def test_bing_verification_index_now_and_llms_assets_are_generated(self) -> None:
+        data = self.app_data()
+        data["websiteUrl"] = "https://pixel-notes.example/"
+        data["editorial"] = {"updatedAt": "2026-08-08"}
+        data["bing"] = {
+            "verificationFileName": "BingSiteAuth.xml",
+            "verificationContent": '<?xml version="1.0"?>\n<users><user>ABCDEFGH12345678</user></users>',
+            "indexNowKey": "ABCDEFGH12345678",
+        }
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+
+        self.assertIn("<users><user>ABCDEFGH12345678</user></users>", (self.output / "BingSiteAuth.xml").read_text(encoding="utf-8"))
+        self.assertEqual("ABCDEFGH12345678\n", (self.output / "ABCDEFGH12345678.txt").read_text(encoding="utf-8"))
+        self.assertTrue((self.output / "llms.txt").is_file())
+        sitemap = (self.output / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertIn("https://pixel-notes.example/features/visual-notes/", sitemap)
+        self.assertIn("<lastmod>2026-08-08</lastmod>", sitemap)
+        manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
+        self.assertIn("BingSiteAuth.xml", manifest["files"])
+        self.assertIn("ABCDEFGH12345678.txt", manifest["files"])
+        self.assertIn("llms.txt", manifest["files"])
+
     def test_invalid_search_console_html_file_configuration_stops_generation(self) -> None:
         data = self.app_data()
         data["searchConsole"] = {"verificationFileName": "google123.html"}

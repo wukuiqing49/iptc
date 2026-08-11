@@ -15,7 +15,7 @@ import shutil
 import sys
 import tempfile
 from pathlib import Path
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import parse_qs, quote, urljoin, urlparse
 
 try:
     import yaml
@@ -37,6 +37,8 @@ TOKEN_PATTERN = re.compile(r"\{\{[^{}]+\}\}")
 LOCAL_REFERENCE = re.compile(r"(?:href|src)=[\"']([^\"']+)[\"']", re.IGNORECASE)
 SEARCH_CONSOLE_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
 SEARCH_CONSOLE_FILE = re.compile(r"^google[A-Za-z0-9_-]+\.html$")
+BING_VERIFICATION_FILE = re.compile(r"^BingSiteAuth\.xml$")
+INDEX_NOW_KEY = re.compile(r"^[A-Za-z0-9_-]{8,128}$")
 
 
 ENGLISH_UI = {
@@ -220,6 +222,38 @@ def search_console_settings(app: dict) -> tuple[str, tuple[str, str] | None]:
             )
         verification_file = (file_name, file_content + "\n")
     return tag, verification_file
+
+
+def bing_settings(app: dict) -> tuple[tuple[str, str] | None, str | None]:
+    """Resolve Bing verification and IndexNow settings for the public site."""
+    config = app.get("bing") or {}
+    if not isinstance(config, dict):
+        raise GenerationError("bing must be a mapping")
+
+    file_name = str(config.get("verificationFileName") or "").strip()
+    file_content = str(config.get("verificationContent") or "").strip()
+    if bool(file_name) != bool(file_content):
+        raise GenerationError(
+            "bing.verificationFileName and verificationContent must be provided together"
+        )
+    verification_file = None
+    if file_name:
+        if not BING_VERIFICATION_FILE.fullmatch(file_name):
+            raise GenerationError("bing.verificationFileName must be BingSiteAuth.xml")
+        if "<users>" not in file_content or "<user>" not in file_content:
+            raise GenerationError("bing.verificationContent must contain Bing <users><user> verification XML")
+        verification_file = (file_name, file_content + "\n")
+
+    key = str(config.get("indexNowKey") or "").strip()
+    if key and not INDEX_NOW_KEY.fullmatch(key):
+        raise GenerationError("bing.indexNowKey must contain 8-128 letters, digits, hyphens, or underscores")
+    return verification_file, key or None
+
+
+def absolute_url(base_url: str, relative_path: str) -> str:
+    """Build a canonical URI with a percent-encoded path for XML and metadata."""
+    encoded_path = quote(relative_path, safe="/%:@-._~!$&'()*+,;=%")
+    return urljoin(base_url, encoded_path)
 
 
 def load_organization(path: Path | None) -> dict:
@@ -872,7 +906,7 @@ def page_relative(locale: str, source: str, page: str) -> str:
 
 
 def page_url(base_url: str, locale: str, source: str, page: str) -> str:
-    return urljoin(base_url, page_relative(locale, source, page))
+    return absolute_url(base_url, page_relative(locale, source, page))
 
 
 def route_url(current: str, target: str, source: str, page: str, base_url: str) -> str:
@@ -1289,15 +1323,15 @@ def render_feature_pages(
             for target in locales:
                 target_slug = feature_slug(target, source, contents[target], feature)
                 target_page = feature_page_path(target, source, target_slug)
-                target_url = urljoin(base_url, target_page.removesuffix("index.html")) if base_url else relative_href(current_page, target_page)
+                target_url = absolute_url(base_url, target_page.removesuffix("index.html")) if base_url else relative_href(current_page, target_page)
                 routes.append({"code": target, "url": target_url})
                 if base_url:
                     alternate_tags.append(f'<link rel="alternate" hreflang="{esc(target)}" href="{esc(target_url)}">')
-            canonical_url = urljoin(base_url, current_page.removesuffix("index.html")) if base_url else ""
+            canonical_url = absolute_url(base_url, current_page.removesuffix("index.html")) if base_url else ""
             canonical = ""
             if base_url:
                 source_slug = feature_slug(source, source, contents[source], feature)
-                source_url = urljoin(base_url, feature_page_path(source, source, source_slug).removesuffix("index.html"))
+                source_url = absolute_url(base_url, feature_page_path(source, source, source_slug).removesuffix("index.html"))
                 canonical = f'<link rel="canonical" href="{esc(canonical_url)}">\n  ' + "\n  ".join(alternate_tags)
                 canonical += f'\n  <link rel="alternate" hreflang="x-default" href="{esc(source_url)}">'
             route_config = {
@@ -1495,17 +1529,17 @@ def render_blog(
         for locale in locales:
             slug = model_for(locale, content_id)["slug"] if content_id else ""
             target_page = blog_page_path(locale, source, slug)
-            url = urljoin(base_url, target_page.removesuffix("index.html")) if base_url else relative_href(current_page, target_page)
+            url = absolute_url(base_url, target_page.removesuffix("index.html")) if base_url else relative_href(current_page, target_page)
             route_items.append({"code": locale, "url": url})
             if base_url:
                 canonical_lines.append(f'<link rel="alternate" hreflang="{esc(locale)}" href="{esc(url)}">')
         current_slug = model_for(current, content_id)["slug"] if content_id else ""
         canonical_page = blog_page_path(current, source, current_slug)
-        canonical_url = urljoin(base_url, canonical_page.removesuffix("index.html")) if base_url else ""
+        canonical_url = absolute_url(base_url, canonical_page.removesuffix("index.html")) if base_url else ""
         tags = f'<link rel="canonical" href="{esc(canonical_url)}">\n  ' + "\n  ".join(canonical_lines) if base_url else ""
         if base_url:
             source_slug = model_for(source, content_id)["slug"] if content_id else ""
-            source_url = urljoin(base_url, blog_page_path(source, source, source_slug).removesuffix("index.html"))
+            source_url = absolute_url(base_url, blog_page_path(source, source, source_slug).removesuffix("index.html"))
             tags += f'\n  <link rel="alternate" hreflang="x-default" href="{esc(source_url)}">'
         config = {
             "sourceLocale": source,
@@ -1781,6 +1815,7 @@ def write_launch_artifacts(
     ready_ids = {str(feature["id"]) for feature in ready}
     app_name = str(app.get("name") or "")
     google_play_url = str(app.get("googlePlayUrl") or "").strip()
+    bing_verification_file, index_now_key = bing_settings(app)
     publisher = str(organization.get("legalName") or nested(app, "developer.name", "") or app_name)
     screenshots = assets.get("screenshots") or []
 
@@ -2000,6 +2035,7 @@ def write_launch_artifacts(
         f"- Planned pages: {len(page_map)}\n"
         f"- Content-ready features: {len(ready)}\n"
         "- Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.\n"
+        f"- Bing verification: {'configured' if bing_verification_file else 'missing'}; IndexNow key: {'configured' if index_now_key else 'missing'}.\n"
         "- FAQ answers and entity claims come from verified product facts; review machine-draft locales before publication.\n",
         encoding="utf-8",
     )
@@ -2022,6 +2058,10 @@ def write_launch_artifacts(
         "website": {"status": "generated", "entry": "index.html", "output": "."},
         "content": {"verifiedFeatures": len(features), "readyFeatures": len(ready), "skippedFeatures": skipped},
         "seoGeo": {"status": seo_status, "websiteUrl": base_url},
+        "bing": {
+            "verification": "configured" if bing_verification_file else "missing",
+            "indexNow": "configured" if index_now_key else "missing",
+        },
         "aso": {"status": aso_status, "googlePlayUrl": google_play_url},
         "localization": localization_rows,
         "publishReady": bool(base_url and google_play_url and not locale_warnings),
@@ -2066,6 +2106,7 @@ def render_site(
     if video_url:
         youtube_embed_url(video_url)
     search_console_tag, search_console_file = search_console_settings(app)
+    bing_verification_file, index_now_key = bing_settings(app)
     base_url = website_url.rstrip("/") + "/" if website_url else ""
     package_name = str(app.get("packageName") or "")
     app_name = str(app.get("name") or "")
@@ -2253,7 +2294,7 @@ def render_site(
                 f'<meta property="og:url" content="{esc(page_url(base_url, locale, source, "index.html"))}">',
             ]
             if social_relative:
-                og_lines.append(f'<meta property="og:image" content="{esc(urljoin(base_url, str(social_relative)))}">')
+                og_lines.append(f'<meta property="og:image" content="{esc(absolute_url(base_url, str(social_relative)))}">')
             open_graph = "\n  ".join(og_lines)
 
         index_values = merge(page_values["index.html"], {
@@ -2438,16 +2479,52 @@ def render_site(
     (stage / "site.webmanifest").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     sitemap_entries = []
+    sitemap_urls = []
     if base_url:
         for page in sorted(set(generated_pages)):
             relative_url = "" if page == "index.html" else page.removesuffix("index.html")
-            sitemap_entries.append(f"  <url><loc>{esc(urljoin(base_url, relative_url))}</loc></url>")
+            public_url = absolute_url(base_url, relative_url)
+            sitemap_urls.append(public_url)
+            lastmod = str(nested(app, "editorial.updatedAt", "") or "").strip()
+            lastmod_tag = f"<lastmod>{esc(lastmod)}</lastmod>" if re.fullmatch(r"\d{4}-\d{2}-\d{2}", lastmod) else ""
+            sitemap_entries.append(f"  <url><loc>{esc(public_url)}</loc>{lastmod_tag}</url>")
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(sitemap_entries) + "\n</urlset>\n"
     (stage / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     robots = "User-agent: *\nAllow: /\n"
     if base_url:
-        robots += f"\nSitemap: {urljoin(base_url, 'sitemap.xml')}\n"
+        robots += f"\nSitemap: {absolute_url(base_url, 'sitemap.xml')}\n"
     (stage / "robots.txt").write_text(robots, encoding="utf-8")
+
+    # Keep the public entity brief concise so answer engines can identify the product,
+    # its verified capabilities, and the first-party pages that support each claim.
+    llms_lines = [
+        f"# {app_name}",
+        f"> {nested(contents[source], 'home.metaDescription')}",
+        "",
+        "## Product",
+        f"- Name: {app_name}",
+        f"- Platform: Android",
+        f"- Category: {app.get('category') or 'Application'}",
+        f"- Official website: {base_url or '/'}",
+    ]
+    if app.get("googlePlayUrl"):
+        llms_lines.append(f"- Google Play: {app['googlePlayUrl']}")
+    llms_lines.extend(["", "## Verified capabilities"])
+    for feature in content_ready_features(features):
+        feature_id = str(feature["id"])
+        feature_name = str(nested(contents[source], f"home.features.{feature_id}.name", feature.get("name") or feature_id))
+        feature_slug_value = feature_slug(source, source, contents[source], feature)
+        feature_url = absolute_url(base_url, feature_page_path(source, source, feature_slug_value).removesuffix("index.html")) if base_url else feature_page_path(source, source, feature_slug_value)
+        llms_lines.append(f"- [{feature_name}]({feature_url}): {nested(contents[source], f'home.features.{feature_id}.description', feature.get('description') or '')}")
+        details = localized_feature_details(contents[source], feature)
+        for item in details.get("faq") or []:
+            if isinstance(item, dict) and item.get("question") and item.get("answer"):
+                llms_lines.append(f"  - Q: {item['question']}")
+                llms_lines.append(f"    A: {item['answer']}")
+    if sitemap_urls:
+        llms_lines.extend(["", "## Public pages"])
+        llms_lines.extend(f"- {url}" for url in sitemap_urls)
+    (stage / "llms.txt").write_text("\n".join(llms_lines) + "\n", encoding="utf-8")
 
     status = {
         "sourceLocale": source,
@@ -2520,6 +2597,11 @@ def render_site(
             "};\n"
         )
         (stage / "_worker.js").write_text(worker, encoding="utf-8")
+    if bing_verification_file:
+        file_name, file_content = bing_verification_file
+        (stage / file_name).write_text(file_content, encoding="utf-8")
+    if index_now_key:
+        (stage / f"{index_now_key}.txt").write_text(index_now_key + "\n", encoding="utf-8")
     excluded_roots = {"content", "aso", "seo-geo"}
     excluded_files = {"launch-readiness.yaml"}
     public_files = sorted(

@@ -295,6 +295,14 @@ videoUrl: "https://www.youtube.com/watch?v=9OyA3yWH864"
 searchConsole:
   verificationFileName: "google939576fea7c9232c.html"
   verificationContent: "google-site-verification: google939576fea7c9232c.html"
+bing:
+  verificationFileName: "BingSiteAuth.xml"
+  verificationContent: |
+    <?xml version="1.0"?>
+    <users>
+      <user>DC4AB582C527A7A168FC391B84B8995E</user>
+    </users>
+  indexNowKey: "DC4AB582C527A7A168FC391B84B8995E"
 editorial:
   publishedAt: ""
   updatedAt: "2026-08-08"

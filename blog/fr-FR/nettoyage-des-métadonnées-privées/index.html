@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nettoyage des métadonnées privées: what it does in CaptionMeta - CaptionMeta</title>
   <meta name="description" content="Inspectez et supprimez certaines données EXIF, IPTC et XMP avant de partager une copie traitée. Learn the exact problem, options, verified steps, and known limitations.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#1976D2">
-  <link rel="canonical" href="https://iptc.pages.dev/blog/fr-FR/nettoyage-des-métadonnées-privées/">
+  <link rel="canonical" href="https://iptc.pages.dev/blog/fr-FR/nettoyage-des-m%C3%A9tadonn%C3%A9es-priv%C3%A9es/">
   <link rel="alternate" hreflang="zh-CN" href="https://iptc.pages.dev/blog/privacy-cleanup/">
   <link rel="alternate" hreflang="en-US" href="https://iptc.pages.dev/blog/en-US/private-metadata-cleanup/">
-  <link rel="alternate" hreflang="ja-JP" href="https://iptc.pages.dev/blog/ja-JP/非公開メタデータの整理/">
-  <link rel="alternate" hreflang="ko-KR" href="https://iptc.pages.dev/blog/ko-KR/비공개-메타데이터-정리/">
+  <link rel="alternate" hreflang="ja-JP" href="https://iptc.pages.dev/blog/ja-JP/%E9%9D%9E%E5%85%AC%E9%96%8B%E3%83%A1%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%95%B4%E7%90%86/">
+  <link rel="alternate" hreflang="ko-KR" href="https://iptc.pages.dev/blog/ko-KR/%EB%B9%84%EA%B3%B5%EA%B0%9C-%EB%A9%94%ED%83%80%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%95%EB%A6%AC/">
   <link rel="alternate" hreflang="de-DE" href="https://iptc.pages.dev/blog/de-DE/private-metadaten-bereinigen/">
-  <link rel="alternate" hreflang="fr-FR" href="https://iptc.pages.dev/blog/fr-FR/nettoyage-des-métadonnées-privées/">
+  <link rel="alternate" hreflang="fr-FR" href="https://iptc.pages.dev/blog/fr-FR/nettoyage-des-m%C3%A9tadonn%C3%A9es-priv%C3%A9es/">
   <link rel="alternate" hreflang="es-419" href="https://iptc.pages.dev/blog/es-419/limpieza-de-metadatos-privados/">
   <link rel="alternate" hreflang="pt-PT" href="https://iptc.pages.dev/blog/pt-PT/limpeza-de-metadados-privados/">
   <link rel="alternate" hreflang="it-IT" href="https://iptc.pages.dev/blog/it-IT/pulizia-dei-metadati-privati/">
-  <link rel="alternate" hreflang="ru-RU" href="https://iptc.pages.dev/blog/ru-RU/очистка-личных-метаданных/">
-  <link rel="alternate" hreflang="ar" href="https://iptc.pages.dev/blog/ar/تنظيف-البيانات-الوصفية-الخاصة/">
+  <link rel="alternate" hreflang="ru-RU" href="https://iptc.pages.dev/blog/ru-RU/%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D0%BC%D0%B5%D1%82%D0%B0%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/">
+  <link rel="alternate" hreflang="ar" href="https://iptc.pages.dev/blog/ar/%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%88%D8%B5%D9%81%D9%8A%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9/">
   <link rel="alternate" hreflang="x-default" href="https://iptc.pages.dev/blog/privacy-cleanup/">
   
   <link rel="stylesheet" href="../../../assets/styles.css">
   <link rel="stylesheet" href="../../../assets/blog.css">
   
-  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"fr-FR","autoRedirect":false,"rememberSelection":true,"defaultLocale":"en-US","storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US","ja":"ja-JP","ko":"ko-KR","de":"de-DE","fr":"fr-FR","es":"es-419","pt":"pt-PT","it":"it-IT","ru":"ru-RU","ar":"ar"},"locales":[{"code":"zh-CN","url":"https://iptc.pages.dev/blog/privacy-cleanup/"},{"code":"en-US","url":"https://iptc.pages.dev/blog/en-US/private-metadata-cleanup/"},{"code":"ja-JP","url":"https://iptc.pages.dev/blog/ja-JP/非公開メタデータの整理/"},{"code":"ko-KR","url":"https://iptc.pages.dev/blog/ko-KR/비공개-메타데이터-정리/"},{"code":"de-DE","url":"https://iptc.pages.dev/blog/de-DE/private-metadaten-bereinigen/"},{"code":"fr-FR","url":"https://iptc.pages.dev/blog/fr-FR/nettoyage-des-métadonnées-privées/"},{"code":"es-419","url":"https://iptc.pages.dev/blog/es-419/limpieza-de-metadatos-privados/"},{"code":"pt-PT","url":"https://iptc.pages.dev/blog/pt-PT/limpeza-de-metadados-privados/"},{"code":"it-IT","url":"https://iptc.pages.dev/blog/it-IT/pulizia-dei-metadati-privati/"},{"code":"ru-RU","url":"https://iptc.pages.dev/blog/ru-RU/очистка-личных-метаданных/"},{"code":"ar","url":"https://iptc.pages.dev/blog/ar/تنظيف-البيانات-الوصفية-الخاصة/"}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"zh-CN","currentLocale":"fr-FR","autoRedirect":false,"rememberSelection":true,"defaultLocale":"en-US","storageKey":"com.wkq.caption:locale","aliases":{"zh":"zh-CN","en":"en-US","ja":"ja-JP","ko":"ko-KR","de":"de-DE","fr":"fr-FR","es":"es-419","pt":"pt-PT","it":"it-IT","ru":"ru-RU","ar":"ar"},"locales":[{"code":"zh-CN","url":"https://iptc.pages.dev/blog/privacy-cleanup/"},{"code":"en-US","url":"https://iptc.pages.dev/blog/en-US/private-metadata-cleanup/"},{"code":"ja-JP","url":"https://iptc.pages.dev/blog/ja-JP/%E9%9D%9E%E5%85%AC%E9%96%8B%E3%83%A1%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%95%B4%E7%90%86/"},{"code":"ko-KR","url":"https://iptc.pages.dev/blog/ko-KR/%EB%B9%84%EA%B3%B5%EA%B0%9C-%EB%A9%94%ED%83%80%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%95%EB%A6%AC/"},{"code":"de-DE","url":"https://iptc.pages.dev/blog/de-DE/private-metadaten-bereinigen/"},{"code":"fr-FR","url":"https://iptc.pages.dev/blog/fr-FR/nettoyage-des-m%C3%A9tadonn%C3%A9es-priv%C3%A9es/"},{"code":"es-419","url":"https://iptc.pages.dev/blog/es-419/limpieza-de-metadatos-privados/"},{"code":"pt-PT","url":"https://iptc.pages.dev/blog/pt-PT/limpeza-de-metadados-privados/"},{"code":"it-IT","url":"https://iptc.pages.dev/blog/it-IT/pulizia-dei-metadati-privati/"},{"code":"ru-RU","url":"https://iptc.pages.dev/blog/ru-RU/%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0-%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D1%85-%D0%BC%D0%B5%D1%82%D0%B0%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/"},{"code":"ar","url":"https://iptc.pages.dev/blog/ar/%D8%AA%D9%86%D8%B8%D9%8A%D9%81-%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%88%D8%B5%D9%81%D9%8A%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9/"}]}</script>
   <script src="../../../assets/locale-router.js" defer></script>
 </head>
 <body class="blog-page article-page">

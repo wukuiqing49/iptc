@@ -89,6 +89,10 @@ screenshots:
 
 googlePlayUrl: ""
 websiteUrl: ""
+bing:
+  verificationFileName: ""
+  verificationContent: ""
+  indexNowKey: ""
 editorial:
   publishedAt: ""
   updatedAt: ""
