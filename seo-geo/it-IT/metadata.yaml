@@ -4,7 +4,7 @@ pages:
   /it-IT/:
     title: CaptionMeta - Strumento per metadati fotografici Android
     description: CaptionMeta
-    primaryQuery: IPTC metadata editor Android
+    primaryQuery: photo metadata editor
   /it-IT/features/modifica-iptc-exif-e-xmp/:
     title: Modifica IPTC, EXIF e XMP - CaptionMeta
     description: Controlla e modifica didascalie, titoli, parole chiave, autori, copyright,

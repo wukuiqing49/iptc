@@ -4,7 +4,7 @@ pages:
   /ko-KR/:
     title: CaptionMeta - Android 사진 메타데이터 도구
     description: Android에서 IPTC, EXIF, XMP 사진 메타데이터를 편집하고 비공개 데이터를 정리해 사진을 전달하세요.
-    primaryQuery: IPTC metadata editor Android
+    primaryQuery: photo metadata editor
   /ko-KR/features/iptc-exif-xmp-편집/:
     title: IPTC, EXIF, XMP 편집 - CaptionMeta
     description: 캡션, 제목, 키워드, 작성자, 저작권, 권리와 위치 메타데이터를 확인하고 편집합니다.

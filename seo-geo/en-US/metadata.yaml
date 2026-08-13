@@ -2,9 +2,9 @@ schemaVersion: '1.0'
 locale: en-US
 pages:
   /en-US/:
-    title: CaptionMeta - Android photo metadata tool
+    title: Photo Metadata Editor for Android | CaptionMeta
     description: CaptionMeta
-    primaryQuery: IPTC metadata editor Android
+    primaryQuery: photo metadata editor
   /en-US/features/iptc-exif-and-xmp-editing/:
     title: IPTC, EXIF, and XMP editing - CaptionMeta
     description: Review and edit captions, headlines, keywords, bylines, copyright,

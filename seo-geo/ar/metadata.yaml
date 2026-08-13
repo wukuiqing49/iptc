@@ -4,7 +4,7 @@ pages:
   /ar/:
     title: CaptionMeta - أداة بيانات الصور الوصفية لنظام Android
     description: CaptionMeta
-    primaryQuery: IPTC metadata editor Android
+    primaryQuery: photo metadata editor
   /ar/features/تحرير-iptc-وexif-وxmp/:
     title: تحرير IPTC وEXIF وXMP - CaptionMeta
     description: راجع وحرّر العناوين والترويسات والكلمات المفتاحية والمؤلفين وحقوق

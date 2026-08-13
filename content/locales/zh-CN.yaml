@@ -26,12 +26,12 @@ common:
   returnHome: "返回首页"
 
 home:
-  pageTitle: "CaptionMeta - Android 照片元数据工具"
-  metaDescription: "CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。"
-  category: "Android 摄影工具"
+  pageTitle: "CaptionMeta：Android 照片元数据编辑器"
+  metaDescription: "CaptionMeta 是 Android 照片元数据编辑器，可编辑 EXIF、IPTC 和 XMP，清理选定的隐私信息，并准备照片副本进行交付。"
+  category: "Android 照片元数据编辑器"
   tagline: "让照片元数据随时可交付。"
   shortDescription: "为摄影师、记者、图片机构和现场团队统一管理照片说明、关键词、署名、版权与交付流程。"
-  fullDescription: "CaptionMeta 是面向 Android 的照片元数据工具。你可以查看和编辑 IPTC、EXIF、XMP 字段，复用元数据预设，清理隐私元数据，并将处理后的照片副本用于交付。"
+  fullDescription: "CaptionMeta 是面向 Android 的照片元数据编辑器。你可以查看和编辑 EXIF、IPTC、XMP 字段，复用元数据预设，清理选定的隐私元数据，并将处理后的照片副本用于交付。"
   heroScreenshotAlt: "CaptionMeta 拍摄首页真实截图"
   heroScreenshotCaption: "当前设备上的 CaptionMeta 拍摄首页"
   featuresHeading: "从拍摄到交付，围绕元数据工作"

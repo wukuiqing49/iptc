@@ -4,7 +4,7 @@ pages:
   /ja-JP/:
     title: CaptionMeta - Android 写真メタデータツール
     description: AndroidでIPTC、EXIF、XMP写真メタデータを編集し、非公開データを整理して写真を納品できます。
-    primaryQuery: IPTC metadata editor Android
+    primaryQuery: photo metadata editor
   /ja-JP/features/iptc-exif-xmpの編集/:
     title: IPTC、EXIF、XMPの編集 - CaptionMeta
     description: キャプション、見出し、キーワード、署名、著作権、権利、位置情報を確認・編集します。

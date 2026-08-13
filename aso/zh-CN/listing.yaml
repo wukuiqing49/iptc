@@ -2,7 +2,7 @@ schemaVersion: '1.0'
 locale: zh-CN
 status: draft
 appName: CaptionMeta
-shortDescription: CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。
+shortDescription: CaptionMeta 是 Android 照片元数据编辑器，可编辑 EXIF、IPTC 和 XMP，清理选定的隐私信息，并准备照片副本进行交付。
 fullDescription: '为摄影师、记者、图片机构和现场团队统一管理照片说明、关键词、署名、版权与交付流程。
 
 
@@ -24,7 +24,7 @@ fullDescription: '为摄影师、记者、图片机构和现场团队统一管�
   Google Play 地址确认后即可从这里前往下载。'
 characterCounts:
   appName: 11
-  shortDescription: 63
+  shortDescription: 73
   fullDescription: 562
 limits:
   appName: 30

@@ -2,9 +2,9 @@ schemaVersion: '1.0'
 locale: zh-CN
 pages:
   /:
-    title: CaptionMeta - Android 照片元数据工具
-    description: CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。
-    primaryQuery: IPTC metadata editor Android
+    title: CaptionMeta：Android 照片元数据编辑器
+    description: CaptionMeta 是 Android 照片元数据编辑器，可编辑 EXIF、IPTC 和 XMP，清理选定的隐私信息，并准备照片副本进行交付。
+    primaryQuery: photo metadata editor
   /features/metadata-editor/:
     title: IPTC、EXIF 与 XMP 编辑 - CaptionMeta
     description: 查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。

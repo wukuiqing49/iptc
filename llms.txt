@@ -1,5 +1,5 @@
 # CaptionMeta
-> CaptionMeta 在 Android 上编辑 IPTC、EXIF 和 XMP 照片元数据，清理隐私信息，并准备照片交付。
+> CaptionMeta 是 Android 照片元数据编辑器，可编辑 EXIF、IPTC 和 XMP，清理选定的隐私信息，并准备照片副本进行交付。
 
 ## Product
 - Name: CaptionMeta

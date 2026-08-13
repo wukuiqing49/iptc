@@ -26,12 +26,12 @@ common:
   returnHome: "Return home"
 
 home:
-  pageTitle: "CaptionMeta - Android photo metadata tool"
-  metaDescription: "Edit IPTC, EXIF, and XMP photo metadata on Android, clean private data, and prepare photo deliveries with CaptionMeta."
-  category: "Android photography tool"
+  pageTitle: "Photo Metadata Editor for Android | CaptionMeta"
+  metaDescription: "CaptionMeta is a photo metadata editor for Android. Edit supported EXIF, IPTC, and XMP fields, clean selected private data, and prepare photo copies for delivery."
+  category: "Android photo metadata editor"
   tagline: "Photo metadata, ready for the field."
   shortDescription: "Keep captions, keywords, credits, rights, and delivery workflows consistent for photography teams on Android."
-  fullDescription: "CaptionMeta is an Android photo metadata tool. Review and edit IPTC, EXIF, and XMP fields, reuse metadata presets, clean private metadata, and prepare processed photo copies for delivery."
+  fullDescription: "CaptionMeta is an Android photo metadata editor. Review and edit supported EXIF, IPTC, and XMP fields, reuse metadata presets, clean selected private metadata, and prepare processed photo copies for delivery."
   heroScreenshotAlt: "Real CaptionMeta capture home screen"
   heroScreenshotCaption: "CaptionMeta capture home on a connected device"
   featuresHeading: "A metadata workflow from capture to delivery"
