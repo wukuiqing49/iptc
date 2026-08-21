@@ -17,7 +17,7 @@ evidence:
 primaryKeyword: 'Coda di consegna foto: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

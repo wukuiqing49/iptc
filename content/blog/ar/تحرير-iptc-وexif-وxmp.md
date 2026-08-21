@@ -16,7 +16,7 @@ evidence:
 primaryKeyword: 'تحرير IPTC وEXIF وXMP: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

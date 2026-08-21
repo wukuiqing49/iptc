@@ -16,7 +16,7 @@ evidence:
 primaryKeyword: 'Preset in batch: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

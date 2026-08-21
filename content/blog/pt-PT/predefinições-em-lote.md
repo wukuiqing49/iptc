@@ -16,7 +16,7 @@ evidence:
 primaryKeyword: 'Predefinições em lote: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

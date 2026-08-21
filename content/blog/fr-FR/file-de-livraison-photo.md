@@ -17,7 +17,7 @@ evidence:
 primaryKeyword: 'File de livraison photo: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

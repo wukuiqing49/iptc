@@ -17,7 +17,7 @@ evidence:
 primaryKeyword: 'Pulizia dei metadati privati: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

@@ -15,7 +15,7 @@ evidence:
 primaryKeyword: 隐私元数据清理：在 CaptionMeta 中能做什么
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

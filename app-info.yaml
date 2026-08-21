@@ -263,7 +263,7 @@ languages:
     - "ru-RU"
     - "ar"
   routing:
-    autoDetect: true
+    autoDetect: false
     rememberSelection: true
     sourceAtRoot: true
     aliases:

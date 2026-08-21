@@ -16,7 +16,7 @@ evidence:
 primaryKeyword: 'IPTC、EXIF、XMPの編集: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

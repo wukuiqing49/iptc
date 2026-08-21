@@ -15,7 +15,7 @@ evidence:
 primaryKeyword: IPTC、EXIF 与 XMP 编辑：在 CaptionMeta 中能做什么
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

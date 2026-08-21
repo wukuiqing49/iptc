@@ -16,7 +16,7 @@ evidence:
 primaryKeyword: 'Nettoyage des métadonnées privées: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

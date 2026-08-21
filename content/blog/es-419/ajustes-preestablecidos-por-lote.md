@@ -16,7 +16,7 @@ evidence:
 primaryKeyword: 'Ajustes preestablecidos por lote: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

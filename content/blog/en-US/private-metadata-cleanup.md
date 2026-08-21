@@ -17,7 +17,7 @@ evidence:
 primaryKeyword: 'Private metadata cleanup: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

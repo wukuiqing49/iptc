@@ -17,7 +17,7 @@ evidence:
 primaryKeyword: 'Cola de entrega de fotos: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 

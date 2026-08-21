@@ -905,22 +905,27 @@ def page_relative(locale: str, source: str, page: str) -> str:
     return f"{locale}/" if page == "index.html" else f"{locale}/{page}"
 
 
+def public_page_path(page: str) -> str:
+    """Return the Cloudflare Pages Clean URL for a generated HTML file."""
+    if page == "index.html":
+        return ""
+    if page.endswith("/index.html"):
+        return page.removesuffix("index.html")
+    if page.endswith(".html"):
+        return page.removesuffix(".html")
+    return page
+
+
 def page_url(base_url: str, locale: str, source: str, page: str) -> str:
-    return absolute_url(base_url, page_relative(locale, source, page))
+    return absolute_url(base_url, public_page_path(page_relative(locale, source, page)))
 
 
 def route_url(current: str, target: str, source: str, page: str, base_url: str) -> str:
     if base_url:
         return page_url(base_url, target, source, page)
-    if current == source:
-        if target == source:
-            return "./" if page == "index.html" else page
-        return f"{target}/" if page == "index.html" else f"{target}/{page}"
-    if target == source:
-        return "../" if page == "index.html" else f"../{page}"
-    if target == current:
-        return "./" if page == "index.html" else page
-    return f"../{target}/" if page == "index.html" else f"../{target}/{page}"
+    current_page = page_relative(current, source, page) or "index.html"
+    target_page = page_relative(target, source, page) or "index.html"
+    return relative_href(current_page, target_page)
 
 
 def canonical_tags(base_url: str, current: str, source: str, locales: list[str], page: str) -> str:
@@ -1169,6 +1174,8 @@ def relative_href(current_page: str, target_page: str) -> str:
         target_dir = posixpath.dirname(target_page)
         relative = posixpath.relpath(target_dir or ".", current_dir or ".")
         return "./" if relative == "." else relative.rstrip("/") + "/"
+    if target_page.endswith(".html"):
+        target_page = target_page.removesuffix(".html")
     return posixpath.relpath(target_page, current_dir or ".")
 
 
@@ -1769,7 +1776,7 @@ def render_blog(
                 "contentId": item["contentId"], "locale": locale, "status": markdown_status,
                 "title": item["title"], "description": item["summary"], "slug": item["slug"],
                 "intent": "feature education", "audience": "app users", "canonical": "", "evidence": item["evidence"],
-                "primaryKeyword": item["title"], "relatedPages": ["/", "/support.html"],
+                "primaryKeyword": item["title"], "relatedPages": ["/", "/support"],
                 "template": item["template"],
             }
             if date:
@@ -2238,10 +2245,10 @@ def render_site(
                 "BASE_PATH": base_path,
                 "APP_NAME": esc(app_name),
                 "BRAND_LOGO": brand_logo,
-                "HOME_URL": "./" if page == "index.html" else "./",
-                "PRIVACY_URL": "privacy.html",
-                "SUPPORT_URL": "support.html",
-                "ABOUT_URL": "about.html",
+                "HOME_URL": relative_href(page, "index.html"),
+                "PRIVACY_URL": relative_href(page, "privacy.html"),
+                "SUPPORT_URL": relative_href(page, "support.html"),
+                "ABOUT_URL": relative_href(page, "about.html"),
                 "BLOG_URL": blog_url,
                 "BLOG_NAV_ITEM": blog_nav_item,
                 "LANGUAGE_SWITCHER": switcher,
@@ -2482,7 +2489,7 @@ def render_site(
     sitemap_urls = []
     if base_url:
         for page in sorted(set(generated_pages)):
-            relative_url = "" if page == "index.html" else page.removesuffix("index.html")
+            relative_url = public_page_path(page)
             public_url = absolute_url(base_url, relative_url)
             sitemap_urls.append(public_url)
             lastmod = str(nested(app, "editorial.updatedAt", "") or "").strip()
@@ -2646,6 +2653,8 @@ def validate_stage(stage: Path) -> None:
                     target = (path.parent / reference.split("#", 1)[0].split("?", 1)[0]).resolve()
                     if reference.endswith("/"):
                         target /= "index.html"
+                    elif not target.suffix and not target.exists() and target.with_suffix(".html").exists():
+                        target = target.with_suffix(".html")
                     if not target.exists():
                         errors.append(f"{path.relative_to(stage)}: missing local reference {reference}")
     try:

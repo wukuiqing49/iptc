@@ -17,7 +17,7 @@ evidence:
 primaryKeyword: 'Photo delivery queue: what it does in CaptionMeta'
 relatedPages:
 - /
-- /support.html
+- /support
 template: standard-article
 ---
 
