@@ -18,7 +18,7 @@
     },
     {
       "path": "_worker.js",
-      "sha256": "0b891c45abbfe16e8772269a4f5294c495ad6a825148a0dd5460b27dc412e8d9",
+      "sha256": "d0d29845ca38ab0bfe7b408333dc7dcf5baa8b3c6d62c6c3597683c0cf055c5c",
       "owner": "generated",
       "featureIds": []
     },
@@ -137,8 +137,14 @@
       "featureIds": []
     },
     {
+      "path": "assets/product-cover.webp",
+      "sha256": "1d7b1a02149bb0084c49126a49ed83bf10b0d22fb10a377dbba10a113ece21dc",
+      "owner": "generated",
+      "featureIds": []
+    },
+    {
       "path": "assets/refinements.css",
-      "sha256": "dbace1e836325e07a33b9413f8724f96bf16dd1da483d7ac0831cac80168fa1f",
+      "sha256": "8b9ecbe60f38af89b0d7881f5c8e8d7d39bea2df10854fccecc35bd39db8241c",
       "owner": "generated",
       "featureIds": []
     },
@@ -624,7 +630,7 @@
     },
     {
       "path": "en-US/index.html",
-      "sha256": "86365da53d96236d8603ad7f5fc971f5ad3e9a0f27ad89d87f00dabc8f5bf461",
+      "sha256": "69fa37bc663da626be3f5e2c972f6b9fa5ef64de119dd795e3d0b06f5ecbd1b8",
       "owner": "generated",
       "featureIds": []
     },
@@ -780,7 +786,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "5f1b466ff8894274309a75762abf5272d60cba0833af38e12b3132a9629b049f",
+      "sha256": "4ff64e75c892d46bb99c95ea895f964ea314df1f39d50b815ea2e257077a8766",
       "owner": "generated",
       "featureIds": []
     },

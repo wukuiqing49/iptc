@@ -104,7 +104,6 @@ def image(name, caption, prefix, eager=False):
 def render_home(c, locale, locale_data, links, prefix):
     zh = locale == 'zh-CN'
     zoom = '放大英文界面' if zh else 'Enlarge the English interface'
-    crop = '真实英文界面局部 · 演示数据' if zh else 'Actual English interface detail · demo data'
     items = [
         ('batch-editor.webp', 'metadata-editor', '一组照片，一次填写' if zh else 'One edit. A whole batch.', c['captions'][0]),
         ('presets.webp', 'batch-presets', '把常用字段留给下次' if zh else 'Keep your setup for next time.', c['captions'][1]),
@@ -122,7 +121,7 @@ def render_home(c, locale, locale_data, links, prefix):
         <div class="hero-actions">{action(c)}<a class="secondary-action" href="{watch_path(locale)}">{esc(c['secondary'])}</a></div>
         {store_details(c)}
       </div>
-      <figure class="hero-media editor-media"><a class="screen-zoom" href="{prefix}assets/screenshots/batch-editor.webp" aria-label="{esc(zoom)}">{image('batch-editor.webp', c['screenNames'][0], prefix, True)}</a><figcaption>{esc(crop)}</figcaption></figure>
+      <figure class="hero-media product-cover"><a class="screen-zoom" href="{prefix}assets/product-cover.webp" aria-label="{'放大产品封面' if zh else 'Enlarge the product cover'}"><img src="{prefix}assets/product-cover.webp" alt="{'CaptionMeta 产品封面：真实英文批量编辑界面与保存后的说明、版权、署名及关键词。' if zh else 'CaptionMeta product cover: actual English batch editor and saved captions, copyright, credits and keywords.'}" width="1440" height="1024" loading="eager" decoding="async"></a><figcaption>{'产品封面 · 真实英文界面与演示数据 · 点击放大' if zh else 'Product cover · Real English app screens and demo data · Select to enlarge'}</figcaption></figure>
     </section>
     <section class="workflow compact-workflow" aria-label="{esc(c['workflowTitle'])}"><ol>{''.join('<li>'+esc(s)+'</li>' for s in (['选择照片', '填写或应用预设', '保存并检查结果', '分享或交付'] if zh else ['Choose photos', 'Fill fields or apply a preset', 'Save and check the result', 'Share or deliver']))}</ol></section>
     <section id="features" class="content-band showcase-band"><div id="screenshots" class="section-heading"><h2>{esc(c['featuresTitle'])}</h2><p>{esc(c['screensIntro'])}</p></div><div class="showcase-grid">{cards}</div><p class="delivery-note"><a href="{esc(links['photo-delivery'])}">{'需要发送到自己的服务器？了解照片交付队列。' if zh else 'Sending to your own server? Explore the photo delivery queue.'}</a></p></section>

@@ -29,9 +29,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 .store-details p { margin: 0; }
 .store-details p + p { margin-top: .4rem; }
 .store-details strong { color: var(--ink); font-weight: 600; }
-.editor-media { padding: 1rem; background: var(--soft); border: 1px solid var(--line); border-radius: 24px; width: min(100%,22rem); }
-.hero-media.editor-media img { width: 100%; max-height: none; border-radius: 12px; }
-.editor-media figcaption { margin: .75rem 0 0; font-size: .75rem; text-align: center; }
+.product-cover { width: 100%; min-width: 0; }
+.hero-media.product-cover img { width: 100%; max-height: none; border-radius: 16px; }
+.hero-media.product-cover figcaption { margin: .75rem 0 0; font-size: .8rem; line-height: 1.6; }
 .content-band, .screenshot-band, .workflow, .closing, .prose { padding-block: clamp(2rem, 4vw, 3.5rem); }
 .content-band .section-heading { margin-inline: auto; max-width: 64rem; }
 .feature-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 2.5rem; }
@@ -136,7 +136,6 @@ footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .hero { grid-template-columns: 1fr; }
   .home-hero h1 { font-size: clamp(2rem,8vw,3rem); }
   .home-hero .summary { font-size: 1.05rem; margin-block: 1rem; }
-  .editor-media { width: min(100%,22rem); }
   .walkthrough { margin-inline: 1rem; padding: 1.5rem; grid-template-columns: 1fr; gap: 1.5rem; }
   .walkthrough-video { max-width: 17rem; justify-self: center; }
   .site-faq { padding-inline: 1rem; }

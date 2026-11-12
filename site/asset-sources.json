@@ -86,5 +86,17 @@
       514,
       635
     ]
+  },
+  {
+    "sourcePaths": [
+      "site/assets/icon.png",
+      "site/assets/screenshots/batch-editor.webp",
+      "site/assets/screenshots/metadata-fields.webp"
+    ],
+    "publicPath": "assets/product-cover.webp",
+    "generator": "site/create_product_cover.py",
+    "purpose": "product-cover-composed-from-real-English-app-screens",
+    "reviewStatus": "English-visible-text-visually-verified",
+    "sha256": "1d7b1a02149bb0084c49126a49ed83bf10b0d22fb10a377dbba10a113ece21dc"
   }
 ]
