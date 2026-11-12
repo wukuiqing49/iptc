@@ -91,6 +91,10 @@ def action(c, prefix=''):
     return f'<a class="primary-action store-action" href="{PLAY}"><img src="/assets/google-play-badge.png" alt="{esc(c["download"])}" width="646" height="250"></a>'
 
 
+def store_details(c):
+    return f'''<div class="store-details"><p><span>{esc(c['storeName'])}:</span> <strong>Photo Metadata &amp; IPTC Editor</strong> · AndroidManTou</p><p>{esc(c['storeTerms'])}</p></div>'''
+
+
 def image(name, caption, prefix, eager=False):
     width, height = Image.open(ROOT / 'site/assets/screenshots' / name).size
     return (f'<img src="{prefix}assets/screenshots/{name}" alt="{esc(caption)}" '
@@ -107,15 +111,16 @@ def render_home(c, locale, locale_data, links, prefix):
         ('metadata-result.webp', 'metadata-editor', '保存以后，再检查一次' if zh else 'See what made it into the file.', c['captions'][2]),
         ('privacy-result.webp', 'privacy-cleanup', '分享之前，检查隐私信息' if zh else 'Check the details before sharing.', c['captions'][3]),
     ]
-    cards = ''.join(f'''<article class="showcase-card"><div class="showcase-copy"><h3>{esc(title)}</h3><p>{esc(body)}</p><a class="feature-link" href="{esc(links[fid])}">{esc(c['details'])}</a></div><figure><a class="screen-zoom" href="{prefix}assets/screenshots/{name}" aria-label="{esc(zoom)}: {esc(title)}">{image(name, title, prefix)}<span>{esc(zoom)}</span></a><figcaption>{esc(crop)}</figcaption></figure></article>''' for name, fid, title, body in items)
+    previews = {'metadata-result.webp': 'metadata-fields.webp', 'privacy-result.webp': 'privacy-fields.webp'}
+    cards = ''.join(f'''<article class="showcase-card{' result-proof' if name in previews else ''}"><div class="showcase-copy"><h3>{esc(title)}</h3><p>{esc(body)}</p><a class="feature-link" href="{esc(links[fid])}">{esc(c['details'])}</a></div><figure><a class="screen-zoom" href="{prefix}assets/screenshots/{name}" aria-label="{esc(zoom)}: {esc(title)}">{image(previews.get(name, name), c['screenEvidence'][i], prefix)}<span>{esc(zoom)}</span></a><figcaption>{esc(c['screenEvidence'][i])}</figcaption></figure></article>''' for i, (name, fid, title, body) in enumerate(items))
     faq = ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in c['faq'])
     return f'''
     <section class="hero home-hero" aria-labelledby="hero-title">
-      <div class="hero-copy"><p class="platform">{esc(c['platform'])}</p>
-        <h1 id="hero-title">{esc(c['headline']).replace(chr(10), '<br>')}</h1>
+      <div class="hero-copy"><h1 id="hero-title">{esc(c['headline']).replace(chr(10), '<br>')}</h1>
+        <p class="platform">{esc(c['platform'])}</p>
         <p class="summary">{esc(c['intro'])}</p>
         <div class="hero-actions">{action(c)}<a class="secondary-action" href="{watch_path(locale)}">{esc(c['secondary'])}</a></div>
-        <p class="store-note">{esc(c['store'])}</p>
+        {store_details(c)}
       </div>
       <figure class="hero-media editor-media"><a class="screen-zoom" href="{prefix}assets/screenshots/batch-editor.webp" aria-label="{esc(zoom)}">{image('batch-editor.webp', c['screenNames'][0], prefix, True)}</a><figcaption>{esc(crop)}</figcaption></figure>
     </section>
@@ -123,7 +128,7 @@ def render_home(c, locale, locale_data, links, prefix):
     <section id="features" class="content-band showcase-band"><div id="screenshots" class="section-heading"><h2>{esc(c['featuresTitle'])}</h2><p>{esc(c['screensIntro'])}</p></div><div class="showcase-grid">{cards}</div><p class="delivery-note"><a href="{esc(links['photo-delivery'])}">{'需要发送到自己的服务器？了解照片交付队列。' if zh else 'Sending to your own server? Explore the photo delivery queue.'}</a></p></section>
     <section id="walkthrough" class="walkthrough"><div class="walkthrough-copy"><h2>{esc(c['videoTitle'])}</h2><p>{esc(c['videoCopy'])}</p><a class="secondary-action" href="{watch_path(locale)}">{'观看 29 秒演示' if zh else 'Watch the 29-second demo'}</a></div><a class="demo-preview" href="{watch_path(locale)}" aria-label="{esc(c['videoLabel'])}"><img src="{prefix}assets/video-poster.webp" width="540" height="960" alt="{esc(c['videoLabel'])}" loading="lazy"><span aria-hidden="true">▶ 0:29</span></a></section>
     <section class="site-faq"><h2>{esc(c['faqTitle'])}</h2>{faq}</section>
-    <section class="closing"><h2>{esc(c['closing'])}</h2>{action(c)}<p class="store-note">{esc(c['store'])}</p></section>'''
+    <section class="closing"><h2>{esc(c['closing'])}</h2>{action(c)}{store_details(c)}</section>'''
 
 
 def render_guide(c, data, locale, prefix, feature_url, fid):
@@ -325,7 +330,7 @@ def transform(path, rel, locale_data, version):
             img['src'] = prefix + 'assets/screenshots/batch-editor.webp'
         if '/screenshots/' in img.get('src',''):
             basename = Path(img['src']).name
-            if basename not in {'batch-editor.webp','presets.webp','metadata-result.webp','privacy-result.webp'}:
+            if basename not in {'batch-editor.webp','presets.webp','metadata-result.webp','metadata-fields.webp','privacy-result.webp','privacy-fields.webp'}:
                 img['src'] = prefix + 'assets/screenshots/metadata-result.webp'
             width, height = Image.open(ROOT/'site/assets/screenshots'/Path(img['src']).name).size
             img['width'], img['height'] = str(width), str(height)

@@ -58,5 +58,33 @@
     "frameSeconds": 24,
     "purpose": "English-frame-from-the-actual-video",
     "sha256": "948d015daccd91c5d449f115a412446d5941a6e6334149786976312c227a5641"
+  },
+  {
+    "sourcePath": "assets/screenshots/metadata-result.webp",
+    "derivedFrom": "docs/promo/20261109/sources/batch-result.png",
+    "publicPath": "assets/screenshots/metadata-fields.webp",
+    "sha256": "daf89b59d38eec29560e692e1f6a13d5de68b2915854f0463c4a8ac5d2e18910",
+    "reviewStatus": "English-visible-text-visually-verified",
+    "purpose": "unedited-English-saved-metadata-fields-crop",
+    "cropPixels": [
+      26,
+      190,
+      514,
+      644
+    ]
+  },
+  {
+    "sourcePath": "assets/screenshots/privacy-result.webp",
+    "derivedFrom": "docs/promo/20261109/sources/privacy-result.png",
+    "publicPath": "assets/screenshots/privacy-fields.webp",
+    "sha256": "ac70cc647f4882f163c7dff2c000c3dc704e677f464b447de14c4e9661fbe8b5",
+    "reviewStatus": "English-visible-text-visually-verified",
+    "purpose": "unedited-English-cleanup-result-fields-crop",
+    "cropPixels": [
+      26,
+      181,
+      514,
+      635
+    ]
   }
 ]

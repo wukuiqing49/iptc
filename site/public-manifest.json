@@ -18,7 +18,7 @@
     },
     {
       "path": "_worker.js",
-      "sha256": "62029c2c826f2390f06a63c77cb532b4c5481e8103a8e7f0267370a932f11614",
+      "sha256": "0b891c45abbfe16e8772269a4f5294c495ad6a825148a0dd5460b27dc412e8d9",
       "owner": "generated",
       "featureIds": []
     },
@@ -36,25 +36,25 @@
     },
     {
       "path": "ar/features/إعدادات-مسبقة-للدفعات/index.html",
-      "sha256": "3979b95e24afd2f9992107dd5c3490483332f41f2b9651833cc9519c947360d1",
+      "sha256": "326bd4e4659ae488a4d16ca634af492492584b34edb73cd777ba7a4cd2233711",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ar/features/تحرير-iptc-وexif-وxmp/index.html",
-      "sha256": "7cce30062c29cdeaf9a1ffa21749ed893a4463e6a76ec325cae3df2eb35cc7c5",
+      "sha256": "dcd64c482f11a7652fad7250bedc628c3dfdb578d5b4a02f6316ba4eb8644ebe",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ar/features/تنظيف-البيانات-الوصفية-الخاصة/index.html",
-      "sha256": "548876351d7a30e9800e6bcc994871b137329d6dc7d992b29e90ae41fe757c76",
+      "sha256": "c8aa53535b83caa5b1438d91ef45537951a70698b0f6d087d656134ac2fff577",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ar/features/قائمة-انتظار-تسليم-الصور/index.html",
-      "sha256": "9d2a9e0f1ea2526556f2598f8c91cdb598e679de76e9a22d820c2196cbbbda4d",
+      "sha256": "f24f9ee2e14f948515ce493b196248fbaf73eb5b4e16e33e8dcba37d5592fe58",
       "owner": "generated",
       "featureIds": []
     },
@@ -138,13 +138,19 @@
     },
     {
       "path": "assets/refinements.css",
-      "sha256": "c8e80a55684cd9406d59e045c0a35866a2b3488b4f57fafe55403b02213e3bc3",
+      "sha256": "dbace1e836325e07a33b9413f8724f96bf16dd1da483d7ac0831cac80168fa1f",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "assets/screenshots/batch-editor.webp",
       "sha256": "e41e5d245f434cdd9747f4ed38ef81b1a79c116ca53fdd1c1fe24235fb9632b1",
+      "owner": "generated",
+      "featureIds": []
+    },
+    {
+      "path": "assets/screenshots/metadata-fields.webp",
+      "sha256": "daf89b59d38eec29560e692e1f6a13d5de68b2915854f0463c4a8ac5d2e18910",
       "owner": "generated",
       "featureIds": []
     },
@@ -157,6 +163,12 @@
     {
       "path": "assets/screenshots/presets.webp",
       "sha256": "8ee70597d4b52e08a5a27ea7cace6dad70b7f47d27976798516888f5f65cc5c6",
+      "owner": "generated",
+      "featureIds": []
+    },
+    {
+      "path": "assets/screenshots/privacy-fields.webp",
+      "sha256": "ac70cc647f4882f163c7dff2c000c3dc704e677f464b447de14c4e9661fbe8b5",
       "owner": "generated",
       "featureIds": []
     },
@@ -174,7 +186,7 @@
     },
     {
       "path": "assets/styles.css",
-      "sha256": "7a7e2d7894d08a745ad8896744bd04ee7b2c125c4889c0a7d5fc9b354dd11e18",
+      "sha256": "5ac768adef8f04c17ef9e2d00a1f42b42b3bee6797231ab04f95a54920469ba7",
       "owner": "generated",
       "featureIds": []
     },
@@ -228,7 +240,7 @@
     },
     {
       "path": "blog/batch-presets/index.html",
-      "sha256": "39a2f37ba8761fb0bd64a8888b910712e9df1d4a260afc37052ecad20ce31081",
+      "sha256": "ac1b9700ac0f25478da8eddfaeb22c92d308d8d391c07ea94cee2866bab4a66d",
       "owner": "generated",
       "featureIds": []
     },
@@ -264,7 +276,7 @@
     },
     {
       "path": "blog/en-US/batch-presets/index.html",
-      "sha256": "74389503dc553a59dd992f6dbe06a71028aa88b49e146d445445bb9a6545705c",
+      "sha256": "0ebf0ae267390c87ea9a2bcc972d4d23e5ac92ab8a7309640939dc7a8b5bcdc0",
       "owner": "generated",
       "featureIds": []
     },
@@ -276,19 +288,19 @@
     },
     {
       "path": "blog/en-US/iptc-exif-and-xmp-editing/index.html",
-      "sha256": "c99ff354fe602f180a05a6c6b2368d242138ee668f563f1acf3043ad77cf674d",
+      "sha256": "766d584fa0c412c98212964ba0af2edf5e78bf13bfdfe6f60413bd919da4558d",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "blog/en-US/photo-delivery-queue/index.html",
-      "sha256": "be8279a7d9585a940b98522bd6a1784ac7969048a56c66c0e4fee80225dcf8af",
+      "sha256": "de87a21a85a7f2604d99227b7126e33a49e8e2b538cf3e0ca7f8bcb580eddcae",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "blog/en-US/private-metadata-cleanup/index.html",
-      "sha256": "629fdae62a5fd66bd078c7aad0d203d108c20f1be41d634c94e6fe30dc860718",
+      "sha256": "53dbdc0e4b88b31901d5f1ba0023fba217adfaf8e42216754cd3aaf07e4711ba",
       "owner": "generated",
       "featureIds": []
     },
@@ -450,19 +462,19 @@
     },
     {
       "path": "blog/metadata-editor/index.html",
-      "sha256": "dce552839c97a86bf5c6f1dcfcdd85654abc4d4d3a6df79a961798bc1178258e",
+      "sha256": "d09d2b3a84ee168f0c7dd313df644266a528c4eb136071a2bc76957e2578c878",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "blog/photo-delivery/index.html",
-      "sha256": "9327efbf897cd2094bd44a8581c6899fca503603702818dbdbda60f94ecf61da",
+      "sha256": "3685d6019cf30ba5aaecc56bdb059e732c06fe6b3d8b467c88743be40983a038",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "blog/privacy-cleanup/index.html",
-      "sha256": "93f779561e7b328e76c8a3b16f10c167c84c388e33960e2065abb26adffbbe5f",
+      "sha256": "c382d0c3179bdf51bb730f02ba05e7d955df6ce714b54749a060c73269892408",
       "owner": "generated",
       "featureIds": []
     },
@@ -540,25 +552,25 @@
     },
     {
       "path": "de-DE/features/foto-übergabewarteschlange/index.html",
-      "sha256": "d29e6960ba476367e1242b48d3badde1eae53a0f76a8eee0c4fcc86b1bf93ca8",
+      "sha256": "a5b0f226c155e38b6d0412944c45c38fe42a9f73874874881de95c3bd6d43d79",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "de-DE/features/iptc-exif-und-xmp-bearbeitung/index.html",
-      "sha256": "6db459fa713f3b27a6e8fd08ba87598a234a5158b2d84d31b707c594122309a1",
+      "sha256": "faa489fdad8bfcd15aba26ef56b32e36609a1249b5aba55cb208ff7b94aa8a6c",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "de-DE/features/private-metadaten-bereinigen/index.html",
-      "sha256": "0d0480f60a9bbae95e9cb4c153b1964038d6ec4b2a1961ee02b0e620b6dafaad",
+      "sha256": "93f1c8be6edff507cf0c60e44f7f85b6dd052cfe9f5d6758e91739db0c883320",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "de-DE/features/stapelvorlagen/index.html",
-      "sha256": "ab26010cc9d4f83b195ab1fede5071ff225c9f163a20b9dce170d8b0a90e7afd",
+      "sha256": "a2e7619de8fb8c05c45e9953a62626a5ae1d2f8f88ff7872969b97baac5a7c87",
       "owner": "generated",
       "featureIds": []
     },
@@ -588,31 +600,31 @@
     },
     {
       "path": "en-US/features/batch-presets/index.html",
-      "sha256": "4f8f2d612ee4e4a699df979399e5a4e504d2ef68b55d21550f630164556f6914",
+      "sha256": "dea504edfde9016c524cb5edb5ab3449b0b6db9ce574f41384d9d766e626a5bd",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "en-US/features/iptc-exif-and-xmp-editing/index.html",
-      "sha256": "5cf4329e0469abacbf79ffa097d776daef6263fad77ef97d04a393dcd65b4f6d",
+      "sha256": "ec9ef456b38aceaf0af1fb40b316de8616ab405ec1ffae7b894c932c07395c7f",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "en-US/features/photo-delivery-queue/index.html",
-      "sha256": "51a319670027b5afe3d97014dca2c8b8b2c6601ef06337ef7cae40872d54d9ac",
+      "sha256": "dcecbec9261955204d2a5b2fbb9b001b6645565e0fdaae186f4e6769660b27b6",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "en-US/features/private-metadata-cleanup/index.html",
-      "sha256": "cac4302aecf1e68e96f3e858101083398333fe5acedfca581ca46e50bac96c62",
+      "sha256": "62be48aedac69c550388017e44443ee7707573d8f391d8243e408cfa8958f80b",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "en-US/index.html",
-      "sha256": "36ddcc37ca143dbf093d956e5b80853f997feeabd51d68ec291124f2b901a7fe",
+      "sha256": "9675f3bcf7dc487360f04f15344f104d0f27cee055e3b9d2915492fd3ef2b03a",
       "owner": "generated",
       "featureIds": []
     },
@@ -642,25 +654,25 @@
     },
     {
       "path": "es-419/features/ajustes-preestablecidos-por-lote/index.html",
-      "sha256": "8bc43b4619de61ef228bbe01400cbf80ea33736ee71cd0161af3cdf234bc16e7",
+      "sha256": "c5f4ca1a77c162104aa59bc1fd415a99473d793d25256b999053da4e08306fdf",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "es-419/features/cola-de-entrega-de-fotos/index.html",
-      "sha256": "bca8607a4fbb56e423f8e47b0dde2b811f1d501ea052337f7231c47e1cfce16e",
+      "sha256": "392bd22393effa732c09dc3d704e391f2786147759b2b549a426f9bf13204334",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "es-419/features/edición-iptc-exif-y-xmp/index.html",
-      "sha256": "697b1d39962b7c639402cf03c4519c5826f24a25513ba733e9642f869e063420",
+      "sha256": "f86c052e6a3c949aa4473b6af6581f453db59e788397c3021459c3836847ef8d",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "es-419/features/limpieza-de-metadatos-privados/index.html",
-      "sha256": "6196d7ad86a8c5c9492f2968f8c9d7abd180b08fae60894556065ed5c1d38cb1",
+      "sha256": "f5834c92896328ccea20d53c834b3f030fe73dc82f936a939cae35206e5b046b",
       "owner": "generated",
       "featureIds": []
     },
@@ -690,25 +702,25 @@
     },
     {
       "path": "features/batch-presets/index.html",
-      "sha256": "4881dbe0ba02ac780840a1c0fdecb33ed1bf83e3918141f049f01d7fb7557fad",
+      "sha256": "357f0c6f9785861cad3aea4b8ddb47a38ee3f1a8c99488f88bbbde4555c5e7f7",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "features/metadata-editor/index.html",
-      "sha256": "b91ff108a2e5bc07b9f9552ddd1f08cea55b7ba4c587645cb899bcf62cab177d",
+      "sha256": "0bca41794378c4c6aadd40ddc3c54f0cc0d1e3e56848d45661750cc755be4395",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "features/photo-delivery/index.html",
-      "sha256": "80d5485a8360232775b9b91b0ffd764a27b9dae4c5d3cd8addd17381fea274d5",
+      "sha256": "0d2d64d090bbf3bd196d40b0b5e925aabdd4d9a9a4e008d86225e4bf694d910b",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "features/privacy-cleanup/index.html",
-      "sha256": "4a8e61d916b58cac1b1e987c57963ab6b1425126aa77c6b3250e23a23c4b239e",
+      "sha256": "ce04fb10eee9203f63bc829c7e5aa8a2decd35c353d2bc19013904fba7f28332",
       "owner": "generated",
       "featureIds": []
     },
@@ -720,25 +732,25 @@
     },
     {
       "path": "fr-FR/features/file-de-livraison-photo/index.html",
-      "sha256": "13221d140dc6f424beb2907ae64f86e2764a94c9cac29bfa701dfb4c42bc5ca8",
+      "sha256": "7d9c6b404a6cb3fd2803e96463a0ec4a7af9495e4d3e89dd0ae606b0ba6e4d24",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "fr-FR/features/modification-iptc-exif-et-xmp/index.html",
-      "sha256": "2af9215ea69225bfaceec6d580437b157081ea81acaab67e33ecf8c6658d103d",
+      "sha256": "fbaa27cbd3ed5c4a8f0895a4c88afc9c7fc5ac5130a9cc1ff317f7a74a05f929",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "fr-FR/features/nettoyage-des-métadonnées-privées/index.html",
-      "sha256": "603596b24a476a92e3d160ff727c3da07bc49eaee0178160f932b7263a920442",
+      "sha256": "16427a24a3d2bba43014eed3b866bbbd9dd21bc04d86b24461e3c16c05c68a28",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "fr-FR/features/préréglages-par-lot/index.html",
-      "sha256": "a2283a22fecd4dbc482a6db645f16eb247bf43d86a5a9f8daac012f4d810bf1b",
+      "sha256": "2f278e2b9ff3950d186748bc0eb8def947dbc86166e68e815bba5e1112509ca6",
       "owner": "generated",
       "featureIds": []
     },
@@ -768,7 +780,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "b3c7fa0ecac9d4d46d67822834a0bf293f93a338a3bc2843335962698eb5bf7a",
+      "sha256": "65fb0693f8a0f6221083094546b701982f8fac1052d79a05268a990acdb33406",
       "owner": "generated",
       "featureIds": []
     },
@@ -780,25 +792,25 @@
     },
     {
       "path": "it-IT/features/coda-di-consegna-foto/index.html",
-      "sha256": "caf1047baf90f446034417a6fcc94d6132c42c81a022469702cbdd4491df2c72",
+      "sha256": "63a9031fe4d041ec29081c6ebc4881db328f1498b186ad26898d40df837b5535",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "it-IT/features/modifica-iptc-exif-e-xmp/index.html",
-      "sha256": "61d4d5d9c5201bb7b24b675b00ebd78f99c2d0574978751ec2ab9a0b486b1dae",
+      "sha256": "e33a7947499568e4c996b0c0c3c883294c92f7ab5778871742057e6efa4b6010",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "it-IT/features/preset-in-batch/index.html",
-      "sha256": "09f124f879557a4c065b9774b8e688c69bd33a3695d5e701f8b58a781aa4a7c5",
+      "sha256": "98705fe478ce75d1729a6d86fcdde2ca966c090f660e97b46d47cd1777e9f4ca",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "it-IT/features/pulizia-dei-metadati-privati/index.html",
-      "sha256": "c327dc33b112b87d708e4d9f5d4cbfa876f935c991537df7d60809d44e5f7c73",
+      "sha256": "5b49ecf3979db2098d1a02e44a3688353aafbc7027198f31c000bb13ee5c30e8",
       "owner": "generated",
       "featureIds": []
     },
@@ -828,25 +840,25 @@
     },
     {
       "path": "ja-JP/features/iptc-exif-xmpの編集/index.html",
-      "sha256": "9c60c8cceb63793275a5187fe069b64e73f01913e3c67144a2736134d7917471",
+      "sha256": "ac5dc7e7baef829b8b29ca55259c671f144b1ddc16439d7f0421d11ac6b71571",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ja-JP/features/一括プリセット/index.html",
-      "sha256": "726b08577f118b4dbfe9ad980677478f71138850eb6720ff82b644ab425aaac2",
+      "sha256": "aeea9291ae9fdbce95d4a8adbacc987c9049743d33bd9f4ac2b737e5b47a7405",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ja-JP/features/写真納品キュー/index.html",
-      "sha256": "51358c8d1a2bb2b194e53b9f5593b43c20307e4717214c4ae4b9d4a549a76e27",
+      "sha256": "8cf47133d4aff01f73bfd4d288b07d2ff2a92f9375331278bdbdc6c6c74ec849",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ja-JP/features/非公開メタデータの整理/index.html",
-      "sha256": "d77d27a1044fb4791dd4bc5877a72bd4089d0d38f8b85dab2b4d7bd429ee4b7d",
+      "sha256": "ccbc3c8c8a0d81906e55f2955a7cb251a028f2dcc9c22577db1d8111936f8d14",
       "owner": "generated",
       "featureIds": []
     },
@@ -876,25 +888,25 @@
     },
     {
       "path": "ko-KR/features/iptc-exif-xmp-편집/index.html",
-      "sha256": "038b71fbae12acd7e5ffebbba9671aceb76db2315f77ece69aeb47701039de4c",
+      "sha256": "0b87f53472013df4348f5dce58e20b617996b8ae0ed5fd4b7428863eb4b11689",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ko-KR/features/비공개-메타데이터-정리/index.html",
-      "sha256": "74633e30f2d44c2aa45dcfdfa2dd0acc85af4615f76956948490a56dd2bfca5e",
+      "sha256": "86b119acf824e9375adaccb16cdb5a80b08e0dc2600f8a32c8e4f627c588182f",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ko-KR/features/사진-전달-대기열/index.html",
-      "sha256": "f1b0b7d88feca3fe3b19c9c02e572cff8e4a356a19f9f659114af4f46736441a",
+      "sha256": "e4bd0c38965054ef252aec480028165da6c28fcdafff484e929edcdce3a10d80",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ko-KR/features/일괄-프리셋/index.html",
-      "sha256": "960536c6718ddad5a1463af255460712680109a00d5835dca56bce6dd043f502",
+      "sha256": "7acff4eaac61d36774bc9b2b3a5669e7c293e693738f7c390889b92389e6790b",
       "owner": "generated",
       "featureIds": []
     },
@@ -936,25 +948,25 @@
     },
     {
       "path": "pt-PT/features/edição-iptc-exif-e-xmp/index.html",
-      "sha256": "14b60fefcfc3a52caacb2efcff6d4a2dd65c6b3ce47874245b94014c56e2f0b4",
+      "sha256": "b333e716d920248d66101aefa1449a71693dd0a1e7596e9dcb2106633a05974e",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "pt-PT/features/fila-de-entrega-de-fotografias/index.html",
-      "sha256": "ea406dc0b6b2535516d9954db306d35c13ad30cb2cc21fb1585b7f65bdccdccc",
+      "sha256": "de8d2b1467dc74865c6e95e82225b67cdaf8dcb07a6c3982b55e1aba5c57dd41",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "pt-PT/features/limpeza-de-metadados-privados/index.html",
-      "sha256": "7f96402ba8f1c21f4d733a99a32bf1c5bd74e5f77d8708f5adaf1194766d8711",
+      "sha256": "12e909f28a5d249c8367d59d9886f730eb52a50c483c09dd2174123b6a8a8996",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "pt-PT/features/predefinições-em-lote/index.html",
-      "sha256": "1a38a901fee3bc25f14f9235797f14ccbe10fe6d813a14b1d53ad87d22fb59cf",
+      "sha256": "8cf03e4ccdbe5f371eed797139a3ffb5a09dbac5775e1c863d9f2114d88dd4a1",
       "owner": "generated",
       "featureIds": []
     },
@@ -990,25 +1002,25 @@
     },
     {
       "path": "ru-RU/features/очередь-передачи-фотографий/index.html",
-      "sha256": "10244b12267284f79b21aea193cc7ca501a9dc6245eb0b5c4070518e02869aa4",
+      "sha256": "eae38bde212f9fe672b22d28fe926271e00bd302bedabdefa6e8596e18a3fbe6",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ru-RU/features/очистка-личных-метаданных/index.html",
-      "sha256": "103cb2350b4a9bdffcaccf85d0d685aa263dabde4f6d1c9865e0e4db1b161f18",
+      "sha256": "ccc7342931021f3ef689ac85dd0c21e6e9a85605f44f50063ab0ae22eba04b00",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ru-RU/features/редактирование-iptc-exif-и-xmp/index.html",
-      "sha256": "82543d1bca6f425785a2c47fa336a60faea130d2ef71632941f760f29aa52370",
+      "sha256": "72368e45dca9349042056fb4b2ecc0a12760cc8aa136fabed4f4fbbc5a699316",
       "owner": "generated",
       "featureIds": []
     },
     {
       "path": "ru-RU/features/шаблоны-для-пакетной-обработки/index.html",
-      "sha256": "8923a91521e7b9cbd2b834c5d3254a72097d4f73a7856a4e80b6d6f5f3ba4c2d",
+      "sha256": "5d5641f39ea41a4bdea77b6ef99854ab63d8f8480b42def6a41bca7a0b222cd9",
       "owner": "generated",
       "featureIds": []
     },
