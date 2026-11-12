@@ -624,7 +624,7 @@
     },
     {
       "path": "en-US/index.html",
-      "sha256": "9675f3bcf7dc487360f04f15344f104d0f27cee055e3b9d2915492fd3ef2b03a",
+      "sha256": "86365da53d96236d8603ad7f5fc971f5ad3e9a0f27ad89d87f00dabc8f5bf461",
       "owner": "generated",
       "featureIds": []
     },
@@ -780,7 +780,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "65fb0693f8a0f6221083094546b701982f8fac1052d79a05268a990acdb33406",
+      "sha256": "5f1b466ff8894274309a75762abf5272d60cba0833af38e12b3132a9629b049f",
       "owner": "generated",
       "featureIds": []
     },
