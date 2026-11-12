@@ -32,7 +32,13 @@ python -B -m http.server 8000 --bind 127.0.0.1 --directory public
 
 根目录与 `public` 的 Cloudflare Worker 均以公开路径白名单拦截内部材料。该防护需要部署后才在线上生效；实际发布仍以隔离的 `public` 为准。验证报告、哈希清单和源码证据不发布。
 
-## 验证
+## 视频搜索入口
+
+`/watch/batch-editing/` 和 `/en-US/watch/batch-editing/` 是以 29 秒真实录屏为主要内容的观看页。首页提供入口；`video-sitemap.xml` 声明观看页、MP4、真实封面和时长，并由 `robots.txt` 引用。所有视频元数据使用同一封面，不使用通用分享图代替视频缩略图。未确认视频首次公开日期，因此不编造 `VideoObject.uploadDate`；当前通过视频 sitemap 提供元数据。
+
+发布时使用上述构建命令和 `public` 输出目录。Git push 本身不证明 Cloudflare 已成功构建部署。上线后检查观看页、MP4、封面与两个 sitemap 均返回 200，再在 Search Console 检查观看页并提交视频 sitemap；首页仍可能被正确归类为“视频是补充内容”。Google 是否索引视频由其抓取和评估决定。
+
+## 本地检查
 
 ```powershell
 python -B -m unittest discover -s app-launch-system/tests -p test_official_site.py -v

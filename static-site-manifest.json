@@ -107,6 +107,7 @@
     "en-US/index.html",
     "en-US/privacy.html",
     "en-US/support.html",
+    "en-US/watch/batch-editing/index.html",
     "es-419/about.html",
     "es-419/features/ajustes-preestablecidos-por-lote/index.html",
     "es-419/features/cola-de-entrega-de-fotos/index.html",
@@ -175,6 +176,8 @@
     "ru-RU/support.html",
     "site.webmanifest",
     "sitemap.xml",
-    "support.html"
+    "support.html",
+    "video-sitemap.xml",
+    "watch/batch-editing/index.html"
   ]
 }

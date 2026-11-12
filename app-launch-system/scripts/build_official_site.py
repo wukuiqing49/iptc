@@ -26,6 +26,48 @@ POLICY = 'https://wukuiqing49.github.io/agreement/cm_privacy_policy.html'
 PRIMARY = {'zh-CN', 'en-US'}
 DAY = '2026-11-12'
 AUDIT = ROOT / '.site-audit'
+VIDEO = '/assets/video/captionmeta-batch.mp4'
+THUMBNAIL = '/assets/video-poster.webp'
+
+
+def watch_path(locale):
+    return ('/en-US' if locale == 'en-US' else '') + '/watch/batch-editing/'
+
+
+def render_watch(locale):
+    c = COPY[locale]
+    zh = locale == 'zh-CN'
+    home = '/' if zh else '/en-US/'
+    title = c['videoLabel'] + ' · 29 ' + ('秒' if zh else 'seconds')
+    canonical = SITE + watch_path(locale)
+    transcript = esc(c['transcriptText'])
+    return f'''<!doctype html>
+<html lang="{locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(title)} | CaptionMeta</title><meta name="description" content="{esc(c['videoCopy'])}">
+<meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1">
+<link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="zh-CN" href="{SITE}{watch_path('zh-CN')}">
+<link rel="alternate" hreflang="en-US" href="{SITE}{watch_path('en-US')}">
+<link rel="alternate" hreflang="x-default" href="{SITE}{watch_path('zh-CN')}">
+<meta property="og:type" content="video.other"><meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(c['videoCopy'])}"><meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{SITE}{THUMBNAIL}"><meta property="og:image:width" content="540"><meta property="og:image:height" content="960">
+<meta property="og:video" content="{SITE}{VIDEO}"><meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1080"><meta property="og:video:height" content="1920">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{SITE}{THUMBNAIL}">
+<link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/refinements.css">
+</head><body><a class="skip-link" href="#main">{'跳至视频' if zh else 'Skip to video'}</a>
+<header class="site-header"><a class="brand" href="{home}"><img src="/assets/icon.png" alt="" width="40" height="40"><span>CaptionMeta</span></a>
+<button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">{'菜单' if zh else 'Menu'}</button>
+<nav id="primary-navigation" aria-label="{'导航' if zh else 'Navigation'}"><a href="{home}">{'产品首页' if zh else 'Product home'}</a><a href="{watch_path('en-US' if zh else 'zh-CN')}" lang="{'en-US' if zh else 'zh-CN'}">{'English' if zh else '中文'}</a></nav></header>
+<main id="main" class="watch-page"><h1>{esc(title)}</h1>
+<figure class="watch-player"><video controls playsinline preload="metadata" poster="{THUMBNAIL}" width="1080" height="1920" aria-label="{esc(c['videoLabel'])}"><source src="{VIDEO}" type="video/mp4"><a href="{VIDEO}">{esc(c['videoLink'])}</a></video><p class="video-error" role="status" hidden>{esc(c['videoFallback'])}</p></figure>
+<p>{esc(c['videoCopy'])}</p><p><a href="{VIDEO}">{esc(c['videoLink'])}</a></p>
+<section class="watch-transcript"><h2>{esc(c['transcript'])}</h2><p>{transcript}</p></section>
+<p><a href="{home}#screenshots">{esc(c['screensTitle'])}</a></p>{action(c)}
+</main><footer><p>CaptionMeta · <a href="{home}support.html">{'帮助与支持' if zh else 'Help and support'}</a></p></footer>
+<script src="/assets/app.js" defer></script></body></html>'''
 
 
 def digest(path):
@@ -69,7 +111,7 @@ def render_home(c, locale, locale_data, links, prefix):
       <div class="hero-copy"><p class="platform">{esc(c['platform'])}</p>
         <h1 id="hero-title">{esc(c['headline']).replace(chr(10), '<br>')}</h1>
         <p class="summary">{esc(c['intro'])}</p>
-        <div class="hero-actions">{action(c)}<a class="secondary-action" href="#walkthrough">{esc(c['secondary'])}</a></div>
+        <div class="hero-actions">{action(c)}<a class="secondary-action" href="{watch_path(locale)}">{esc(c['secondary'])}</a></div>
         <p class="store-note">{esc(c['store'])}</p>
       </div>
       <figure class="hero-media editor-media">{image('batch-editor.webp', c['screenNames'][0], prefix, True)}<figcaption>{esc(c['heroCaption'])}</figcaption></figure>
@@ -79,6 +121,7 @@ def render_home(c, locale, locale_data, links, prefix):
     <section id="walkthrough" class="walkthrough"><div class="walkthrough-copy"><h2>{esc(c['videoTitle'])}</h2><p>{esc(c['videoCopy'])}</p>
       <details class="transcript"><summary>{esc(c['transcript'])}</summary><p>{esc(c['transcriptText'])}</p></details>
       <p><a href="{prefix}assets/video/captionmeta-batch.mp4">{esc(c['videoLink'])}</a></p>
+      <p><a href="{watch_path(locale)}">{'打开视频观看页' if locale == 'zh-CN' else 'Open the video watch page'}</a></p>
       <p><a href="#screenshots">{esc(c['screensTitle'])}</a></p>
     </div><figure class="walkthrough-video"><video controls playsinline preload="none" poster="{prefix}assets/video-poster.webp" width="1080" height="1920" aria-label="{esc(c['videoLabel'])}"><source src="{prefix}assets/video/captionmeta-batch.mp4" type="video/mp4"><a href="{prefix}assets/video/captionmeta-batch.mp4">{esc(c['videoLink'])}</a></video><p class="video-error" role="status" hidden>{esc(c['videoFallback'])}</p></figure></section>
     <section class="workflow"><div class="section-heading"><h2>{esc(c['workflowTitle'])}</h2></div><ol>{steps}</ol></section>
@@ -371,6 +414,11 @@ def build():
             if transform(path,rel,locales,version):
                 soup=BeautifulSoup(path.read_text(encoding='utf-8'),'html.parser')
                 indexed.append(soup.find('link',rel='canonical')['href'])
+        for locale in sorted(PRIMARY):
+            dest = stage / watch_path(locale).lstrip('/') / 'index.html'
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(render_watch(locale), encoding='utf-8')
+            indexed.append(SITE + watch_path(locale))
         manifest={'name':'CaptionMeta','short_name':'CaptionMeta','start_url':'/','display':'browser','background_color':'#ffffff','theme_color':'#1976d2','icons':[{'src':f'/assets/icon-{n}.png','sizes':f'{n}x{n}','type':'image/png'} for n in [192,512]]}
         (stage/'site.webmanifest').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
         ns='http://www.sitemaps.org/schemas/sitemap/0.9'; ET.register_namespace('',ns)
@@ -378,7 +426,19 @@ def build():
         for url in sorted(indexed):
             entry=ET.SubElement(sitemap,'{'+ns+'}url');ET.SubElement(entry,'{'+ns+'}loc').text=url;ET.SubElement(entry,'{'+ns+'}lastmod').text=DAY
         ET.ElementTree(sitemap).write(stage/'sitemap.xml',encoding='utf-8',xml_declaration=True)
-        (stage/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+SITE+'/sitemap.xml\n',encoding='utf-8')
+        # Video sitemap supplies discoverable metadata without inventing an unknown
+        # first-publication date (required by Google's VideoObject rich results).
+        video_ns = 'http://www.google.com/schemas/sitemap-video/1.1'
+        ET.register_namespace('video', video_ns)
+        video_map = ET.Element('{'+ns+'}urlset')
+        for locale in sorted(PRIMARY):
+            entry = ET.SubElement(video_map, '{'+ns+'}url')
+            ET.SubElement(entry, '{'+ns+'}loc').text = SITE + watch_path(locale)
+            video = ET.SubElement(entry, '{'+video_ns+'}video')
+            for key, value in [('thumbnail_loc', SITE + THUMBNAIL), ('title', COPY[locale]['videoLabel']), ('description', COPY[locale]['videoCopy']), ('content_loc', SITE + VIDEO), ('duration', '29')]:
+                ET.SubElement(video, '{'+video_ns+'}'+key).text = value
+        ET.ElementTree(video_map).write(stage/'video-sitemap.xml', encoding='utf-8', xml_declaration=True)
+        (stage/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+SITE+'/sitemap.xml\nSitemap: '+SITE+'/video-sitemap.xml\n',encoding='utf-8')
         (stage/'llms.txt').write_text('# CaptionMeta\n\nAndroid photo metadata editor, listed on Google Play as Photo Metadata & IPTC Editor by AndroidManTou.\n\nEdit supported photo captions, keywords, credits and copyright. Reuse presets, inspect metadata cleanup, and deliver processed photos to a user-configured server. Format support varies. Metadata cleanup does not guarantee anonymity.\n\n## First-party pages\n- '+SITE+'/\n- '+SITE+'/en-US/\n- '+SITE+'/blog/en-US/\n- '+SITE+'/en-US/support\n\n## Download and privacy\n- '+PLAY+'\n- '+POLICY+'\n',encoding='utf-8')
         (stage/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n\n/assets/*\n  Cache-Control: public, max-age=3600\n',encoding='utf-8')
         files=sorted(p.relative_to(stage).as_posix() for p in stage.rglob('*') if p.is_file())
