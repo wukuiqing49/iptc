@@ -136,7 +136,23 @@ bing:
   indexNowKey: "你的IndexNowKey"
 ```
 
-生成器会将 `BingSiteAuth.xml`、`<IndexNowKey>.txt`、百分号编码的 `sitemap.xml`、`robots.txt` 和 `llms.txt` 写入公开文件清单。部署后，在 Bing Webmaster Tools 验证域名并提交 `https://你的域名/sitemap.xml`；页面新增或更新时，再使用该 key 调用 IndexNow API。
+生成器会将 `BingSiteAuth.xml`、`<IndexNowKey>.txt`、百分号编码的 `sitemap.xml`、`robots.txt` 和 `llms.txt` 写入公开文件清单。部署后，在 Bing Webmaster Tools 验证域名并提交 `https://你的域名/sitemap.xml`。
+
+当页面新增或更新后，可通过命令行一键向 IndexNow / Bing 提交全量或指定 URL：
+
+```powershell
+# 提交 sitemap.xml 中的所有 URL 到 IndexNow 默认接口 (api.indexnow.org)
+python app-launch-system/scripts/launch.py submit-indexnow
+
+# 模拟提交 (dry-run)
+python app-launch-system/scripts/launch.py submit-indexnow --dry-run
+
+# 单独提交到 Bing 接口
+python app-launch-system/scripts/launch.py submit-indexnow --endpoint https://www.bing.com/indexnow
+
+# 仅提交指定 URL
+python app-launch-system/scripts/launch.py submit-indexnow --url https://你的域名/blog/new-post/
+```
 
 ## 如何把项目交给 AI
 

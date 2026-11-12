@@ -1,0 +1,7 @@
+# IntelliJ IDEA project files
+.idea/
+.playwright-mcp/
+__pycache__/
+*.pyc
+.site-audit/
+public/

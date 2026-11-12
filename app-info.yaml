@@ -1,12 +1,12 @@
 schemaVersion: "1.0"
 sourceProject: "C:\\work\\AI\\PressIPTC"
-analyzedAt: "2026-08-08"
+analyzedAt: "2026-11-12"
 analysis:
   status: "verified"
   analyzerVersion: "1.0"
   selectedModule: "app"
   selectedVariant: "release"
-  validatedAt: "2026-08-08"
+  validatedAt: "2026-11-12"
   errors: []
   warnings:
     - "The project release build uses a repository test keystore; verify signing before publication."
@@ -15,8 +15,8 @@ analysis:
 name: "CaptionMeta"
 packageName: "com.wkq.caption"
 version:
-  name: "1.2.5"
-  code: "125"
+  name: "1.4.0"
+  code: "140"
   minSdk: 24
   targetSdk: 36
 developer:
@@ -224,17 +224,19 @@ brand:
     - "#1976D2"
     - "#0D65B5"
     - "#F5F9FF"
-  logo: "app-launch-system/config/assets/icon/captionmeta-icon.png"
+  logo: "site/assets/icon.png"
 
 assets:
-  root: "app-launch-system/config/assets"
-  icon: "icon/captionmeta-icon.png"
-  coverImage: "screenshots/captionmeta-home.png"
-  socialImage: "screenshots/captionmeta-home.png"
-  video: "video/captionmeta-intro.mp4"
+  root: "site/assets"
+  icon: "icon.png"
+  coverImage: "screenshots/batch-editor.webp"
+  socialImage: "social-card.jpg"
+  video: "video/captionmeta-batch.mp4"
   screenshots:
-    - "screenshots/captionmeta-home.png"
-    - "screenshots/captionmeta-upload.png"
+    - "screenshots/batch-editor.webp"
+    - "screenshots/presets.webp"
+    - "screenshots/metadata-result.webp"
+    - "screenshots/privacy-result.webp"
 
 languages:
   source: "zh-CN"
@@ -280,18 +282,26 @@ languages:
       ar: "ar"
 
 screenshots:
-  - path: "screenshots/captionmeta-home.png"
-    locale: "zh-CN"
-    screen: "Capture home"
-    caption: "当前设备上的 CaptionMeta 拍摄首页"
-  - path: "screenshots/captionmeta-upload.png"
-    locale: "zh-CN"
-    screen: "Upload queue"
-    caption: "当前设备上的照片上传队列"
+  - path: "screenshots/batch-editor.webp"
+    locale: "en-US"
+    screen: "Batch metadata editor"
+    caption: "Actual batch editor using demonstration information"
+  - path: "screenshots/presets.webp"
+    locale: "en-US"
+    screen: "IPTC presets"
+    caption: "Reusable IPTC preset configuration"
+  - path: "screenshots/metadata-result.webp"
+    locale: "en-US"
+    screen: "Saved metadata"
+    caption: "Read back the generated photo metadata"
+  - path: "screenshots/privacy-result.webp"
+    locale: "en-US"
+    screen: "Metadata cleanup result"
+    caption: "Inspect the processed photo after cleanup"
 
 googlePlayUrl: "https://play.google.com/store/apps/details?id=com.wkq.caption"
 websiteUrl: "https://iptc.pages.dev/"
-videoUrl: "https://www.youtube.com/watch?v=9OyA3yWH864"
+videoUrl: ""
 searchConsole:
   verificationFileName: "google939576fea7c9232c.html"
   verificationContent: "google-site-verification: google939576fea7c9232c.html"
@@ -305,12 +315,12 @@ bing:
   indexNowKey: "DC4AB582C527A7A168FC391B84B8995E"
 editorial:
   publishedAt: ""
-  updatedAt: "2026-08-08"
+  updatedAt: "2026-11-12"
 support:
   email: "wukuiqing@gmail.com"
   url: ""
 privacy:
-  policyUrl: ""
+  policyUrl: "https://wukuiqing49.github.io/agreement/cm_privacy_policy.html"
   dataPractices:
     - "Photos and metadata are processed by the Android app workflow on the device and may be sent to a server only when the user configures a delivery profile and starts delivery."
     - "The app can request camera, location, and media access to support capture, GPS metadata, and photo selection workflows."

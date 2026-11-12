@@ -42,6 +42,19 @@ def main() -> int:
     website.add_argument("--organization", type=Path)
     website.add_argument("--force", action="store_true")
 
+    subparsers.add_parser("build-site", help="构建经过内容优化和静态校验的 public/ 官网")
+
+    indexnow = subparsers.add_parser("submit-indexnow")
+    indexnow.add_argument("--app-info", type=Path)
+    indexnow.add_argument("--sitemap", type=Path)
+    indexnow.add_argument("--url", action="append", dest="urls")
+    indexnow.add_argument("--key", type=str)
+    indexnow.add_argument("--host", type=str)
+    indexnow.add_argument("--key-location", type=str)
+    indexnow.add_argument("--endpoint", type=str)
+    indexnow.add_argument("--dry-run", action="store_true")
+    indexnow.add_argument("--limit", type=int)
+
     args = parser.parse_args()
     if args.command == "validate-app-info":
         return run_script("validate_app_info.py", [absolute(args.app_info)])
@@ -67,7 +80,34 @@ def main() -> int:
             command_args.extend(["--organization", absolute(args.organization)])
         if args.force:
             command_args.append("--force")
-        return run_script("generate_website.py", command_args)
+        result = run_script("generate_website.py", command_args)
+        if result == 0 and (not args.output or args.output.resolve() == ROOT.parent.resolve()):
+            return run_script("build_official_site.py", [])
+        return result
+    if args.command == "build-site":
+        return run_script("build_official_site.py", [])
+    if args.command == "submit-indexnow":
+        command_args = []
+        if args.app_info:
+            command_args.extend(["--app-info", absolute(args.app_info)])
+        if args.sitemap:
+            command_args.extend(["--sitemap", absolute(args.sitemap)])
+        if args.urls:
+            for u in args.urls:
+                command_args.extend(["--url", u])
+        if args.key:
+            command_args.extend(["--key", args.key])
+        if args.host:
+            command_args.extend(["--host", args.host])
+        if args.key_location:
+            command_args.extend(["--key-location", args.key_location])
+        if args.endpoint:
+            command_args.extend(["--endpoint", args.endpoint])
+        if args.dry_run:
+            command_args.append("--dry-run")
+        if args.limit is not None:
+            command_args.extend(["--limit", str(args.limit)])
+        return run_script("submit_indexnow.py", command_args)
     parser.error(f"unsupported command: {args.command}")
     return 2
 
