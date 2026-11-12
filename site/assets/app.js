@@ -1,5 +1,28 @@
 document.documentElement.classList.add('js');
 
+// Native dialog keeps Escape, focus containment and focus restoration available.
+if (typeof HTMLDialogElement !== 'undefined') {
+  const viewer = document.createElement('dialog');
+  viewer.className = 'image-viewer';
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.textContent = document.documentElement.lang === 'zh-CN' ? '关闭截图' : 'Close image';
+  const enlarged = document.createElement('img');
+  viewer.append(close, enlarged);
+  viewer.setAttribute('aria-label', document.documentElement.lang === 'zh-CN' ? '英文应用界面' : 'English app interface');
+  document.body.append(viewer);
+  close.addEventListener('click', () => viewer.close());
+  for (const link of document.querySelectorAll('.screen-zoom')) {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      enlarged.src = link.href;
+      enlarged.alt = link.querySelector('img').alt;
+      viewer.showModal();
+    });
+  }
+}
+
 const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.nav-toggle');
 const navigation = document.querySelector('#primary-navigation');
@@ -30,6 +53,7 @@ for (const video of document.querySelectorAll('video')) {
   const fail = () => { if (status) status.hidden = false; };
   video.addEventListener('error', fail);
   for (const source of video.querySelectorAll('source')) source.addEventListener('error', fail);
+  if (video.error || video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) fail();
   video.addEventListener('playing', () => { if (status) status.hidden = true; });
   // 手动播放也随时可暂停；减少动态模式不触发任何自动播放。
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');

@@ -92,19 +92,22 @@ def action(c, prefix=''):
 
 
 def image(name, caption, prefix, eager=False):
+    width, height = Image.open(ROOT / 'site/assets/screenshots' / name).size
     return (f'<img src="{prefix}assets/screenshots/{name}" alt="{esc(caption)}" '
-            f'width="540" height="1200" loading="{"eager" if eager else "lazy"}" decoding="async">')
+            f'width="{width}" height="{height}" loading="{"eager" if eager else "lazy"}" decoding="async">')
 
 
 def render_home(c, locale, locale_data, links, prefix):
-    names = list(GUIDES)
-    cards = ''.join(f'<article><h3>{esc(locale_data["home"]["features"][fid]["name"])}</h3>'
-                    f'<p>{esc(locale_data["home"]["features"][fid]["description"])}</p>'
-                    f'<a class="feature-link" href="{esc(links[fid])}">{esc(c["details"])}</a></article>' for fid in names)
-    gallery = ''.join(f'<figure>{image(name, c["screenNames"][i], prefix)}'
-                      f'<figcaption><strong>{esc(c["screenNames"][i])}</strong><p>{esc(c["captions"][i])}</p></figcaption></figure>'
-                      for i, name in enumerate(['batch-editor.webp', 'presets.webp', 'metadata-result.webp', 'privacy-result.webp']))
-    steps = ''.join(f'<li>{esc(s)}</li>' for s in c['steps'])
+    zh = locale == 'zh-CN'
+    zoom = '放大英文界面' if zh else 'Enlarge the English interface'
+    crop = '真实英文界面局部 · 演示数据' if zh else 'Actual English interface detail · demo data'
+    items = [
+        ('batch-editor.webp', 'metadata-editor', '一组照片，一次填写' if zh else 'One edit. A whole batch.', c['captions'][0]),
+        ('presets.webp', 'batch-presets', '把常用字段留给下次' if zh else 'Keep your setup for next time.', c['captions'][1]),
+        ('metadata-result.webp', 'metadata-editor', '保存以后，再检查一次' if zh else 'See what made it into the file.', c['captions'][2]),
+        ('privacy-result.webp', 'privacy-cleanup', '分享之前，检查隐私信息' if zh else 'Check the details before sharing.', c['captions'][3]),
+    ]
+    cards = ''.join(f'''<article class="showcase-card"><div class="showcase-copy"><h3>{esc(title)}</h3><p>{esc(body)}</p><a class="feature-link" href="{esc(links[fid])}">{esc(c['details'])}</a></div><figure><a class="screen-zoom" href="{prefix}assets/screenshots/{name}" aria-label="{esc(zoom)}: {esc(title)}">{image(name, title, prefix)}<span>{esc(zoom)}</span></a><figcaption>{esc(crop)}</figcaption></figure></article>''' for name, fid, title, body in items)
     faq = ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in c['faq'])
     return f'''
     <section class="hero home-hero" aria-labelledby="hero-title">
@@ -114,17 +117,11 @@ def render_home(c, locale, locale_data, links, prefix):
         <div class="hero-actions">{action(c)}<a class="secondary-action" href="{watch_path(locale)}">{esc(c['secondary'])}</a></div>
         <p class="store-note">{esc(c['store'])}</p>
       </div>
-      <figure class="hero-media editor-media">{image('batch-editor.webp', c['screenNames'][0], prefix, True)}<figcaption>{esc(c['heroCaption'])}</figcaption></figure>
+      <figure class="hero-media editor-media"><a class="screen-zoom" href="{prefix}assets/screenshots/batch-editor.webp" aria-label="{esc(zoom)}">{image('batch-editor.webp', c['screenNames'][0], prefix, True)}</a><figcaption>{esc(crop)}</figcaption></figure>
     </section>
-    <section id="features" class="content-band"><div class="section-heading"><h2>{esc(c['featuresTitle'])}</h2><p>{esc(c['featuresIntro'])}</p></div><div class="feature-list">{cards}</div></section>
-    <section id="screenshots" class="screenshot-band"><div class="section-heading"><h2>{esc(c['screensTitle'])}</h2><p>{esc(c['screensIntro'])}</p></div><div class="screenshot-list real-screens">{gallery}</div></section>
-    <section id="walkthrough" class="walkthrough"><div class="walkthrough-copy"><h2>{esc(c['videoTitle'])}</h2><p>{esc(c['videoCopy'])}</p>
-      <details class="transcript"><summary>{esc(c['transcript'])}</summary><p>{esc(c['transcriptText'])}</p></details>
-      <p><a href="{prefix}assets/video/captionmeta-batch.mp4">{esc(c['videoLink'])}</a></p>
-      <p><a href="{watch_path(locale)}">{'打开视频观看页' if locale == 'zh-CN' else 'Open the video watch page'}</a></p>
-      <p><a href="#screenshots">{esc(c['screensTitle'])}</a></p>
-    </div><figure class="walkthrough-video"><video controls playsinline preload="none" poster="{prefix}assets/video-poster.webp" width="1080" height="1920" aria-label="{esc(c['videoLabel'])}"><source src="{prefix}assets/video/captionmeta-batch.mp4" type="video/mp4"><a href="{prefix}assets/video/captionmeta-batch.mp4">{esc(c['videoLink'])}</a></video><p class="video-error" role="status" hidden>{esc(c['videoFallback'])}</p></figure></section>
-    <section class="workflow"><div class="section-heading"><h2>{esc(c['workflowTitle'])}</h2></div><ol>{steps}</ol></section>
+    <section class="workflow compact-workflow" aria-label="{esc(c['workflowTitle'])}"><ol>{''.join('<li>'+esc(s)+'</li>' for s in (['选择照片', '填写或应用预设', '保存并检查结果', '分享或交付'] if zh else ['Choose photos', 'Fill fields or apply a preset', 'Save and check the result', 'Share or deliver']))}</ol></section>
+    <section id="features" class="content-band showcase-band"><div id="screenshots" class="section-heading"><h2>{esc(c['featuresTitle'])}</h2><p>{esc(c['screensIntro'])}</p></div><div class="showcase-grid">{cards}</div><p class="delivery-note"><a href="{esc(links['photo-delivery'])}">{'需要发送到自己的服务器？了解照片交付队列。' if zh else 'Sending to your own server? Explore the photo delivery queue.'}</a></p></section>
+    <section id="walkthrough" class="walkthrough"><div class="walkthrough-copy"><h2>{esc(c['videoTitle'])}</h2><p>{esc(c['videoCopy'])}</p><a class="secondary-action" href="{watch_path(locale)}">{'观看 29 秒演示' if zh else 'Watch the 29-second demo'}</a></div><a class="demo-preview" href="{watch_path(locale)}" aria-label="{esc(c['videoLabel'])}"><img src="{prefix}assets/video-poster.webp" width="540" height="960" alt="{esc(c['videoLabel'])}" loading="lazy"><span aria-hidden="true">▶ 0:29</span></a></section>
     <section class="site-faq"><h2>{esc(c['faqTitle'])}</h2>{faq}</section>
     <section class="closing"><h2>{esc(c['closing'])}</h2>{action(c)}<p class="store-note">{esc(c['store'])}</p></section>'''
 
@@ -135,7 +132,7 @@ def render_guide(c, data, locale, prefix, feature_url, fid):
     home = '/' if locale == 'zh-CN' else '/en-US/'
     guide_home = '/blog/' if locale == 'zh-CN' else '/blog/en-US/'
     home_name, guide_name = ('首页', '指南') if locale == 'zh-CN' else ('Home', 'Guides')
-    return f'''<article><header class="article-header"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{home}">{home_name}</a><span>/</span><a href="{guide_home}">{guide_name}</a></nav><p class="article-kicker">{esc(c['guideLabel'])}</p><h1>{esc(data['title'])}</h1><p class="article-dek">{esc(data['intro'])}</p><p class="article-meta">{esc(c['version'])} · <time datetime="{DAY}">{DAY}</time></p></header><div class="article-layout"><aside class="article-toc"><nav>{toc}</nav></aside><div class="article-body">{sections}<figure class="guide-screen">{image(GUIDES[fid]['image'], data['title'], prefix)}<figcaption>{esc(c['screensIntro'])}</figcaption></figure><p><a href="{feature_url}">{esc(c['details'])}</a></p>{action(c)}</div></div></article>'''
+    return f'''<article><header class="article-header"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{home}">{home_name}</a><span>/</span><a href="{guide_home}">{guide_name}</a></nav><p class="article-kicker">{esc(c['guideLabel'])}</p><h1>{esc(data['title'])}</h1><p class="article-dek">{esc(data['intro'])}</p><p class="article-meta">{esc(c['version'])} · <time datetime="{DAY}">{DAY}</time></p></header><div class="article-layout"><aside class="article-toc"><nav>{toc}</nav></aside><div class="article-body">{sections}<figure class="guide-screen"><a class="screen-zoom" href="{prefix}assets/screenshots/{GUIDES[fid]['image']}">{image(GUIDES[fid]['image'], data['title'], prefix)}</a><figcaption>{esc(c['screensIntro'])}</figcaption></figure><p><a href="{feature_url}">{esc(c['details'])}</a></p>{action(c)}</div></div></article>'''
 
 
 def metadata(soup, locale, canonical, title, description, prefix, primary, version):
@@ -250,7 +247,8 @@ def transform(path, rel, locale_data, version):
             category.decompose()
         media = soup.select_one('.feature-media')
         if media:
-            replace_contents(media, image(GUIDES[fid]['image'] if fid else 'batch-editor.webp', title, prefix) + f'<figcaption>{esc(c["screensIntro"])}</figcaption>')
+            shot = GUIDES[fid]['image'] if fid else 'batch-editor.webp'
+            replace_contents(media, f'<a class="screen-zoom" href="{prefix}assets/screenshots/{shot}">{image(shot, title, prefix)}</a>' + f'<figcaption>{esc(c["screensIntro"])}</figcaption>')
         if primary:
             # 将实现口吻替换为用户说明，保留其余经核对的功能说明。
             for p in soup.select('.feature-faq p'):
@@ -260,7 +258,7 @@ def transform(path, rel, locale_data, version):
                     p.string = ('可配置 FTP、FTPS、SFTP、HTTP、SMB 和 WebDAV。你需要自行提供服务器和有效凭据。' if locale == 'zh-CN' else 'Configure FTP, FTPS, SFTP, HTTP, SMB or WebDAV with your own server and valid credentials.')
             if fid == 'privacy-cleanup':
                 soup.select_one('.feature-limitations').append(fragment('<p>' + esc(c['faq'][-1][1]) + '</p>'))
-            soup.select_one('.feature-detail').append(fragment(action(c)))
+            soup.select_one('.feature-hero').append(fragment(action(c)))
     if article and primary and fid:
         related = soup.select_one('.related-band')
         guide_feature = next((a['href'] for a in soup.select('a[href]') if '/features/' in a['href'] or a['href'].startswith('../../features/')), None)
@@ -329,7 +327,8 @@ def transform(path, rel, locale_data, version):
             basename = Path(img['src']).name
             if basename not in {'batch-editor.webp','presets.webp','metadata-result.webp','privacy-result.webp'}:
                 img['src'] = prefix + 'assets/screenshots/metadata-result.webp'
-            img['width'], img['height'] = '540', '1200'
+            width, height = Image.open(ROOT/'site/assets/screenshots'/Path(img['src']).name).size
+            img['width'], img['height'] = str(width), str(height)
         img['decoding'] = 'async'
     for h3 in soup.select('.article-card h3'):
         a = h3.find('a')
@@ -342,6 +341,8 @@ def transform(path, rel, locale_data, version):
                     if card_image:
                         card_image['src'] = prefix + 'assets/screenshots/' + GUIDES[key]['image']
                         card_image['alt'] = GUIDES[key][locale]['title']
+                        width, height = Image.open(ROOT/'site/assets/screenshots'/GUIDES[key]['image']).size
+                        card_image['width'], card_image['height'] = str(width), str(height)
                     p = h3.parent.find('p', class_=None)
                     if p: p.string = GUIDES[key][locale]['intro']
     metadata(soup, locale, canonical, title, description, prefix, primary, version)

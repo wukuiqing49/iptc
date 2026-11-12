@@ -1,0 +1,62 @@
+[
+  {
+    "sourcePath": "docs/promo/20261109/sources/batch-editor.png",
+    "publicPath": "assets/screenshots/batch-editor.webp",
+    "sha256": "e41e5d245f434cdd9747f4ed38ef81b1a79c116ca53fdd1c1fe24235fb9632b1",
+    "reviewStatus": "English-visible-text-visually-verified",
+    "purpose": "unedited-English-interface-crop",
+    "cropPixels": [
+      0,
+      120,
+      1080,
+      1084
+    ]
+  },
+  {
+    "sourcePath": "docs/promo/20261109/sources/batch-result.png",
+    "publicPath": "assets/screenshots/metadata-result.webp",
+    "sha256": "777bf4f89fdd60f99018f7b4a044cb154b1f369a2f86c2c53161dba54c91f319",
+    "reviewStatus": "visually-verified",
+    "purpose": "real-app-screenshot"
+  },
+  {
+    "sourcePath": "docs/promo/20261109/sources/presets.png",
+    "publicPath": "assets/screenshots/presets.webp",
+    "sha256": "8ee70597d4b52e08a5a27ea7cace6dad70b7f47d27976798516888f5f65cc5c6",
+    "reviewStatus": "English-visible-text-visually-verified",
+    "purpose": "unedited-English-interface-crop",
+    "cropPixels": [
+      0,
+      120,
+      1080,
+      1400
+    ]
+  },
+  {
+    "sourcePath": "docs/promo/20261109/sources/privacy-result.png",
+    "publicPath": "assets/screenshots/privacy-result.webp",
+    "sha256": "3664b165a56f960a4d82a0a4005068cf7adbd8c6e777589bc76141e569070ffb",
+    "reviewStatus": "English-visible-text-visually-verified",
+    "purpose": "unedited-English-interface-crop",
+    "cropPixels": [
+      0,
+      1010,
+      1080,
+      2280
+    ]
+  },
+  {
+    "sourcePath": "docs/promo/20261109/videos/CaptionMeta-Batch-29s.mp4",
+    "publicPath": "assets/video/captionmeta-batch.mp4",
+    "sha256": "582dc420da382658d8233e9147111185ff6b6d9776030ece8305559da81462b1",
+    "reviewStatus": "recording-notes-and-sampled-frames-verified",
+    "purpose": "real-app-screen-recording-with-embedded-English-text"
+  },
+  {
+    "sourcePath": "docs/promo/20261109/videos/CaptionMeta-Batch-29s.mp4",
+    "publicPath": "assets/video-poster.webp",
+    "frameSeconds": 24,
+    "purpose": "English-frame-from-the-actual-video",
+    "sha256": "948d015daccd91c5d449f115a412446d5941a6e6334149786976312c227a5641"
+  }
+]
