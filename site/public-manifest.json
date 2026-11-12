@@ -138,7 +138,7 @@
     },
     {
       "path": "assets/product-cover.webp",
-      "sha256": "1d7b1a02149bb0084c49126a49ed83bf10b0d22fb10a377dbba10a113ece21dc",
+      "sha256": "68268e398e679406bce15ec06412e7f62bde50301cb58cb07a8b91854bd44053",
       "owner": "generated",
       "featureIds": []
     },
@@ -630,7 +630,7 @@
     },
     {
       "path": "en-US/index.html",
-      "sha256": "69fa37bc663da626be3f5e2c972f6b9fa5ef64de119dd795e3d0b06f5ecbd1b8",
+      "sha256": "54799924549db80ac3e04c736b160e4eb3423e82b02a3f0df4135dcee824a691",
       "owner": "generated",
       "featureIds": []
     },
@@ -786,7 +786,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "4ff64e75c892d46bb99c95ea895f964ea314df1f39d50b815ea2e257077a8766",
+      "sha256": "45e2eef2282497e1bcacc08ea7406a34d907363459e88e843ebcd2411a616c6e",
       "owner": "generated",
       "featureIds": []
     },

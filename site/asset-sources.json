@@ -89,14 +89,27 @@
   },
   {
     "sourcePaths": [
-      "site/assets/icon.png",
-      "site/assets/screenshots/batch-editor.webp",
-      "site/assets/screenshots/metadata-fields.webp"
+      "site/cover-sources/market-photo.png",
+      "site/assets/screenshots/metadata-result.webp"
     ],
+    "photoOrigin": "PressIPTC/docs/promo/20261109/sources/photo-preview.png",
+    "photoCropPixels": [
+      53,
+      353,
+      1027,
+      810
+    ],
+    "interfaceCropPixels": [
+      0,
+      60,
+      540,
+      644
+    ],
+    "visualReference": "PressIPTC/docs/promo/20261109/covers/youtube-main-landscape.jpg",
     "publicPath": "assets/product-cover.webp",
     "generator": "site/create_product_cover.py",
-    "purpose": "product-cover-composed-from-real-English-app-screens",
+    "purpose": "photography-scene-and-real-English-saved-metadata-cover",
     "reviewStatus": "English-visible-text-visually-verified",
-    "sha256": "1d7b1a02149bb0084c49126a49ed83bf10b0d22fb10a377dbba10a113ece21dc"
+    "sha256": "68268e398e679406bce15ec06412e7f62bde50301cb58cb07a8b91854bd44053"
   }
 ]
