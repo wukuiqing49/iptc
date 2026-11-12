@@ -1,0 +1,15 @@
+# CaptionMeta
+
+Android photo metadata editor, listed on Google Play as Photo Metadata & IPTC Editor by AndroidManTou.
+
+Edit supported photo captions, keywords, credits and copyright. Reuse presets, inspect metadata cleanup, and deliver processed photos to a user-configured server. Format support varies. Metadata cleanup does not guarantee anonymity.
+
+## First-party pages
+- https://iptc.pages.dev/
+- https://iptc.pages.dev/en-US/
+- https://iptc.pages.dev/blog/en-US/
+- https://iptc.pages.dev/en-US/support
+
+## Download and privacy
+- https://play.google.com/store/apps/details?id=com.wkq.caption
+- https://wukuiqing49.github.io/agreement/cm_privacy_policy.html

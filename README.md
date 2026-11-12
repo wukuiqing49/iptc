@@ -10,7 +10,7 @@ python -B app-launch-system/scripts/launch.py build-site
 python -B -m http.server 8000 --bind 127.0.0.1 --directory public
 ```
 
-打开 http://127.0.0.1:8000/ 。`wrangler.toml` 的 Pages 输出目录已设置为 `public`。若使用 Cloudflare Git 集成，构建命令使用前两条，输出目录填 `public`。目录调整需要在下一次部署时生效；本地构建不会修改现有线上站点或提交搜索引擎索引请求。
+打开 http://127.0.0.1:8000/ 。`wrangler.toml` 的 Pages 输出目录已设置为 `public`。当前使用**预构建静态文件随 Git 提交**的方式，兼容 Cloudflare 现有的空构建命令：Cloudflare 拉取仓库后直接发布 `public`，无需安装 Python 或修改后台设置。每次更新源文件后，在本地运行上述构建命令，并将 `public` 与源文件一起提交。Git push 触发自动部署；部署成功后线上才更新。
 
 ## 内容与素材
 
@@ -20,6 +20,7 @@ python -B -m http.server 8000 --bind 127.0.0.1 --directory public
 - `site/source-pages.json`：沿用的页面路由及验证文件。原页面保留为源输入，构建时定向优化，不覆盖源页面中的人工改动。
 - `app-info.yaml`：产品版本、来源项目、正式商店与政策链接。Android 源项目不被修改。
 - `.site-audit/`：公开文件清单、资源来源、生成哈希、审计和验证记录；不进入 `public`。
+- `site/public-manifest.json`：随预构建文件提交的归属哈希，支持新克隆仓库重新构建，同时保留人工修改保护；不发布到网站。
 
 公开页面保留 11 种语言路由。中文与英文进入 sitemap；其余九种未经人工审核的翻译提供明确预览提示，使用 `noindex,follow`，不作为已审核页面的 hreflang 目标。审核后应同时更新页面状态、语言提示、hreflang 和 sitemap，而不是只删除提示。
 

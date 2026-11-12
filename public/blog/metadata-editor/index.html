@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>如何在 Android 照片中添加说明、署名与版权 | CaptionMeta</title>
+<meta content="让接收照片的人知道拍了什么、由谁拍摄，以及应该如何署名。先区分字段的用途，再检查生成文件中的实际内容。" name="description"/>
+
+<meta content="#1976D2" name="theme-color"/>
+<link href="https://iptc.pages.dev/blog/metadata-editor/" rel="canonical"/>
+<link href="https://iptc.pages.dev/blog/metadata-editor/" hreflang="zh-CN" rel="alternate"/>
+<link href="https://iptc.pages.dev/blog/en-US/iptc-exif-and-xmp-editing/" hreflang="en-US" rel="alternate"/>
+
+
+
+
+
+
+
+
+
+<link href="https://iptc.pages.dev/blog/metadata-editor/" hreflang="x-default" rel="alternate"/>
+<link href="../../assets/styles.css" rel="stylesheet"/>
+<link href="../../assets/blog.css" rel="stylesheet"/>
+<script id="locale-routes" type="application/json">{"sourceLocale": "zh-CN", "currentLocale": "zh-CN", "autoRedirect": false, "rememberSelection": true, "defaultLocale": "en-US", "storageKey": "com.wkq.caption:locale", "aliases": {"zh": "zh-CN", "en": "en-US", "ja": "ja-JP", "ko": "ko-KR", "de": "de-DE", "fr": "fr-FR", "es": "es-419", "pt": "pt-PT", "it": "it-IT", "ru": "ru-RU", "ar": "ar"}, "locales": [{"code": "zh-CN", "url": "/blog/metadata-editor/"}, {"code": "en-US", "url": "/blog/en-US/iptc-exif-and-xmp-editing/"}, {"code": "ja-JP", "url": "/blog/ja-JP/iptc-exif-xmp%E3%81%AE%E7%B7%A8%E9%9B%86/"}, {"code": "ko-KR", "url": "/blog/ko-KR/iptc-exif-xmp-%ED%8E%B8%EC%A7%91/"}, {"code": "de-DE", "url": "/blog/de-DE/iptc-exif-und-xmp-bearbeitung/"}, {"code": "fr-FR", "url": "/blog/fr-FR/modification-iptc-exif-et-xmp/"}, {"code": "es-419", "url": "/blog/es-419/edici%C3%B3n-iptc-exif-y-xmp/"}, {"code": "pt-PT", "url": "/blog/pt-PT/edi%C3%A7%C3%A3o-iptc-exif-e-xmp/"}, {"code": "it-IT", "url": "/blog/it-IT/modifica-iptc-exif-e-xmp/"}, {"code": "ru-RU", "url": "/blog/ru-RU/%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-iptc-exif-%D0%B8-xmp/"}, {"code": "ar", "url": "/blog/ar/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1-iptc-%D9%88exif-%D9%88xmp/"}]}</script>
+<script defer="" src="../../assets/locale-router.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="index,follow,max-image-preview:large" name="robots"/><meta content="website" property="og:type"/><meta content="如何在 Android 照片中添加说明、署名与版权 | CaptionMeta" property="og:title"/><meta content="让接收照片的人知道拍了什么、由谁拍摄，以及应该如何署名。先区分字段的用途，再检查生成文件中的实际内容。" property="og:description"/><meta content="https://iptc.pages.dev/blog/metadata-editor/" property="og:url"/><meta content="CaptionMeta" property="og:site_name"/><meta content="https://iptc.pages.dev/assets/social-card.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="CaptionMeta photo metadata editor" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="如何在 Android 照片中添加说明、署名与版权 | CaptionMeta" name="twitter:title"/><meta content="让接收照片的人知道拍了什么、由谁拍摄，以及应该如何署名。先区分字段的用途，再检查生成文件中的实际内容。" name="twitter:description"/><meta content="https://iptc.pages.dev/assets/social-card.jpg" name="twitter:image"/><link href="../../favicon.ico" rel="icon" sizes="16x16 32x32 48x48" type="image/x-icon"/><link href="../../assets/favicon.png" rel="icon" sizes="96x96" type="image/png"/><link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://iptc.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "指南", "item": "https://iptc.pages.dev/blog/"}, {"@type": "ListItem", "position": 3, "name": "如何在 Android 照片中添加说明、署名与版权", "item": "https://iptc.pages.dev/blog/metadata-editor/"}]}</script><link href="../../assets/refinements.css" rel="stylesheet"/></head>
+<body class="blog-page article-page">
+<div aria-hidden="true" class="reading-progress"><span></span></div>
+<a class="skip-link" href="#main">跳转到主要内容</a>
+<header class="site-header">
+<a aria-label="CaptionMeta" class="brand" href="../../">
+<img alt="" decoding="async" height="40" src="../../assets/icon.png" width="40"/>
+<span>CaptionMeta</span>
+</a>
+<button aria-controls="primary-navigation" aria-expanded="false" class="nav-toggle" type="button">菜单</button><nav aria-label="主导航" id="primary-navigation">
+<a href="../../">首页</a>
+<a aria-current="page" href="../">指南</a>
+<a href="../../about.html">关于</a>
+<a href="../../support.html">支持</a>
+<label class="language-picker"><span class="visually-hidden">语言</span><select aria-label="语言" data-locale-switcher=""><option value="zh-CN">简体中文</option><option value="en-US">English</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="de-DE">Deutsch</option><option value="fr-FR">Français</option><option value="es-419">Español (Latinoamérica)</option><option value="pt-PT">Português (Portugal)</option><option value="it-IT">Italiano</option><option value="ru-RU">Русский</option><option value="ar">العربية</option></select></label>
+</nav>
+</header>
+<main id="main"><article><header class="article-header"><nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">首页</a><span>/</span><a href="/blog/">指南</a></nav><p class="article-kicker">操作指南</p><h1>如何在 Android 照片中添加说明、署名与版权</h1><p class="article-dek">让接收照片的人知道拍了什么、由谁拍摄，以及应该如何署名。先区分字段的用途，再检查生成文件中的实际内容。</p><p class="article-meta">当前版本 1.4.0 · <time datetime="2026-11-12">2026-11-12</time></p></header><div class="article-layout"><aside class="article-toc"><nav><a href="#step-1">先区分标题、说明与署名</a><a href="#step-2">在照片副本中填写并保存</a><a href="#step-3">为什么另一个查看器显示不同？</a><a href="#step-4">交付前检查</a></nav></aside><div class="article-body"><section id="step-1"><h2>先区分标题、说明与署名</h2><p>标题用一句短语概括照片；说明补充事件、人物和场景；署名记录创作者；版权声明说明权利归属。关键词用于检索，不应替代完整说明。</p><dl class="field-example"><dt>标题示例</dt><dd>街市清晨</dd><dt>说明示例</dt><dd>摊主在清晨整理当天售卖的蔬菜。</dd><dt>署名示例</dt><dd>你的摄影署名</dd><dt>版权示例</dt><dd>填写你有权使用的版权声明。</dd></dl></section><section id="step-2"><h2>在照片副本中填写并保存</h2><ol><li>选择已有照片，打开编辑流程。</li><li>填写标题、说明、关键词、署名和版权；共同信息可先保存成预设。</li><li>需要时逐张调整说明，再生成处理后的照片。</li><li>打开生成文件，在元数据视图中回读对应字段。</li></ol></section><section id="step-3"><h2>为什么另一个查看器显示不同？</h2><p>不同软件可能优先读取 IPTC 或 XMP 中的不同字段，也可能没有展示全部信息。先比较同一份生成文件、同一个字段；不要仅凭缩略图或旧缓存判断是否写入成功。</p></section><section id="step-4"><h2>交付前检查</h2><ul><li>确认署名和版权归属准确，而不是照搬演示文字。</li><li>确认没有把未经核实的人名、地点写入说明。</li><li>测试接收方实际使用的软件和文件格式。</li></ul></section><figure class="guide-screen"><a class="screen-zoom" href="../../assets/screenshots/metadata-result.webp"><img alt="如何在 Android 照片中添加说明、署名与版权" decoding="async" height="1200" loading="lazy" src="../../assets/screenshots/metadata-result.webp" width="540"/></a><figcaption>真实英文应用界面，使用演示照片与署名。局部展示关键字段，点击可放大查看。</figcaption></figure><p><a href="/features/metadata-editor/">了解功能</a></p><a class="primary-action store-action" href="https://play.google.com/store/apps/details?id=com.wkq.caption"><img alt="前往 Google Play" decoding="async" height="250" src="/assets/google-play-badge.png" width="646"/></a></div></div></article><section aria-labelledby="related-title" class="related-band">
+<div class="related-heading">
+<h2 id="related-title">相关功能</h2>
+<a class="text-link" href="../">查看全部文章 <span aria-hidden="true">→</span></a>
+</div>
+<div class="article-grid article-grid-compact">
+<article class="article-card"><div class="article-card-content"><p class="article-kicker">功能指南</p><h3><a href="../privacy-cleanup/">分享照片前，如何检查与清理隐私元数据</a></h3><p>照片可能包含拍摄时间、设备信息、位置和署名。先判断哪些信息不适合分享，再检查清理后的副本。</p></div></article><article class="article-card"><div class="article-card-content"><p class="article-kicker">功能指南</p><h3><a href="../batch-presets/">如何用 IPTC 预设批量填写照片信息</a></h3><p>同一组照片常有共同的署名、版权和关键词，但每张照片仍需要自己的说明。把这两类信息分开处理。</p></div></article>
+</div>
+</section></main>
+<footer>
+<p>© 2026 上海促动科技有限公司. 保留所有权利。</p>
+<nav aria-label="页脚导航">
+<a href="../">指南</a>
+<a href="../../privacy.html">隐私</a>
+<a href="../../about.html">关于</a>
+<a href="../../support.html">支持</a>
+</nav>
+</footer>
+<script defer="" src="../../assets/blog.js"></script>
+<script defer="True" src="../../assets/app.js"></script></body>
+</html>

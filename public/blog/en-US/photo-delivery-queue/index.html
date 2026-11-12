@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>How to check photos and deliver them to your own server | CaptionMeta</title>
+<meta content="Verify the files and metadata first, then check the server connection, destination and task status. CaptionMeta does not provide hosted photo storage." name="description"/>
+
+<meta content="#1976D2" name="theme-color"/>
+<link href="https://iptc.pages.dev/blog/en-US/photo-delivery-queue/" rel="canonical"/>
+<link href="https://iptc.pages.dev/blog/photo-delivery/" hreflang="zh-CN" rel="alternate"/>
+<link href="https://iptc.pages.dev/blog/en-US/photo-delivery-queue/" hreflang="en-US" rel="alternate"/>
+
+
+
+
+
+
+
+
+
+<link href="https://iptc.pages.dev/blog/photo-delivery/" hreflang="x-default" rel="alternate"/>
+<link href="../../../assets/styles.css" rel="stylesheet"/>
+<link href="../../../assets/blog.css" rel="stylesheet"/>
+<script id="locale-routes" type="application/json">{"sourceLocale": "zh-CN", "currentLocale": "en-US", "autoRedirect": false, "rememberSelection": true, "defaultLocale": "en-US", "storageKey": "com.wkq.caption:locale", "aliases": {"zh": "zh-CN", "en": "en-US", "ja": "ja-JP", "ko": "ko-KR", "de": "de-DE", "fr": "fr-FR", "es": "es-419", "pt": "pt-PT", "it": "it-IT", "ru": "ru-RU", "ar": "ar"}, "locales": [{"code": "zh-CN", "url": "/blog/photo-delivery/"}, {"code": "en-US", "url": "/blog/en-US/photo-delivery-queue/"}, {"code": "ja-JP", "url": "/blog/ja-JP/%E5%86%99%E7%9C%9F%E7%B4%8D%E5%93%81%E3%82%AD%E3%83%A5%E3%83%BC/"}, {"code": "ko-KR", "url": "/blog/ko-KR/%EC%82%AC%EC%A7%84-%EC%A0%84%EB%8B%AC-%EB%8C%80%EA%B8%B0%EC%97%B4/"}, {"code": "de-DE", "url": "/blog/de-DE/foto-%C3%BCbergabewarteschlange/"}, {"code": "fr-FR", "url": "/blog/fr-FR/file-de-livraison-photo/"}, {"code": "es-419", "url": "/blog/es-419/cola-de-entrega-de-fotos/"}, {"code": "pt-PT", "url": "/blog/pt-PT/fila-de-entrega-de-fotografias/"}, {"code": "it-IT", "url": "/blog/it-IT/coda-di-consegna-foto/"}, {"code": "ru-RU", "url": "/blog/ru-RU/%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8-%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B9/"}, {"code": "ar", "url": "/blog/ar/%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1-%D8%AA%D8%B3%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%B5%D9%88%D8%B1/"}]}</script>
+<script defer="" src="../../../assets/locale-router.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="index,follow,max-image-preview:large" name="robots"/><meta content="website" property="og:type"/><meta content="How to check photos and deliver them to your own server | CaptionMeta" property="og:title"/><meta content="Verify the files and metadata first, then check the server connection, destination and task status. CaptionMeta does not provide hosted photo storage." property="og:description"/><meta content="https://iptc.pages.dev/blog/en-US/photo-delivery-queue/" property="og:url"/><meta content="CaptionMeta" property="og:site_name"/><meta content="https://iptc.pages.dev/assets/social-card.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="CaptionMeta photo metadata editor" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="How to check photos and deliver them to your own server | CaptionMeta" name="twitter:title"/><meta content="Verify the files and metadata first, then check the server connection, destination and task status. CaptionMeta does not provide hosted photo storage." name="twitter:description"/><meta content="https://iptc.pages.dev/assets/social-card.jpg" name="twitter:image"/><link href="../../../favicon.ico" rel="icon" sizes="16x16 32x32 48x48" type="image/x-icon"/><link href="../../../assets/favicon.png" rel="icon" sizes="96x96" type="image/png"/><link href="../../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://iptc.pages.dev/en-US/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://iptc.pages.dev/blog/en-US/"}, {"@type": "ListItem", "position": 3, "name": "How to check photos and deliver them to your own server", "item": "https://iptc.pages.dev/blog/en-US/photo-delivery-queue/"}]}</script><link href="../../../assets/refinements.css" rel="stylesheet"/></head>
+<body class="blog-page article-page">
+<div aria-hidden="true" class="reading-progress"><span></span></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a aria-label="CaptionMeta" class="brand" href="../../../en-US/">
+<img alt="" decoding="async" height="40" src="../../../assets/icon.png" width="40"/>
+<span>CaptionMeta</span>
+</a>
+<button aria-controls="primary-navigation" aria-expanded="false" class="nav-toggle" type="button">Menu</button><nav aria-label="Primary navigation" id="primary-navigation">
+<a href="../../../en-US/">Home</a>
+<a aria-current="page" href="../">Guides</a>
+<a href="../../../en-US/about.html">About</a>
+<a href="../../../en-US/support.html">Support</a>
+<label class="language-picker"><span class="visually-hidden">Language</span><select aria-label="Language" data-locale-switcher=""><option value="zh-CN">简体中文</option><option value="en-US">English</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="de-DE">Deutsch</option><option value="fr-FR">Français</option><option value="es-419">Español (Latinoamérica)</option><option value="pt-PT">Português (Portugal)</option><option value="it-IT">Italiano</option><option value="ru-RU">Русский</option><option value="ar">العربية</option></select></label>
+</nav>
+</header>
+<main id="main"><article><header class="article-header"><nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/en-US/">Home</a><span>/</span><a href="/blog/en-US/">Guides</a></nav><p class="article-kicker">Practical guide</p><h1>How to check photos and deliver them to your own server</h1><p class="article-dek">Verify the files and metadata first, then check the server connection, destination and task status. CaptionMeta does not provide hosted photo storage.</p><p class="article-meta">Current version 1.4.0 · <time datetime="2026-11-12">2026-11-12</time></p></header><div class="article-layout"><aside class="article-toc"><nav><a href="#step-1">Prepare a server connection</a><a href="#step-2">Test a small set before the full delivery</a><a href="#step-3">Read the specific failure</a><a href="#step-4">Protect connection details</a></nav></aside><div class="article-body"><section id="step-1"><h2>Prepare a server connection</h2><p>The app provides FTP, FTPS, SFTP, HTTP, SMB and WebDAV configurations. You need an authorized server, account and writable destination. Connectivity depends on your server settings.</p></section><section id="step-2"><h2>Test a small set before the full delivery</h2><ol><li>Create a server profile and check the address, protocol and destination.</li><li>Test connectivity and write permissions with a non-sensitive photo.</li><li>Check captions, rights and privacy information in processed photos.</li><li>Add the files to the queue and inspect each task’s result.</li></ol></section><section id="step-3"><h2>Read the specific failure</h2><p>A network interruption, incorrect credentials and a non-writable directory require different fixes. Check the error and verify the file at the server; entering the queue is not the same as successful delivery.</p></section><section id="step-4"><h2>Protect connection details</h2><p>When contacting support, share the error type and relevant steps without passwords or complete server credentials. The current demonstration covers local editing and does not demonstrate a server upload.</p></section><figure class="guide-screen"><a class="screen-zoom" href="../../../assets/screenshots/metadata-result.webp"><img alt="How to check photos and deliver them to your own server" decoding="async" height="1200" loading="lazy" src="../../../assets/screenshots/metadata-result.webp" width="540"/></a><figcaption>Actual English app screens, using demo photos and credits. Details are cropped for clarity; select an image to enlarge it.</figcaption></figure><p><a href="/en-US/features/photo-delivery-queue/">Explore the feature</a></p><a class="primary-action store-action" href="https://play.google.com/store/apps/details?id=com.wkq.caption"><img alt="Get it on Google Play" decoding="async" height="250" src="/assets/google-play-badge.png" width="646"/></a></div></div></article><section aria-labelledby="related-title" class="related-band">
+<div class="related-heading">
+<h2 id="related-title">Related features</h2>
+<a class="text-link" href="../">View all articles <span aria-hidden="true">→</span></a>
+</div>
+<div class="article-grid article-grid-compact">
+<article class="article-card"><div class="article-card-content"><p class="article-kicker">Feature guide</p><h3><a href="../iptc-exif-and-xmp-editing/">How to add photo captions, credits and copyright on Android</a></h3><p>Help the recipient understand what a photo shows, who created it and how it should be credited. Use each field for its purpose, then check the saved file.</p></div></article><article class="article-card"><div class="article-card-content"><p class="article-kicker">Feature guide</p><h3><a href="../private-metadata-cleanup/">How to inspect and clean photo metadata before sharing</a></h3><p>Photos can contain time, device, location and identity information. Decide what should be shared, then inspect the cleaned copy.</p></div></article>
+</div>
+</section></main>
+<footer>
+<p>© 2026 上海促动科技有限公司. All rights reserved.</p>
+<nav aria-label="Footer navigation">
+<a href="../">Guides</a>
+<a href="../../../en-US/privacy.html">Privacy</a>
+<a href="../../../en-US/about.html">About</a>
+<a href="../../../en-US/support.html">Support</a>
+</nav>
+</footer>
+<script defer="" src="../../../assets/blog.js"></script>
+<script defer="True" src="../../../assets/app.js"></script></body>
+</html>

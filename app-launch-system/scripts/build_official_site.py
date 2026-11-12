@@ -379,7 +379,11 @@ def build():
     public = ROOT / 'public'
     AUDIT.mkdir(exist_ok=True)
     record = AUDIT / 'generation-manifest.json'
-    previous = json.loads(record.read_text(encoding='utf-8')) if record.exists() else None
+    # Fresh Git checkouts contain the published assets and their ownership record.
+    # Local audit state stays private; both records protect manual asset changes.
+    versioned_record = ROOT / 'site/public-manifest.json'
+    previous_record = record if record.exists() else versioned_record
+    previous = json.loads(previous_record.read_text(encoding='utf-8')) if previous_record.exists() else None
     if public.exists():
         owned = {f['path']:f['sha256'] for f in previous['files']} if previous else {}
         conflicts = [p.relative_to(public).as_posix() for p in public.rglob('*') if p.is_file() and (p.relative_to(public).as_posix() not in owned or digest(p) != owned[p.relative_to(public).as_posix()])]
@@ -445,6 +449,11 @@ def build():
         files=sorted(p.relative_to(stage).as_posix() for p in stage.rglob('*') if p.is_file())
         code=worker(files)
         (stage/'_worker.js').write_text(code,encoding='utf-8')
+        # Publish the same text bytes on Windows and Linux; ownership hashes must
+        # survive Git checkout and rebuilding on either platform.
+        for path in stage.rglob('*'):
+            if path.is_file() and (path.suffix in {'.html','.css','.js','.xml','.txt','.webmanifest'} or path.name == '_headers'):
+                path.write_bytes(path.read_bytes().replace(b'\r\n', b'\n'))
         # 在替换已归属文件前，先静态校验所有公开引用。
         sys.path.insert(0,str(ROOT/'site'))
         from validate_public import check
@@ -457,7 +466,9 @@ def build():
         # 根目录 Worker 同样启用白名单，防止旧部署配置误公开内部文件。
         (ROOT/'_worker.js').write_text(code,encoding='utf-8')
     files=[{'path':p.relative_to(public).as_posix(),'sha256':digest(p),'owner':'generated','featureIds':[]} for p in sorted(public.rglob('*')) if p.is_file()]
-    record.write_text(json.dumps({'schemaVersion':1,'generatedAt':DAY,'sourceRevision':None,'publicRoot':'public','files':files},ensure_ascii=False,indent=2),encoding='utf-8')
+    manifest_text = json.dumps({'schemaVersion':1,'generatedAt':DAY,'sourceRevision':None,'publicRoot':'public','files':files},ensure_ascii=False,indent=2)
+    record.write_text(manifest_text,encoding='utf-8')
+    versioned_record.write_text(manifest_text,encoding='utf-8')
     (AUDIT/'public-files.json').write_text(json.dumps([p['path'] for p in files],ensure_ascii=False,indent=2),encoding='utf-8')
     (ROOT/'static-site-manifest.json').write_text(json.dumps({'schemaVersion':'2.0','publicRoot':'public','entry':'index.html','files':[p['path'] for p in files]},ensure_ascii=False,indent=2),encoding='utf-8')
     print(f'OK: {len(files)} public files, {len(indexed)} indexable pages. Deploy only {public}')

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>IPTC、EXIF 与 XMP 编辑 - CaptionMeta</title>
+<meta content="查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。" name="description"/>
+
+<meta content="#1976D2" name="theme-color"/>
+<link href="https://iptc.pages.dev/features/metadata-editor/" rel="canonical"/>
+<link href="https://iptc.pages.dev/features/metadata-editor/" hreflang="zh-CN" rel="alternate"/>
+<link href="https://iptc.pages.dev/en-US/features/iptc-exif-and-xmp-editing/" hreflang="en-US" rel="alternate"/>
+
+
+
+
+
+
+
+
+
+<link href="https://iptc.pages.dev/features/metadata-editor/" hreflang="x-default" rel="alternate"/>
+<link href="../../site.webmanifest" rel="manifest"/>
+<link href="../../assets/styles.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"IPTC、EXIF 与 XMP 编辑","description":"查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。","mainEntity":{"@id":"https://iptc.pages.dev/features/metadata-editor/#app"},"url":"https://iptc.pages.dev/features/metadata-editor/"},{"@type":"SoftwareApplication","@id":"https://iptc.pages.dev/features/metadata-editor/#app","name":"CaptionMeta","operatingSystem":"Android","featureList":["读取并检查支持的 EXIF、IPTC 和 XMP 元数据。","将说明、标题、关键词、署名、版权、权利和位置写入处理后的照片副本。","使用单张照片的值细化或覆盖批量值。"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CaptionMeta 能在 Android 上编辑 IPTC 和 XMP 吗？","acceptedAnswer":{"@type":"Answer","text":"可以。项目中包含 IPTC 和 XMP 写入器及验证测试，用于当前照片元数据工作流。"}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+<script id="locale-routes" type="application/json">{"sourceLocale": "zh-CN", "currentLocale": "zh-CN", "autoRedirect": false, "rememberSelection": true, "defaultLocale": "en-US", "storageKey": "com.wkq.caption:locale", "aliases": {"zh": "zh-CN", "en": "en-US", "ja": "ja-JP", "ko": "ko-KR", "de": "de-DE", "fr": "fr-FR", "es": "es-419", "pt": "pt-PT", "it": "it-IT", "ru": "ru-RU", "ar": "ar"}, "locales": [{"code": "zh-CN", "url": "/features/metadata-editor/"}, {"code": "en-US", "url": "/en-US/features/iptc-exif-and-xmp-editing/"}, {"code": "ja-JP", "url": "/ja-JP/features/iptc-exif-xmp%E3%81%AE%E7%B7%A8%E9%9B%86/"}, {"code": "ko-KR", "url": "/ko-KR/features/iptc-exif-xmp-%ED%8E%B8%EC%A7%91/"}, {"code": "de-DE", "url": "/de-DE/features/iptc-exif-und-xmp-bearbeitung/"}, {"code": "fr-FR", "url": "/fr-FR/features/modification-iptc-exif-et-xmp/"}, {"code": "es-419", "url": "/es-419/features/edici%C3%B3n-iptc-exif-y-xmp/"}, {"code": "pt-PT", "url": "/pt-PT/features/edi%C3%A7%C3%A3o-iptc-exif-e-xmp/"}, {"code": "it-IT", "url": "/it-IT/features/modifica-iptc-exif-e-xmp/"}, {"code": "ru-RU", "url": "/ru-RU/features/%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-iptc-exif-%D0%B8-xmp/"}, {"code": "ar", "url": "/ar/features/%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1-iptc-%D9%88exif-%D9%88xmp/"}]}</script>
+<script defer="" src="../../assets/locale-router.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="index,follow,max-image-preview:large" name="robots"/><meta content="website" property="og:type"/><meta content="IPTC、EXIF 与 XMP 编辑 - CaptionMeta" property="og:title"/><meta content="查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。" property="og:description"/><meta content="https://iptc.pages.dev/features/metadata-editor/" property="og:url"/><meta content="CaptionMeta" property="og:site_name"/><meta content="https://iptc.pages.dev/assets/social-card.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="CaptionMeta photo metadata editor" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="IPTC、EXIF 与 XMP 编辑 - CaptionMeta" name="twitter:title"/><meta content="查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。" name="twitter:description"/><meta content="https://iptc.pages.dev/assets/social-card.jpg" name="twitter:image"/><link href="../../favicon.ico" rel="icon" sizes="16x16 32x32 48x48" type="image/x-icon"/><link href="../../assets/favicon.png" rel="icon" sizes="96x96" type="image/png"/><link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://iptc.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "功能", "item": "https://iptc.pages.dev/#features"}, {"@type": "ListItem", "position": 3, "name": "IPTC、EXIF 与 XMP 编辑", "item": "https://iptc.pages.dev/features/metadata-editor/"}]}</script><link href="../../assets/refinements.css" rel="stylesheet"/></head>
+<body class="feature-page">
+<a class="skip-link" href="#main">跳转到主要内容</a>
+<header class="site-header">
+<a aria-label="CaptionMeta" class="brand" href="../../"><img alt="" decoding="async" height="40" src="../../assets/icon.png" width="40"/><span>CaptionMeta</span></a>
+<button aria-controls="primary-navigation" aria-expanded="false" class="nav-toggle" type="button">菜单</button><nav aria-label="主导航" id="primary-navigation">
+<a href="../../">首页</a>
+<a href="../../blog/">指南</a>
+<a href="../../about.html">关于</a>
+<a href="../../support.html">支持</a>
+<label class="language-picker"><span class="visually-hidden">语言</span><select aria-label="语言" data-locale-switcher=""><option value="zh-CN">简体中文</option><option value="en-US">English</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="de-DE">Deutsch</option><option value="fr-FR">Français</option><option value="es-419">Español (Latinoamérica)</option><option value="pt-PT">Português (Portugal)</option><option value="it-IT">Italiano</option><option value="ru-RU">Русский</option><option value="ar">العربية</option></select></label>
+</nav>
+</header>
+<main id="main">
+<article class="feature-detail">
+<header class="feature-hero">
+<nav aria-label="面包屑导航" class="breadcrumbs"><a href="../../">首页</a><span aria-hidden="true">/</span><a href="../../#features">功能</a></nav>
+
+<h1>IPTC、EXIF 与 XMP 编辑</h1>
+<p class="tagline">查看并编辑说明、标题、关键词、署名、版权、权利和位置等照片元数据。</p>
+<p class="feature-problem"><strong>解决什么问题:</strong> 当每张照片的说明、署名、权利或关键词都被单独编辑时，交付内容容易不一致。</p>
+<a class="primary-action store-action" href="https://play.google.com/store/apps/details?id=com.wkq.caption"><img alt="前往 Google Play" decoding="async" height="250" src="/assets/google-play-badge.png" width="646"/></a></header>
+<figure class="feature-media"><a class="screen-zoom" href="../../assets/screenshots/metadata-result.webp"><img alt="IPTC、EXIF 与 XMP 编辑 - CaptionMeta" decoding="async" height="1200" loading="lazy" src="../../assets/screenshots/metadata-result.webp" width="540"/></a><figcaption>真实英文应用界面，使用演示照片与署名。局部展示关键字段，点击可放大查看。</figcaption></figure>
+<div class="feature-content-grid">
+<section><h2>可以完成什么</h2><ul><li>读取并检查支持的 EXIF、IPTC 和 XMP 元数据。</li><li>将说明、标题、关键词、署名、版权、权利和位置写入处理后的照片副本。</li><li>使用单张照片的值细化或覆盖批量值。</li></ul></section>
+<section><h2>可配置选项</h2><ul><li>IPTC 核心与扩展字段、XMP 字段、EXIF 处理和位置值。</li></ul></section>
+<section><h2>支持的输入</h2><ul><li>从 Android 设备选择的本地照片文件。</li></ul></section>
+<section><h2>生成的结果</h2><ul><li>写入所选元数据字段的处理后照片副本。</li></ul></section>
+</div>
+<section class="feature-workflow"><h2>操作流程</h2><ol><li>选择一张或一组本地照片。</li><li>选择预设，或填写说明、标题、关键词、署名和权利字段。</li><li>检查结果并保存处理后的副本，用于分享或交付。</li></ol></section>
+<section class="feature-limitations"><h2>使用限制</h2><ul><li>可用字段和写入行为取决于所选文件以及工作流中启用的元数据字段。</li></ul></section>
+<section class="feature-faq"><h2>常见问题</h2><details><summary>CaptionMeta 能在 Android 上编辑 IPTC 和 XMP 吗？</summary><p>可以编辑支持的 IPTC 与 XMP 字段。具体可用字段取决于文件格式和工作流设置，请在保存后检查结果。</p></details></section>
+
+<a class="primary-action" href="../../blog/metadata-editor/">阅读相关指南</a>
+</article>
+</main>
+<footer>
+<p>© 2026 上海促动科技有限公司. 保留所有权利。</p>
+<nav aria-label="页脚导航">
+<a href="../../privacy.html">隐私</a>
+<a href="../../about.html">关于</a>
+<a href="../../support.html">支持</a>
+</nav>
+</footer>
+<script defer="True" src="../../assets/app.js"></script></body>
+</html>
